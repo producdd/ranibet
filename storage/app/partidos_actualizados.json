@@ -1,0 +1,272 @@
+[
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "FC Cajamarca",
+    "visitante": "Sport Boys",
+    "fecha_scraping": "2026-04-30 21:17:41.164931"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "AD Tarma",
+    "visitante": "Grau",
+    "fecha_scraping": "2026-04-30 21:17:41.230802"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Cienciano",
+    "visitante": "Comerciantes Unidos",
+    "fecha_scraping": "2026-04-30 21:17:41.307874"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Lima",
+    "visitante": "Moquegua",
+    "fecha_scraping": "2026-04-30 21:17:41.379893"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Sporting Cristal",
+    "visitante": "Cusco",
+    "fecha_scraping": "2026-04-30 21:17:41.474754"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Juan Pablo II",
+    "visitante": "Universitario",
+    "fecha_scraping": "2026-04-30 21:17:41.560916"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Atl.",
+    "visitante": "Sport Huancayo",
+    "fecha_scraping": "2026-04-30 21:17:41.645988"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Melgar",
+    "visitante": "UTC",
+    "fecha_scraping": "2026-04-30 21:17:41.720664"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Los Chankas",
+    "visitante": "Deportivo Garcilaso",
+    "fecha_scraping": "2026-04-30 21:17:41.790693"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "UTC",
+    "visitante": "FC Cajamarca",
+    "fecha_scraping": "2026-04-30 21:17:41.859632"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Deportivo Garcilaso",
+    "visitante": "Melgar",
+    "fecha_scraping": "2026-04-30 21:17:41.925249"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "AD Tarma",
+    "visitante": "Los Chankas",
+    "fecha_scraping": "2026-04-30 21:17:41.992478"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Universitario",
+    "visitante": "Alianza Atl.",
+    "fecha_scraping": "2026-04-30 21:17:42.059071"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Grau",
+    "visitante": "Alianza Lima",
+    "fecha_scraping": "2026-04-30 21:17:42.129538"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Cusco",
+    "visitante": "Sport Huancayo",
+    "fecha_scraping": "2026-04-30 21:17:42.198211"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "UTC",
+    "visitante": "Cienciano",
+    "fecha_scraping": "2026-04-30 21:17:42.283603"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Sport Boys",
+    "visitante": "Juan Pablo II",
+    "fecha_scraping": "2026-04-30 21:17:42.365868"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Comerciantes Unidos",
+    "visitante": "Sporting Cristal",
+    "fecha_scraping": "2026-04-30 21:17:42.445305"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Moquegua",
+    "visitante": "FC Cajamarca",
+    "fecha_scraping": "2026-04-30 21:17:42.514729"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Los Chankas",
+    "visitante": "Cienciano",
+    "fecha_scraping": "2026-04-30 21:17:42.580482"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "ANBA Peru\n2",
+    "visitante": "Estudiantil CNI",
+    "fecha_scraping": "2026-04-30 21:17:48.611833"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Estudiantil CNI",
+    "visitante": "ANBA Peru",
+    "fecha_scraping": "2026-04-30 21:17:48.685311"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Minas",
+    "visitante": "ANBA Peru",
+    "fecha_scraping": "2026-04-30 21:17:48.755795"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "ANBA Peru",
+    "visitante": "Juventud Huracan",
+    "fecha_scraping": "2026-04-30 21:17:48.825100"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "ASA",
+    "visitante": "Minas",
+    "fecha_scraping": "2026-04-30 21:17:48.892666"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "ASA",
+    "visitante": "Cachorro",
+    "fecha_scraping": "2026-04-30 21:17:48.970926"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Huancarama",
+    "visitante": "ANBA Peru",
+    "fecha_scraping": "2026-04-30 21:17:49.040712"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Juventud Huracan",
+    "visitante": "Patibamba",
+    "fecha_scraping": "2026-04-30 21:17:49.120717"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Minas",
+    "visitante": "Tahuishco",
+    "fecha_scraping": "2026-04-30 21:17:49.205748"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "ANBA Peru",
+    "visitante": "Huancarama",
+    "fecha_scraping": "2026-04-30 21:17:49.279053"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Cachorro",
+    "visitante": "ASA",
+    "fecha_scraping": "2026-04-30 21:17:49.370469"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Patibamba",
+    "visitante": "Juventud Huracan",
+    "fecha_scraping": "2026-04-30 21:17:49.443781"
+  },
+  {
+    "torneo": "Copa Perú",
+    "local": "Tahuishco",
+    "visitante": "Minas",
+    "fecha_scraping": "2026-04-30 21:17:49.517781"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Arsenal",
+    "visitante": "Atlético de Madrid",
+    "fecha_scraping": "2026-04-30 21:17:55.334515"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Bayern Múnich",
+    "visitante": "PSG",
+    "fecha_scraping": "2026-04-30 21:17:55.405900"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Atlético de Madrid",
+    "visitante": "Arsenal",
+    "fecha_scraping": "2026-04-30 21:17:55.472862"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "PSG",
+    "visitante": "Bayern Múnich",
+    "fecha_scraping": "2026-04-30 21:17:55.535761"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Arsenal",
+    "visitante": "Sporting CP",
+    "fecha_scraping": "2026-04-30 21:17:55.606818"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Bayern Múnich",
+    "visitante": "Real Madrid",
+    "fecha_scraping": "2026-04-30 21:17:55.679026"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Atlético de Madrid",
+    "visitante": "Barcelona",
+    "fecha_scraping": "2026-04-30 21:17:55.756918"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Liverpool",
+    "visitante": "PSG",
+    "fecha_scraping": "2026-04-30 21:17:55.836219"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Barcelona",
+    "visitante": "Atlético de Madrid",
+    "fecha_scraping": "2026-04-30 21:17:55.907740"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "PSG",
+    "visitante": "Liverpool",
+    "fecha_scraping": "2026-04-30 21:17:56.008965"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Real Madrid",
+    "visitante": "Bayern Múnich",
+    "fecha_scraping": "2026-04-30 21:17:56.144868"
+  },
+  {
+    "torneo": "Champions League",
+    "local": "Sporting CP",
+    "visitante": "Arsenal",
+    "fecha_scraping": "2026-04-30 21:17:56.302575"
+  }
+]

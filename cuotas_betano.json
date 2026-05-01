@@ -1,0 +1,202 @@
+[
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "FC Cajamarca",
+    "visitante": "Sport Boys",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:42:06.547164"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "AD Tarma",
+    "visitante": "Grau",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:42:16.176004"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Cienciano",
+    "visitante": "Comerciantes Unidos",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:42:24.250577"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Lima",
+    "visitante": "Moquegua",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:42:33.623760"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Sporting Cristal",
+    "visitante": "Cusco",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:42:43.305471"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Juan Pablo II",
+    "visitante": "Universitario",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:42:53.026658"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Atl.",
+    "visitante": "Sport Huancayo",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:43:01.363404"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Melgar",
+    "visitante": "UTC",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:43:11.013900"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Los Chankas",
+    "visitante": "Deportivo Garcilaso",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:43:20.797149"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "UTC",
+    "visitante": "FC Cajamarca",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:43:29.351668"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Deportivo Garcilaso",
+    "visitante": "Melgar",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:43:40.645783"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "AD Tarma",
+    "visitante": "Los Chankas",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:43:52.301565"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Universitario",
+    "visitante": "Alianza Atl.",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:44:02.149350"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Grau",
+    "visitante": "Alianza Lima",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:44:12.181664"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Cusco",
+    "visitante": "Sport Huancayo",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:44:22.572423"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "UTC",
+    "visitante": "Cienciano",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:44:31.874153"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Sport Boys",
+    "visitante": "Juan Pablo II",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:44:41.757959"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Comerciantes Unidos",
+    "visitante": "Sporting Cristal",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:44:52.149251"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Moquegua",
+    "visitante": "FC Cajamarca",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:45:00.852876"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Los Chankas",
+    "visitante": "Cienciano",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.25",
+    "cuota_visitante": "12.43",
+    "casa": "Betano",
+    "fecha": "2026-05-01 00:45:10.832819"
+  }
+]

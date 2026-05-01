@@ -1,0 +1,88 @@
+:root {
+    --rani-verde: #28a745;
+    --rani-oscuro: #1a1a1a;
+    --rani-card: #ffffff;
+    --envivo: #ff4d4d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 200px 1fr 300px; /* PC: 3 columnas */
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Sidebar Ligas */
+.sidebar-ligas {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    height: fit-content;
+}
+
+.liga-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.liga-item:hover { background: #e8f5e9; color: var(--rani-verde); }
+
+/* Feed Central */
+.feed-central {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.badge-live {
+    background: var(--envivo);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker { 50% { opacity: 0; } }
+
+/* Cupón de Apuestas */
+.bet-slip {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.monto-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .app-container { grid-template-columns: 1fr; }
+    .sidebar-ligas, .bet-slip { display: none; } /* En móvil usamos el menú inferior y el popup */
+}

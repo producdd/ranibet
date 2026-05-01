@@ -1,0 +1,92 @@
+[
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "FC Cajamarca",
+    "visitante": "Sport Boys",
+    "cuota_local": "2.12",
+    "cuota_empate": "3.25",
+    "cuota_visitante": "3.35",
+    "fecha": "2026-05-01 00:47:50.279784"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "AD Tarma",
+    "visitante": "Grau",
+    "cuota_local": "1.68",
+    "cuota_empate": "3.45",
+    "cuota_visitante": "5.25",
+    "fecha": "2026-05-01 00:47:59.205046"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Cienciano",
+    "visitante": "Comerciantes Unidos",
+    "cuota_local": "1.72",
+    "cuota_empate": "3.60",
+    "cuota_visitante": "4.55",
+    "fecha": "2026-05-01 00:48:07.433877"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Lima",
+    "visitante": "Moquegua",
+    "cuota_local": "1.19",
+    "cuota_empate": "5.65",
+    "cuota_visitante": "18.00",
+    "fecha": "2026-05-01 00:48:16.593094"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Sporting Cristal",
+    "visitante": "Cusco",
+    "cuota_local": "1.78",
+    "cuota_empate": "3.60",
+    "cuota_visitante": "4.30",
+    "fecha": "2026-05-01 00:48:26.148684"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Juan Pablo II",
+    "visitante": "Universitario",
+    "cuota_local": "4.50",
+    "cuota_empate": "3.45",
+    "cuota_visitante": "1.78",
+    "fecha": "2026-05-01 00:48:34.816585"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Atl.",
+    "visitante": "Sport Huancayo",
+    "cuota_local": "1.82",
+    "cuota_empate": "3.45",
+    "cuota_visitante": "4.15",
+    "fecha": "2026-05-01 00:48:45.758775"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Melgar",
+    "visitante": "UTC",
+    "cuota_local": "1.50",
+    "cuota_empate": "4.00",
+    "cuota_visitante": "6.10",
+    "fecha": "2026-05-01 00:48:54.863534"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Los Chankas",
+    "visitante": "Deportivo Garcilaso",
+    "cuota_local": "1.92",
+    "cuota_empate": "3.40",
+    "cuota_visitante": "3.85",
+    "fecha": "2026-05-01 00:49:04.134412"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "UTC",
+    "visitante": "FC Cajamarca",
+    "cuota_local": "1.25",
+    "cuota_empate": "1.12",
+    "cuota_visitante": "13.33",
+    "fecha": "2026-05-01 00:49:11.529158"
+  }
+]

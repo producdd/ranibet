@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaniBet | Dashboard Profesional</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- SECCIÓN IZQUIERDA: LIGAS -->
+    <aside class="sidebar-ligas">
+        <h3 style="color:var(--rani-verde);">🏆 Ligas</h3>
+        <div class="liga-item" onclick="cargarMercados('Liga 1')">🇵🇪 Liga 1</div>
+        <div class="liga-item" onclick="cargarMercados('Copa Per')">🏟️ Copa Perú</div>
+        <div class="liga-item" onclick="cargarMercados('Libertadores')">🏆 Libertadores</div>
+        <div class="liga-item" onclick="cargarMercados('Todos')">🌐 Todas</div>
+    </aside>
+
+    <!-- SECCIÓN CENTRAL: PARTIDOS -->
+    <main class="feed-central">
+        <header style="background:none; border:none; padding:0; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center;">
+            <h2 style="margin:0;">🐸 RANI<span style="color:var(--rani-verde);">BET</span></h2>
+            <div style="font-weight:800;">💰 <span id="balance">50.00</span> RC</div>
+        </header>
+        <div id="listado">Cargando mercados en vivo...</div>
+    </main>
+
+    <!-- SECCIÓN DERECHA: CUPÓN (SOLO PC) -->
+    <aside class="bet-slip">
+        <h3>📑 Cupón de Apuesta</h3>
+        <div id="slip-empty" style="color:gray; font-size:12px;">Haz clic en una cuota para añadir.</div>
+        <div id="slip-active" style="display:none;">
+            <div id="sel-info" style="font-size:13px; margin-bottom:15px;"></div>
+            <label style="font-size:11px; font-weight:bold;">MONTO A APOSTAR:</label>
+            <input type="number" id="monto-apuesta" class="monto-input" value="10" oninput="actualizarCalculo()">
+            <div style="display:flex; justify-content:space-between; font-weight:800; margin-top:10px;">
+                <span>Ganancia:</span> <span id="pos-ganancia" style="color:var(--rani-verde);">0.00 RC</span>
+            </div>
+            <button onclick="apostarAhora()" style="width:100%; background:var(--rani-verde); color:white; border:none; padding:15px; border-radius:10px; font-weight:800; margin-top:15px; cursor:pointer;">
+                COLOCAR APUESTA 🐸
+            </button>
+        </div>
+    </aside>
+</div>
+
+<!-- Modal para Ticket (Móvil/Captura) -->
+<div id="modal-ticket" class="modal-overlay">
+    <div class="modal-content">
+        <div id="ticket-view"></div>
+        <button onclick="document.getElementById('modal-ticket').style.display='none'" style="width:100%; margin-top:10px; background:#444; color:white; border:none; padding:10px; border-radius:8px;">Cerrar</button>
+    </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/scraping.js"></script>
+<script src="js/ticket.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
