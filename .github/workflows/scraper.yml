@@ -1,0 +1,58 @@
+name: Scraper de Cuotas
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Chrome
+        run: |
+          sudo apt update
+          sudo apt install -y chromium-browser chromium-chromedriver
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Instalar selenium
+        run: pip install selenium
+      - name: Ejecutar scraper
+        run: |
+          python3 << 'EOF'
+          from selenium import webdriver
+          from selenium.webdriver.common.by import By
+          from selenium.webdriver.chrome.options import Options
+          from selenium.webdriver.chrome.service import Service
+          import json, time, re
+          from datetime import datetime
+          options = Options()
+          options.add_argument('--headless=new')
+          options.add_argument('--no-sandbox')
+          options.binary_location = "/usr/bin/chromium-browser"
+          service = Service('/usr/bin/chromedriver')
+          driver = webdriver.Chrome(service=service, options=options)
+          driver.get('https://www.flashscore.pe/futbol/peru/liga-1/')
+          time.sleep(5)
+          todos = []
+          for elem in driver.find_elements(By.CSS_SELECTOR, '.event__match')[:15]:
+              try:
+                  local = elem.find_element(By.CSS_SELECTOR, '[class*="homeParticipant"]').text.strip()
+                  visitante = elem.find_element(By.CSS_SELECTOR, '[class*="awayParticipant"]').text.strip()
+                  odds = elem.find_elements(By.CSS_SELECTOR, '.event__odd')
+                  odds_textos = [o.text.strip() for o in odds if re.match(r'^\d+\.\d{2}$', o.text.strip())]
+                  todos.append({'torneo': 'Liga 1 Peruana', 'local': local, 'visitante': visitante, 'cuota_local': odds_textos[0] if odds_textos else '', 'cuota_empate': odds_textos[1] if len(odds_textos)>1 else '', 'cuota_visitante': odds_textos[2] if len(odds_textos)>2 else '', 'fecha': str(datetime.now())})
+              except: pass
+          driver.quit()
+          with open('partidos.json', 'w') as f:
+              json.dump(todos, f, indent=2)
+          print(f"{len(todos)} partidos")
+          EOF
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add partidos.json
+          git diff --staged --quiet || git commit -m "Actualizar cuotas $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
