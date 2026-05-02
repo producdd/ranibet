@@ -817,6 +817,7 @@ function keepTodayAndNextJornadaByGroup(rows){
   const inputRows = Array.isArray(rows) ? rows : [];
   const now = new Date();
   const todayKey = toDateKey(now);
+  const liveRows = inputRows.filter(row => row?.live === true);
 
   const enriched = inputRows.map(row => ({row, matchDate: parseScraperMatchDate(row)}));
   const withDate = enriched.filter(item => Number.isFinite(item.matchDate?.getTime()));
@@ -825,12 +826,26 @@ function keepTodayAndNextJornadaByGroup(rows){
   withDate.sort((a, b) => a.matchDate - b.matchDate);
   const todayRows = withDate.filter(item => toDateKey(item.matchDate) === todayKey);
   const futureRows = withDate.filter(item => toDateKey(item.matchDate) > todayKey);
-  const nextKey = futureRows.length ? toDateKey(futureRows[0].matchDate) : '';
-  const nextJornadaRows = nextKey ? futureRows.filter(item => toDateKey(item.matchDate) === nextKey) : [];
+  // Champions/Libertadores suelen publicar la "próxima jornada" repartida en 2 días.
+  const nextFutureKeys = [...new Set(futureRows.map(item => toDateKey(item.matchDate)))].slice(0, 2);
+  const nextJornadaRows = nextFutureKeys.length
+    ? futureRows.filter(item => nextFutureKeys.includes(toDateKey(item.matchDate)))
+    : [];
 
-  const selected = [...todayRows, ...nextJornadaRows];
-  if(selected.length) return selected;
-  if(futureRows.length) return futureRows.filter(item => toDateKey(item.matchDate) === toDateKey(futureRows[0].matchDate));
+  const selected = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...todayRows, ...nextJornadaRows];
+  if(selected.length){
+    const seen = new Set();
+    return selected.filter(item => {
+      const key = `${item.row?.torneo || ''}|${item.row?.local || ''}|${item.row?.visitante || ''}|${item.row?.match_datetime || ''}|${item.row?.time_text || ''}`;
+      if(seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+  if(futureRows.length){
+    const fallbackKeys = [...new Set(futureRows.map(item => toDateKey(item.matchDate)))].slice(0, 2);
+    return futureRows.filter(item => fallbackKeys.includes(toDateKey(item.matchDate)));
+  }
   return withoutDate.slice(0, 10);
 }
 
@@ -860,6 +875,9 @@ function createMatchFromScraper(item, idx, nextId){
   const oddHome = Number(item?.mejor_cuota_local ?? item?.cuota_local);
   const oddDraw = Number(item?.mejor_cuota_empate ?? item?.cuota_empate);
   const oddAway = Number(item?.mejor_cuota_visitante ?? item?.cuota_visitante);
+  const isLive = item?.live === true;
+  const liveMinute = String(item?.minute || '').replace(/[^0-9+]/g, '');
+  const liveScore = String(item?.score || '').replace(':', '-').trim();
 
   return {
     id: nextId + idx,
@@ -869,13 +887,15 @@ function createMatchFromScraper(item, idx, nextId){
     away,
     homeEmoji: cfg.homeEmoji,
     awayEmoji: cfg.awayEmoji,
-    time: formatLiga1KickoffLabel(item, matchDate),
+    time: isLive ? (liveMinute ? `${liveMinute}'` : 'EN VIVO') : formatLiga1KickoffLabel(item, matchDate),
     odds: {
       h: Number.isFinite(oddHome) && oddHome > 0 ? oddHome : 2.00,
       d: Number.isFinite(oddDraw) && oddDraw > 0 ? oddDraw : 3.00,
       a: Number.isFinite(oddAway) && oddAway > 0 ? oddAway : 3.50
     },
-    live: false
+    live: isLive,
+    score: isLive ? (liveScore || '0-0') : undefined,
+    minute: isLive ? (liveMinute || '0') : undefined
   };
 }
 
