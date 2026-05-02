@@ -881,7 +881,6 @@ function createMatchFromScraper(item, idx, nextId){
 
 function replaceScrapedLeagueMatches(scrapedRows){
   const rows = Array.isArray(scrapedRows) ? scrapedRows : [];
-  const allowedLeagues = new Set(Object.keys(SCRAPER_LEAGUE_CONFIG));
   const grouped = Object.fromEntries(Object.keys(SCRAPER_LEAGUE_CONFIG).map(league => [league, []]));
   rows.forEach(row => {
     const league = resolveScraperLeague(row);
@@ -890,12 +889,6 @@ function replaceScrapedLeagueMatches(scrapedRows){
 
   const filteredRows = Object.values(grouped)
     .flatMap(group => keepTodayAndNextJornadaByGroup(group).map(item => item.row || item));
-
-  const currentAllowed = MATCHES.filter(m => allowedLeagues.has(m.league));
-  const fallbackByLeague = Object.fromEntries(Object.keys(SCRAPER_LEAGUE_CONFIG).map(league => [league, []]));
-  currentAllowed.forEach(match => {
-    if(fallbackByLeague[match.league]) fallbackByLeague[match.league].push(match);
-  });
 
   const rowsByLeague = Object.fromEntries(Object.keys(SCRAPER_LEAGUE_CONFIG).map(league => [league, []]));
   filteredRows.forEach(row => {
@@ -911,15 +904,12 @@ function replaceScrapedLeagueMatches(scrapedRows){
   const merged = [];
   Object.keys(rowsByLeague).forEach(league => {
     const scrapedLeagueRows = rowsByLeague[league];
-    if(scrapedLeagueRows.length){
-      const mappedLeague = scrapedLeagueRows
-        .map((row, idx) => createMatchFromScraper(row, idx, nextId))
-        .filter(Boolean);
-      nextId += mappedLeague.length;
-      merged.push(...mappedLeague);
-      return;
-    }
-    merged.push(...fallbackByLeague[league]);
+    if(!scrapedLeagueRows.length) return;
+    const mappedLeague = scrapedLeagueRows
+      .map((row, idx) => createMatchFromScraper(row, idx, nextId))
+      .filter(Boolean);
+    nextId += mappedLeague.length;
+    merged.push(...mappedLeague);
   });
 
   if(!merged.length) return false;
@@ -945,9 +935,8 @@ async function syncLeaguesFromFlashscore(notify = false){
 }
 
 function keepOnlyScraperLeaguesInMemory(){
-  const allowed = new Set(Object.keys(SCRAPER_LEAGUE_CONFIG));
-  const filtered = MATCHES.filter(match => allowed.has(match.league));
-  MATCHES.splice(0, MATCHES.length, ...filtered);
+  // Modo estricto: mostrar solo partidos que vienen del scraping (partidos.json).
+  MATCHES.splice(0, MATCHES.length);
 }
 
 window.RaniSupabase = {client:supabaseClient, initSupabaseProfile, loadUserProfile, saveUserProfile, fetchGlobalRanking};
