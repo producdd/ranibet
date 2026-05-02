@@ -1,36 +1,166 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>RaniBet - Partidos</title>
-    <style>
-        body { font-family: Arial; background: #1a1a2e; color: white; padding: 20px; text-align: center; }
-        .partido { background: #16213e; margin: 10px auto; padding: 15px; border-radius: 10px; max-width: 500px; }
-        .cuotas { display: flex; justify-content: center; gap: 20px; margin-top: 10px; }
-        .cuota { background: #e94560; padding: 5px 10px; border-radius: 5px; }
-        h1 { color: #e94560; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RANIBET 🐸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>🏆 RaniBet</h1>
-    <div id="contenedor">Cargando...</div>
-    <script>
-        const URL = 'https://raw.githubusercontent.com/producdd/ranibet/main/partidos.json';
-        async function cargar() {
-            try {
-                const res = await fetch(URL + '?t=' + Date.now());
-                const data = await res.json();
-                let html = '';
-                data.forEach(p => {
-                    html += `<div class="partido"><strong>${p.local}</strong> vs <strong>${p.visitante}</strong><div class="cuotas">${p.cuota_local ? `<span class="cuota">🏠 ${p.cuota_local}</span>` : ''}${p.cuota_empate ? `<span class="cuota">🤝 ${p.cuota_empate}</span>` : ''}${p.cuota_visitante ? `<span class="cuota">✈️ ${p.cuota_visitante}</span>` : ''}</div></div>`;
-                });
-                document.getElementById('contenedor').innerHTML = html || '<p>Sin partidos</p>';
-            } catch(e) {
-                document.getElementById('contenedor').innerHTML = '<p>Error</p>';
-            }
-        }
-        cargar();
-        setInterval(cargar, 30000);
-    </script>
+  <div class="frog-corner" onclick="showToast('🐸 ¡RANIBET! ¡Apostá con cabeza!','info')" title="¡Mascota RANIBET!">🐸</div>
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <div class="username-gate" id="usernameGate">
+    <div class="brutality-box">
+      <div class="brutality-kicker">💀🔥 RANI BET BRUTALITY 🔥💀</div>
+      <div class="brutality-title">🐸 TU NOMBRE DEL MUNDO BRUTALITY 💀🔥</div>
+      <div class="brutality-sub">El ranking no usa tu correo ni tu nombre real. Aquí peleas con tu username.</div>
+      <div class="brutality-input-row">
+        <span>@</span>
+        <input id="usernameInput" maxlength="20" autocomplete="off" placeholder="rana.brutal-77">
+      </div>
+      <div class="brutality-meta">
+        <span id="usernameHint">Letras, números, puntos y guiones. Máximo 20.</span>
+        <span id="usernameCount">0/20</span>
+      </div>
+      <button class="brutality-save" id="usernameSaveBtn" onclick="saveBrutalityUsername()" disabled>ENTRAR AL PANTANO 🔥</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="ticketModal">
+    <div class="modal-box">
+      <div class="modal-top">
+        <span class="modal-top-frog">🐸</span>
+        <div class="modal-top-title">¡APUESTA REGISTRADA!</div>
+        <div class="modal-top-sub">Tu ticket RANIBET ha sido procesado</div>
+      </div>
+      <div class="modal-ticket-id" id="mTicketId">RNB-00000</div>
+      <div class="modal-body">
+        <div class="modal-row"><span class="modal-row-label">Selecciones</span><span class="modal-row-val" id="mPicks">-</span></div>
+        <div class="modal-row"><span class="modal-row-label">Cuota Total</span><span class="modal-row-val" id="mOdd">-</span></div>
+        <div class="modal-row"><span class="modal-row-label">Monedas Apostadas</span><span class="modal-row-val" id="mStake">-</span></div>
+        <div class="modal-row"><span class="modal-row-label">Ganancia Potencial</span><span class="modal-row-val green" id="mPotential">-</span></div>
+      </div>
+      <button class="modal-close-btn" onclick="closeModal()">CERRAR TICKET 🐸</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="logo">
+      <span class="logo-frog-text">🐸</span>
+      <div><div class="logo-text">RANI<span>BET</span></div></div>
+    </div>
+    <nav class="header-center" id="headerNav">
+      <button class="hc-pill active-pg" onclick="showPage('sports',this)">⚽ Deportes</button>
+      <button class="hc-pill" onclick="showPage('history',this)">📋 Historial</button>
+      <button class="hc-pill" onclick="showPage('won',this)">🏆 Ganadas</button>
+      <button class="hc-pill" onclick="showPage('ranking',this)">🐸 Ranking</button>
+      <button class="hc-pill" onclick="showPage('live',this)">🔴 En Vivo</button>
+    </nav>
+    <div class="header-right">
+      <div class="balance-box">
+        <div class="balance-label">🐸 RANICOINS</div>
+        <div class="balance-val"><span class="coin-mark">R</span><span id="balAmt">500</span></div>
+      </div>
+      <div class="promo-redeem">
+        <input id="promoCodeInput" maxlength="24" placeholder="RANADT" oninput="normalizePromoCodeInput()">
+        <button onclick="redeemPromoCode()">CANJEAR CÓDIGO</button>
+      </div>
+      <button class="btn-dep" onclick="addCoins()">+ RECARGAR</button>
+      <div class="auth-widget" id="authWidget">
+        <div id="googleSignInBtn"></div>
+        <button class="user-info-pill hidden" id="userInfoPill" onclick="signOutUser()">
+          <span class="uip-avatar" id="userAvatar">🐸</span>
+          <span class="uip-copy">
+            <span class="uip-name" id="userName">Rana</span>
+            <span class="uip-handle">Salir</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker"><div class="ticker-inner" id="tickerInner"></div></div>
+
+  <nav class="subnav" id="subNav">
+    <button class="snav-item active" onclick="filterLeague('all',this)"><span class="snav-icon">🏆</span>Todos</button>
+    <button class="snav-item" onclick="filterLeague('liga1',this)"><span class="snav-icon">🇵🇪</span>Liga 1</button>
+    <button class="snav-item" onclick="filterLeague('champions',this)"><span class="snav-icon">⭐</span>Champions</button>
+    <button class="snav-item" onclick="filterLeague('libertadores',this)"><span class="snav-icon">🌎</span>Libertadores</button>
+  </nav>
+
+  <div class="layout">
+    <main class="main">
+      <section class="page active" id="page-sports">
+        <div class="matches-list" id="matchesList"></div>
+      </section>
+
+      <section class="page" id="page-history">
+        <div class="page-header"><div class="page-title">HISTORIAL DE <span>APUESTAS</span></div><div class="page-note">🐸 Tus picks RANIBET</div></div>
+        <div class="stats-bar">
+          <div class="stat-cell"><div class="stat-num" id="statTotal">0</div><div class="stat-lbl">Total Tickets</div></div>
+          <div class="stat-cell"><div class="stat-num" id="statWon">0</div><div class="stat-lbl">Ganadas</div></div>
+          <div class="stat-cell"><div class="stat-num" id="statRate">0%</div><div class="stat-lbl">% Acierto</div></div>
+          <div class="stat-cell"><div class="stat-num" id="statProfit">R0</div><div class="stat-lbl">Ganancia Neta</div></div>
+        </div>
+        <div class="filter-row">
+          <button class="filter-pill active" onclick="filterHistory(null,this)">Todas</button>
+          <button class="filter-pill" onclick="filterHistory('WON',this)">✅ Ganadas</button>
+          <button class="filter-pill" onclick="filterHistory('LOST',this)">❌ Perdidas</button>
+          <button class="filter-pill" onclick="filterHistory('PENDING',this)">⏳ Pendientes</button>
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </section>
+
+      <section class="page" id="page-won">
+        <div class="page-header"><div class="page-title">APUESTAS <span>GANADAS</span> 🏆</div></div>
+        <div class="stats-bar">
+          <div class="stat-cell"><div class="stat-num" id="wonCount">0</div><div class="stat-lbl">Tickets ganados</div></div>
+          <div class="stat-cell"><div class="stat-num" id="wonCoins">R0</div><div class="stat-lbl">Total cobrado</div></div>
+          <div class="stat-cell"><div class="stat-num" id="wonBestOdd">-</div><div class="stat-lbl">Mejor cuota</div></div>
+          <div class="stat-cell"><div class="stat-num" id="wonStreak">0</div><div class="stat-lbl">Racha actual</div></div>
+        </div>
+        <div class="history-list" id="wonList"></div>
+      </section>
+
+      <section class="page" id="page-ranking">
+        <div class="ranking-header">
+          <div class="rh-title">🐸 RANKING TIPSTER SEMANAL</div>
+          <div class="rh-sub"><span>Semana del 27 Abr - 3 May 2026</span><span class="rh-week">SEMANA 18</span></div>
+        </div>
+        <div class="rank-legend">
+          <div class="rleg-cell"><div class="rleg-num" id="rlTotal">0</div><div class="rleg-lbl">Tipsters</div></div>
+          <div class="rleg-cell"><div class="rleg-num" id="rlAvgRate">0%</div><div class="rleg-lbl">% Acierto Prom.</div></div>
+          <div class="rleg-cell"><div class="rleg-num" id="rlTopProfit">R0</div><div class="rleg-lbl">Mejor Ganancia</div></div>
+        </div>
+        <div class="rank-list" id="rankList"></div>
+      </section>
+
+      <section class="page" id="page-live">
+        <div class="page-header">
+          <div class="page-title">⚡ PARTIDOS <span>EN VIVO</span></div>
+          <div class="live-status"><span></span>ACTUALIZANDO</div>
+        </div>
+        <div class="matches-list" id="liveMatchList"></div>
+      </section>
+    </main>
+
+    <aside class="sidebar" id="ticketSidebar">
+      <div class="ticket-head">
+        <div class="ticket-title-row"><span class="ticket-frog">🐸</span><span class="ticket-title-txt">MI TICKET</span><span class="ticket-badge" id="ticketBadge">0</span></div>
+        <div class="ticket-type-toggle">
+          <button class="ttt-btn active" id="tttSingle" onclick="setBetType('simple')">SIMPLE</button>
+          <button class="ttt-btn" id="tttCombo" onclick="setBetType('combinada')">COMBINADA</button>
+        </div>
+      </div>
+      <div id="ticketBody" class="ticket-body"></div>
+      <div id="ticketFoot"></div>
+    </aside>
+  </div>
+
+  <script src="js/engine.js"></script>
 </body>
 </html>

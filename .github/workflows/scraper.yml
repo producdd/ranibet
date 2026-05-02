@@ -25,25 +25,218 @@ jobs:
           from selenium.webdriver.common.by import By
           from selenium.webdriver.chrome.options import Options
           from selenium.webdriver.chrome.service import Service
+          from selenium.webdriver.support.ui import WebDriverWait
+          from selenium.webdriver.support import expected_conditions as EC
+          from selenium.common.exceptions import NoSuchElementException
           import json, time, re
-          from datetime import datetime
+          from datetime import datetime, timedelta
+
+          def parse_kickoff(time_text):
+              txt = (time_text or '').strip()
+              now = datetime.now()
+              low = txt.lower()
+
+              # Formatos comunes en Flashscore:
+              # - "03.05. 15:30"
+              # - "Hoy 15:30" / "Mañana 15:30"
+              # - "15:30"
+              # - "Aplazado" / "Finalizado" (sin hora)
+
+              if not txt or any(word in low for word in ['aplazado', 'cancelado', 'finalizado', 'postp']):
+                  return None, ''
+
+              m_relative = re.search(r'(hoy|mañana|manana)\s+(\d{1,2}):(\d{2})', low)
+              if m_relative:
+                  ref, hour, minute = m_relative.groups()
+                  hour = int(hour)
+                  minute = int(minute)
+                  base = now if ref == 'hoy' else now + timedelta(days=1)
+                  dt = datetime(base.year, base.month, base.day, hour, minute)
+                  return dt, f'{hour:02d}:{minute:02d}'
+
+              m_full = re.search(r'(\d{2})\.(\d{2})\.\s*(\d{1,2}):(\d{2})', txt)
+              if m_full:
+                  day, month, hour, minute = map(int, m_full.groups())
+                  year = now.year
+                  # Si la fecha ya pasó mucho, probablemente corresponde al próximo año.
+                  if (month, day) < (now.month, now.day - 1):
+                      year += 1
+                  dt = datetime(year, month, day, hour, minute)
+                  return dt, f'{hour:02d}:{minute:02d}'
+
+              m_hour = re.search(r'(\d{1,2}):(\d{2})', txt)
+              if m_hour:
+                  hour, minute = map(int, m_hour.groups())
+                  dt = datetime(now.year, now.month, now.day, hour, minute)
+                  return dt, f'{hour:02d}:{minute:02d}'
+
+              return None, ''
+
+          def first_text(elem, selectors):
+              for selector in selectors:
+                  try:
+                      value = elem.find_element(By.CSS_SELECTOR, selector).text.strip()
+                      if value:
+                          return value
+                  except NoSuchElementException:
+                      pass
+                  except:
+                      pass
+              return ''
+
+          def accept_cookies_if_present(driver):
+              try:
+                  btn = WebDriverWait(driver, 4).until(
+                      EC.element_to_be_clickable((By.ID, 'onetrust-accept-btn-handler'))
+                  )
+                  btn.click()
+                  time.sleep(1)
+              except:
+                  pass
+
+          def extract_odds_from_match(elem):
+              odd_cells = elem.find_elements(By.CSS_SELECTOR, '.event__odd')
+              values = []
+              details = []
+              for cell in odd_cells:
+                  value = cell.text.strip()
+                  if not re.match(r'^\d+\.\d{2}$', value):
+                      continue
+                  label = (
+                      cell.get_attribute('title')
+                      or cell.get_attribute('aria-label')
+                      or cell.get_attribute('data-testid')
+                      or ''
+                  ).strip()
+                  values.append(value)
+                  details.append({'valor': value, 'meta': label})
+
+              if len(values) < 3:
+                  return {
+                      'cuota_local': '',
+                      'cuota_empate': '',
+                      'cuota_visitante': '',
+                      'mejor_cuota_local': '',
+                      'mejor_cuota_empate': '',
+                      'mejor_cuota_visitante': '',
+                      'odds_detalle': []
+                  }
+
+              triples = []
+              for i in range(0, len(values) - 2, 3):
+                  try:
+                      triples.append([float(values[i]), float(values[i + 1]), float(values[i + 2])])
+                  except:
+                      pass
+
+              if not triples:
+                  return {
+                      'cuota_local': values[0],
+                      'cuota_empate': values[1],
+                      'cuota_visitante': values[2],
+                      'mejor_cuota_local': values[0],
+                      'mejor_cuota_empate': values[1],
+                      'mejor_cuota_visitante': values[2],
+                      'odds_detalle': details
+                  }
+
+              first = triples[0]
+              best_h = max(t[0] for t in triples)
+              best_d = max(t[1] for t in triples)
+              best_a = max(t[2] for t in triples)
+
+              return {
+                  'cuota_local': f'{first[0]:.2f}',
+                  'cuota_empate': f'{first[1]:.2f}',
+                  'cuota_visitante': f'{first[2]:.2f}',
+                  'mejor_cuota_local': f'{best_h:.2f}',
+                  'mejor_cuota_empate': f'{best_d:.2f}',
+                  'mejor_cuota_visitante': f'{best_a:.2f}',
+                  'odds_detalle': details
+              }
+
           options = Options()
           options.add_argument('--headless=new')
           options.add_argument('--no-sandbox')
           options.binary_location = "/usr/bin/chromium-browser"
           service = Service('/usr/bin/chromedriver')
           driver = webdriver.Chrome(service=service, options=options)
-          driver.get('https://www.flashscore.pe/futbol/peru/liga-1/')
-          time.sleep(5)
+
+          competitions = [
+              ('Liga 1 Peruana', 'https://www.flashscore.pe/futbol/peru/liga-1/'),
+              ('Copa Libertadores', 'https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/'),
+              ('UEFA Champions League', 'https://www.flashscore.pe/futbol/europa/champions-league/partidos/')
+          ]
+
           todos = []
-          for elem in driver.find_elements(By.CSS_SELECTOR, '.event__match')[:15]:
+          for torneo, url in competitions:
               try:
-                  local = elem.find_element(By.CSS_SELECTOR, '[class*="homeParticipant"]').text.strip()
-                  visitante = elem.find_element(By.CSS_SELECTOR, '[class*="awayParticipant"]').text.strip()
-                  odds = elem.find_elements(By.CSS_SELECTOR, '.event__odd')
-                  odds_textos = [o.text.strip() for o in odds if re.match(r'^\d+\.\d{2}$', o.text.strip())]
-                  todos.append({'torneo': 'Liga 1 Peruana', 'local': local, 'visitante': visitante, 'cuota_local': odds_textos[0] if odds_textos else '', 'cuota_empate': odds_textos[1] if len(odds_textos)>1 else '', 'cuota_visitante': odds_textos[2] if len(odds_textos)>2 else '', 'fecha': str(datetime.now())})
-              except: pass
+                  urls_to_try = [url]
+                  # Flashscore a veces muestra la vista resumen sin listar partidos directamente.
+                  # Para Champions/Libertadores probamos también URL base como fallback.
+                  if 'champions-league/partidos/' in url:
+                      urls_to_try.append('https://www.flashscore.pe/futbol/europa/champions-league/')
+                  if 'copa-libertadores/partidos/' in url:
+                      urls_to_try.append('https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/')
+
+                  matches = []
+                  for source_url in urls_to_try:
+                      driver.get(source_url)
+                      accept_cookies_if_present(driver)
+                      try:
+                          WebDriverWait(driver, 12).until(
+                              EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.event__match'))
+                          )
+                      except:
+                          time.sleep(4)
+                      matches = driver.find_elements(By.CSS_SELECTOR, '.event__match')
+                      if matches:
+                          break
+
+                  for elem in matches[:30]:
+                      try:
+                          local = first_text(elem, [
+                              '.event__participant--home',
+                              '[class*="event__homeParticipant"]',
+                              '[class*="homeParticipant"]'
+                          ])
+                          visitante = first_text(elem, [
+                              '.event__participant--away',
+                              '[class*="event__awayParticipant"]',
+                              '[class*="awayParticipant"]'
+                          ])
+                          if not local or not visitante:
+                              continue
+
+                          time_text = first_text(elem, [
+                              '.event__time',
+                              '[class*="event__stage"]',
+                              '[class*="event__round"]'
+                          ])
+                          kickoff_dt, kickoff_hour = parse_kickoff(time_text)
+                          odds_data = extract_odds_from_match(elem)
+                          todos.append({
+                              'torneo': torneo,
+                              'local': local,
+                              'visitante': visitante,
+                              'cuota_local': odds_data['cuota_local'],
+                              'cuota_empate': odds_data['cuota_empate'],
+                              'cuota_visitante': odds_data['cuota_visitante'],
+                              'mejor_cuota_local': odds_data['mejor_cuota_local'],
+                              'mejor_cuota_empate': odds_data['mejor_cuota_empate'],
+                              'mejor_cuota_visitante': odds_data['mejor_cuota_visitante'],
+                              'odds_detalle': odds_data['odds_detalle'],
+                              'hora_partido': kickoff_hour,
+                              'fecha_partido': kickoff_dt.strftime('%Y-%m-%d %H:%M:%S') if kickoff_dt else '',
+                              'match_datetime': kickoff_dt.isoformat() if kickoff_dt else '',
+                              'time_text': time_text,
+                              'fuente_url': url,
+                              'fecha_scrape': datetime.now().isoformat()
+                          })
+                      except:
+                          pass
+              except:
+                  pass
           driver.quit()
           with open('partidos.json', 'w') as f:
               json.dump(todos, f, indent=2)
