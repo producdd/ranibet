@@ -992,17 +992,34 @@ function extractMinuteNumber(minuteStr){
   return parseInt(str, 10) || 0;
 }
 
+function cleanupLiveCache(){
+  const liveIds = new Set(MATCHES.filter(m => m.live).map(m => m.id));
+  Object.keys(liveMinuteCache).forEach(id => {
+    if(!liveIds.has(Number(id))){
+      delete liveMinuteCache[id];
+    }
+  });
+}
+
 function incrementLiveMinutes(){
   MATCHES.forEach(m => {
-    if(!m.live) return;
+    if(!m.live || !m.minute) return;
+    
+    const currentMinuteFromScraper = extractMinuteNumber(m.minute);
     
     if(!(m.id in liveMinuteCache)){
-      liveMinuteCache[m.id] = extractMinuteNumber(m.minute);
+      liveMinuteCache[m.id] = currentMinuteFromScraper;
     }
     
-    liveMinuteCache[m.id]++;
-    const newMinute = String(liveMinuteCache[m.id]);
+    const cachedMinute = liveMinuteCache[m.id];
     
+    if(cachedMinute >= currentMinuteFromScraper){
+      liveMinuteCache[m.id] = cachedMinute + 1;
+    } else {
+      liveMinuteCache[m.id] = currentMinuteFromScraper + 1;
+    }
+    
+    const newMinute = String(liveMinuteCache[m.id]);
     updateMatchDOMMinute(m.id, newMinute);
   });
 }
@@ -1091,6 +1108,8 @@ async function pollMatchUpdates(){
     
     replaceScrapedLeagueMatches(data);
     
+    cleanupLiveCache();
+    
     detectedGoalsList.forEach(goal => {
       const match = MATCHES.find(m => m.id === goal.matchId);
       if(match){
@@ -1104,6 +1123,9 @@ async function pollMatchUpdates(){
     
     if(document.getElementById('page-live')?.classList.contains('active')){
       renderLive();
+    }
+    if(document.getElementById('page-sports')?.classList.contains('active')){
+      renderMatches(currentLeague);
     }
   }catch(error){
     console.warn('Error en polling de goles:', error);
@@ -1120,10 +1142,17 @@ buildTicker();
 renderMatches('all');
 renderTicket();
 bindPromoCodeInput();
-syncLeaguesFromFlashscore(false);
-storeCurrentScores();
 
-// Reloj en vivo: incrementa minutos cada segundo para partidos en vivo
+// Sync inmediato con Flashscore al cargar
+syncLeaguesFromFlashscore(false).then(() => {
+  storeCurrentScores();
+  cleanupLiveCache();
+  buildTicker();
+  renderMatches(currentLeague);
+  renderLive();
+});
+
+// Reloj en vivo: incrementa minutos cada segundo para partidos en vivo (resincronizado con Flashscore)
 liveClockIntervalId = setInterval(incrementLiveMinutes, 1000);
 
 // Polling cada 60 segundos con detección de goles
