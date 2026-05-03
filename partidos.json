@@ -10,15 +10,15 @@
     "mejor_cuota_empate": "",
     "mejor_cuota_visitante": "",
     "odds_detalle": [],
-    "hora_partido": "11:00",
-    "fecha_partido": "2026-05-03 11:00:00",
-    "match_datetime": "2026-05-03T11:00:00-05:00",
-    "live": false,
-    "minute": "11",
-    "score": "",
-    "time_text": "11:00",
+    "hora_partido": "",
+    "fecha_partido": "",
+    "match_datetime": "",
+    "live": true,
+    "minute": "53",
+    "score": "2-2",
+    "time_text": "53",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:56.916044-05:00"
+    "fecha_scrape": "2026-05-03T12:13:11.438093-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -39,7 +39,7 @@
     "score": "",
     "time_text": "13:15",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:57.218635-05:00"
+    "fecha_scrape": "2026-05-03T12:13:11.722717-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -60,7 +60,7 @@
     "score": "",
     "time_text": "15:30",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:57.359568-05:00"
+    "fecha_scrape": "2026-05-03T12:13:11.899819-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -81,7 +81,7 @@
     "score": "",
     "time_text": "18:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:57.506610-05:00"
+    "fecha_scrape": "2026-05-03T12:13:12.082019-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -102,7 +102,7 @@
     "score": "",
     "time_text": "04.05. 13:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:57.674373-05:00"
+    "fecha_scrape": "2026-05-03T12:13:12.299566-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -123,7 +123,7 @@
     "score": "",
     "time_text": "08.05. 15:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:57.803840-05:00"
+    "fecha_scrape": "2026-05-03T12:13:12.462755-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -144,7 +144,7 @@
     "score": "",
     "time_text": "09.05. 13:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:57.934077-05:00"
+    "fecha_scrape": "2026-05-03T12:13:12.615828-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +165,7 @@
     "score": "",
     "time_text": "09.05. 15:15",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.071571-05:00"
+    "fecha_scrape": "2026-05-03T12:13:12.765772-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -186,7 +186,7 @@
     "score": "",
     "time_text": "09.05. 20:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.202243-05:00"
+    "fecha_scrape": "2026-05-03T12:13:12.926045-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -207,7 +207,7 @@
     "score": "",
     "time_text": "10.05. 13:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.335949-05:00"
+    "fecha_scrape": "2026-05-03T12:13:13.096288-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -228,7 +228,7 @@
     "score": "",
     "time_text": "10.05. 15:15",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.470253-05:00"
+    "fecha_scrape": "2026-05-03T12:13:13.242823-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -249,7 +249,7 @@
     "score": "",
     "time_text": "10.05. 17:30",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.603915-05:00"
+    "fecha_scrape": "2026-05-03T12:13:13.402208-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -270,7 +270,7 @@
     "score": "",
     "time_text": "11.05. 13:00",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.739952-05:00"
+    "fecha_scrape": "2026-05-03T12:13:13.557368-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -291,7 +291,7 @@
     "score": "",
     "time_text": "11.05. 20:30",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.872227-05:00"
+    "fecha_scrape": "2026-05-03T12:13:13.716250-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -312,7 +312,7 @@
     "score": "2-1",
     "time_text": "02.05.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:58.996896-05:00"
+    "fecha_scrape": "2026-05-03T12:13:13.871025-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -333,7 +333,7 @@
     "score": "1-0",
     "time_text": "02.05.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:59.119327-05:00"
+    "fecha_scrape": "2026-05-03T12:13:14.027802-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -354,7 +354,7 @@
     "score": "1-0",
     "time_text": "02.05.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:59.247745-05:00"
+    "fecha_scrape": "2026-05-03T12:13:14.177839-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -375,7 +375,7 @@
     "score": "3-2",
     "time_text": "02.05.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:59.367228-05:00"
+    "fecha_scrape": "2026-05-03T12:13:14.861630-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -396,7 +396,7 @@
     "score": "1-0",
     "time_text": "27.04.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:59.487431-05:00"
+    "fecha_scrape": "2026-05-03T12:13:15.033172-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -417,7 +417,7 @@
     "score": "4-0",
     "time_text": "27.04.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:59.609686-05:00"
+    "fecha_scrape": "2026-05-03T12:13:15.196229-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -438,7 +438,7 @@
     "score": "1-2",
     "time_text": "26.04.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:16:59.735595-05:00"
+    "fecha_scrape": "2026-05-03T12:13:15.357185-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -459,7 +459,7 @@
     "score": "0-1",
     "time_text": "26.04.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:17:00.062434-05:00"
+    "fecha_scrape": "2026-05-03T12:13:15.512030-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -480,7 +480,7 @@
     "score": "2-1",
     "time_text": "26.04.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:17:00.440873-05:00"
+    "fecha_scrape": "2026-05-03T12:13:15.668179-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -501,7 +501,7 @@
     "score": "2-2",
     "time_text": "26.04.",
     "fuente_url": "https://www.flashscore.pe/futbol/peru/liga-1/",
-    "fecha_scrape": "2026-05-03T09:17:00.572975-05:00"
+    "fecha_scrape": "2026-05-03T12:13:15.811107-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -522,7 +522,7 @@
     "score": "",
     "time_text": "05.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:07.933597-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.151316-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -543,7 +543,7 @@
     "score": "",
     "time_text": "05.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.073569-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.283677-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -564,7 +564,7 @@
     "score": "",
     "time_text": "05.05. 19:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.211803-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.440892-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -585,7 +585,7 @@
     "score": "",
     "time_text": "05.05. 19:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.349012-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.576338-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -606,7 +606,7 @@
     "score": "",
     "time_text": "05.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.492862-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.707468-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -627,7 +627,7 @@
     "score": "",
     "time_text": "06.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.634771-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.840224-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -648,7 +648,7 @@
     "score": "",
     "time_text": "06.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.850070-05:00"
+    "fecha_scrape": "2026-05-03T12:13:22.972212-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -669,7 +669,7 @@
     "score": "",
     "time_text": "06.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:08.986430-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.104168-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -690,7 +690,7 @@
     "score": "",
     "time_text": "06.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:09.125561-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.237483-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -711,7 +711,7 @@
     "score": "",
     "time_text": "06.05. 21:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:09.264163-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.375348-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -732,7 +732,7 @@
     "score": "",
     "time_text": "06.05. 21:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:09.406365-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.504964-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -753,7 +753,7 @@
     "score": "",
     "time_text": "07.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:09.808925-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.636181-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -774,7 +774,7 @@
     "score": "",
     "time_text": "07.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:09.972437-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.768347-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -795,7 +795,7 @@
     "score": "",
     "time_text": "07.05. 19:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.112045-05:00"
+    "fecha_scrape": "2026-05-03T12:13:23.898641-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -816,7 +816,7 @@
     "score": "",
     "time_text": "07.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.242349-05:00"
+    "fecha_scrape": "2026-05-03T12:13:24.030530-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -837,7 +837,7 @@
     "score": "",
     "time_text": "07.05. 21:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.377349-05:00"
+    "fecha_scrape": "2026-05-03T12:13:24.161191-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -858,7 +858,7 @@
     "score": "",
     "time_text": "19.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.507910-05:00"
+    "fecha_scrape": "2026-05-03T12:13:24.291203-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -879,7 +879,7 @@
     "score": "",
     "time_text": "19.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.636806-05:00"
+    "fecha_scrape": "2026-05-03T12:13:24.423602-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -900,7 +900,7 @@
     "score": "",
     "time_text": "19.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.771436-05:00"
+    "fecha_scrape": "2026-05-03T12:13:24.567147-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -921,7 +921,7 @@
     "score": "",
     "time_text": "19.05. 19:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:10.899850-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.082283-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -942,7 +942,7 @@
     "score": "",
     "time_text": "19.05. 19:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.030934-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.231584-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -963,7 +963,7 @@
     "score": "",
     "time_text": "19.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.167664-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.371693-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -984,7 +984,7 @@
     "score": "",
     "time_text": "19.05. 21:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.301442-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.521704-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1005,7 +1005,7 @@
     "score": "",
     "time_text": "20.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.430852-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.657709-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1026,7 +1026,7 @@
     "score": "",
     "time_text": "20.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.560261-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.793296-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1047,7 +1047,7 @@
     "score": "",
     "time_text": "20.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.693494-05:00"
+    "fecha_scrape": "2026-05-03T12:13:25.938251-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1068,7 +1068,7 @@
     "score": "",
     "time_text": "20.05. 19:30",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.831101-05:00"
+    "fecha_scrape": "2026-05-03T12:13:26.074265-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1089,7 +1089,7 @@
     "score": "",
     "time_text": "20.05. 21:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:11.960844-05:00"
+    "fecha_scrape": "2026-05-03T12:13:26.218722-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1110,7 +1110,7 @@
     "score": "",
     "time_text": "20.05. 21:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:12.091895-05:00"
+    "fecha_scrape": "2026-05-03T12:13:26.355031-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1131,7 +1131,7 @@
     "score": "",
     "time_text": "21.05. 17:00",
     "fuente_url": "https://www.flashscore.pe/futbol/sudamerica/copa-libertadores/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:12.230431-05:00"
+    "fecha_scrape": "2026-05-03T12:13:26.492724-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1152,7 +1152,7 @@
     "score": "",
     "time_text": "05.05. 14:00\nPREVIEW",
     "fuente_url": "https://www.flashscore.pe/futbol/europa/champions-league/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:18.399672-05:00"
+    "fecha_scrape": "2026-05-03T12:13:32.333260-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1173,6 +1173,6 @@
     "score": "",
     "time_text": "06.05. 14:00\nPREVIEW",
     "fuente_url": "https://www.flashscore.pe/futbol/europa/champions-league/partidos/",
-    "fecha_scrape": "2026-05-03T09:17:18.527964-05:00"
+    "fecha_scrape": "2026-05-03T12:13:32.478243-05:00"
   }
 ]
