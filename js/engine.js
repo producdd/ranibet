@@ -1001,9 +1001,22 @@ function cleanupLiveCache(){
   });
 }
 
+function isReallyLiveFromFlashscore(match){
+  if(!match.live) return false;
+  if(!match.minute || !match.score) return false;
+  
+  const minute = extractMinuteNumber(match.minute);
+  if(minute < 0 || minute > 150) return false;
+  
+  const scoreRegex = /^\d+-\d+$/;
+  if(!scoreRegex.test(match.score)) return false;
+  
+  return true;
+}
+
 function incrementLiveMinutes(){
   MATCHES.forEach(m => {
-    if(!m.live || !m.minute) return;
+    if(!isReallyLiveFromFlashscore(m)) return;
     
     const currentMinuteFromScraper = extractMinuteNumber(m.minute);
     
