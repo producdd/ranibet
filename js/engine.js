@@ -955,7 +955,7 @@ async function syncLeaguesFromFlashscore(notify = false){
 }
 
 function keepOnlyScraperLeaguesInMemory(){
-  // Modo estricto: mostrar solo partidos que vienen del scraping (partidos.json).
+  // Limpia completamente los datos demo al inicio
   MATCHES.splice(0, MATCHES.length);
 }
 
@@ -1004,37 +1004,20 @@ function cleanupLiveCache(){
 function isReallyLiveFromFlashscore(match){
   if(!match.live) return false;
   if(!match.minute || !match.score) return false;
-  
+
   const minute = extractMinuteNumber(match.minute);
   if(minute < 0 || minute > 150) return false;
-  
+
   const scoreRegex = /^\d+-\d+$/;
   if(!scoreRegex.test(match.score)) return false;
-  
+
   return true;
 }
 
 function incrementLiveMinutes(){
-  MATCHES.forEach(m => {
-    if(!isReallyLiveFromFlashscore(m)) return;
-    
-    const currentMinuteFromScraper = extractMinuteNumber(m.minute);
-    
-    if(!(m.id in liveMinuteCache)){
-      liveMinuteCache[m.id] = currentMinuteFromScraper;
-    }
-    
-    const cachedMinute = liveMinuteCache[m.id];
-    
-    if(cachedMinute >= currentMinuteFromScraper){
-      liveMinuteCache[m.id] = cachedMinute + 1;
-    } else {
-      liveMinuteCache[m.id] = currentMinuteFromScraper + 1;
-    }
-    
-    const newMinute = String(liveMinuteCache[m.id]);
-    updateMatchDOMMinute(m.id, newMinute);
-  });
+  // NO incrementa automáticamente - solo sincroniza con Flashscore
+  // El polling cada 60 segundos actualiza los minutos desde Flashscore
+  return;
 }
 
 function updateMatchDOMMinute(matchId, minute){
@@ -1116,24 +1099,32 @@ async function pollMatchUpdates(){
     const response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
     if(!response.ok) return;
     const data = await response.json();
-    
+
     const detectedGoalsList = detectedGoals();
-    
+
+    // Reemplaza completamente los datos con Flashscore
     replaceScrapedLeagueMatches(data);
-    
+
+    // Limpia caché de partidos terminados
     cleanupLiveCache();
-    
+
+    // Actualiza DOM con datos frescos de Flashscore
+    MATCHES.forEach(match => {
+      if(match.live && match.minute && match.score){
+        updateMatchDOM(match.id, match.minute, match.score);
+      }
+    });
+
     detectedGoalsList.forEach(goal => {
       const match = MATCHES.find(m => m.id === goal.matchId);
       if(match){
-        updateMatchDOM(match.id, match.minute, match.score);
         triggerGoalAlert(goal);
       }
     });
-    
+
     storeCurrentScores();
     buildTicker();
-    
+
     if(document.getElementById('page-live')?.classList.contains('active')){
       renderLive();
     }
@@ -1150,25 +1141,21 @@ window.RaniScraping = {loadScrapedMatches, MATCHES};
 window.RaniLogros = {renderRanking, renderWon, saveAchievement, userAchievements:[]};
 window.RaniCoins = {get balance(){return balance;}, addCoins, placeBet, redeemPromoCode};
 
+// Limpia datos demo y carga datos reales de Flashscore
 keepOnlyScraperLeaguesInMemory();
-buildTicker();
-renderMatches('all');
-renderTicket();
-bindPromoCodeInput();
 
-// Sync inmediato con Flashscore al cargar
+// Carga inicial desde Flashscore
 syncLeaguesFromFlashscore(false).then(() => {
   storeCurrentScores();
   cleanupLiveCache();
   buildTicker();
-  renderMatches(currentLeague);
+  renderMatches('all');
   renderLive();
+  renderTicket();
+  bindPromoCodeInput();
 });
 
-// Reloj en vivo: incrementa minutos cada segundo para partidos en vivo (resincronizado con Flashscore)
-liveClockIntervalId = setInterval(incrementLiveMinutes, 1000);
-
-// Polling cada 60 segundos con detección de goles
+// Polling cada 60 segundos con actualización completa desde Flashscore
 pollingIntervalId = setInterval(pollMatchUpdates, LIGA1_AUTO_REFRESH_MS);
 
 initSupabaseProfile().then(() => {
