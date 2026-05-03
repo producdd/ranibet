@@ -42,6 +42,7 @@ let balance = 500;
 let betsHistory = [...DEMO_HISTORY];
 let currentLeague = 'all';
 const LIGA1_AUTO_REFRESH_MS = 60000;
+const GITHUB_RAW_SCRAPER_URL = 'https://raw.githubusercontent.com/producdd/ranibet/master/partidos.json';
 
 async function initSupabaseProfile(){
   if(!supabaseClient){
@@ -793,6 +794,44 @@ function toDateKey(dt){
   return `${y}-${m}-${d}`;
 }
 
+function getLatestScrapeTimestamp(rows){
+  let latest = 0;
+  (Array.isArray(rows) ? rows : []).forEach(row => {
+    const scrapeDate = parseScraperMatchDate(row?.fecha_scrape);
+    if(scrapeDate && Number.isFinite(scrapeDate.getTime())){
+      latest = Math.max(latest, scrapeDate.getTime());
+    }
+  });
+  return latest ? new Date(latest) : null;
+}
+
+function getLatestScrapeAgeMinutes(rows){
+  const latest = getLatestScrapeTimestamp(rows);
+  if(!latest) return Infinity;
+  return (Date.now() - latest.getTime()) / 60000;
+}
+
+async function fetchScraperJson(url){
+  try{
+    const response = await fetch(url, {cache:'no-store'});
+    if(!response.ok) return null;
+    const data = await response.json();
+    if(!Array.isArray(data)) return null;
+    return data;
+  }catch(error){
+    console.warn('No se pudo leer JSON de scraper:', url, error);
+    return null;
+  }
+}
+
+function isStaleLiveRow(item){
+  if(!item?.live) return false;
+  const scrapeDate = parseScraperMatchDate(item?.fecha_scrape);
+  if(!scrapeDate || !Number.isFinite(scrapeDate.getTime())) return false;
+  const age = (Date.now() - scrapeDate.getTime()) / 60000;
+  return age > 10;
+}
+
 function formatLiga1KickoffLabel(item, matchDate){
   const hourRaw = String(item?.hora_partido || '').trim();
   const fallbackHour = Number.isFinite(matchDate?.getTime())
@@ -870,14 +909,22 @@ function createMatchFromScraper(item, idx, nextId){
   const league = resolveScraperLeague(item);
   if(!league || !SCRAPER_LEAGUE_CONFIG[league]) return null;
   const matchDate = parseScraperMatchDate(item);
+  const scrapeDate = parseScraperMatchDate(item?.fecha_scrape);
+  const isLiveSource = item?.live === true;
+  const staleLive = isStaleLiveRow(item);
   const cfg = SCRAPER_LEAGUE_CONFIG[league];
+
+  if(isLiveSource && staleLive && !matchDate){
+    // Si el row vive es viejo y no hay fecha de partido confiable, descartamos.
+    return null;
+  }
 
   const oddHome = Number(item?.mejor_cuota_local ?? item?.cuota_local);
   const oddDraw = Number(item?.mejor_cuota_empate ?? item?.cuota_empate);
   const oddAway = Number(item?.mejor_cuota_visitante ?? item?.cuota_visitante);
-  const isLive = item?.live === true;
   const liveMinute = String(item?.minute || '').replace(/[^0-9+]/g, '');
   const liveScore = String(item?.score || '').replace(':', '-').trim();
+  const isLive = isLiveSource && !staleLive;
 
   return {
     id: nextId + idx,
@@ -895,7 +942,8 @@ function createMatchFromScraper(item, idx, nextId){
     },
     live: isLive,
     score: isLive ? (liveScore || '0-0') : undefined,
-    minute: isLive ? (liveMinute || '0') : undefined
+    minute: isLive ? (liveMinute || '0') : undefined,
+    fecha_scrape: scrapeDate ? scrapeDate.toISOString() : undefined
   };
 }
 
@@ -944,11 +992,28 @@ function replaceScrapedLeagueMatches(scrapedRows){
 
 async function syncLeaguesFromFlashscore(notify = false){
   try{
-    const response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
-    if(!response.ok) return;
-    const data = await response.json();
+    const localData = await fetchScraperJson(`./partidos.json?ts=${Date.now()}`);
+    const localAge = localData ? getLatestScrapeAgeMinutes(localData) : Infinity;
+    let data = localData;
+
+    if(localAge > 8){
+      const remoteData = await fetchScraperJson(`${GITHUB_RAW_SCRAPER_URL}?ts=${Date.now()}`);
+      const remoteAge = remoteData ? getLatestScrapeAgeMinutes(remoteData) : Infinity;
+      if(remoteData && remoteAge <= localAge){
+        data = remoteData;
+      }
+    }
+
+    if(!data) return;
     const changed = replaceScrapedLeagueMatches(data);
-    if(changed && notify) showToast('Ligas actualizadas desde Flashscore 🔄','success');
+    if(changed){
+      cleanupLiveCache();
+      storeCurrentScores();
+      buildTicker();
+      if(document.getElementById('page-live')?.classList.contains('active')) renderLive();
+      if(document.getElementById('page-sports')?.classList.contains('active')) renderMatches(currentLeague);
+      if(notify) showToast('Ligas actualizadas desde Flashscore 🔄','success');
+    }
   }catch(error){
     console.warn('No se pudo actualizar ligas desde partidos.json', error);
   }
