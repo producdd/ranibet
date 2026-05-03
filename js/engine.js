@@ -959,6 +959,157 @@ function keepOnlyScraperLeaguesInMemory(){
   MATCHES.splice(0, MATCHES.length);
 }
 
+// 🐸 SISTEMA DE POLLING, RELOJ EN VIVO Y DETECCIÓN DE GOLES
+let previousScores = {};
+let pollingIntervalId = null;
+let liveClockIntervalId = null;
+let liveMinuteCache = {}; // Almacena minuto actual local para cada partido en vivo
+
+function storeCurrentScores(){
+  previousScores = {};
+  MATCHES.forEach(m => {
+    if(m.live && m.score) previousScores[m.id] = m.score;
+  });
+}
+
+function parseScore(scoreStr){
+  if(!scoreStr) return null;
+  const match = String(scoreStr).match(/(\d+)-(\d+)/);
+  if(!match) return null;
+  return {home: parseInt(match[1], 10), away: parseInt(match[2], 10)};
+}
+
+function hasGoalHappened(prevScore, currentScore){
+  if(!prevScore || !currentScore) return false;
+  const prevTotal = prevScore.home + prevScore.away;
+  const currTotal = currentScore.home + currentScore.away;
+  return currTotal > prevTotal;
+}
+
+function extractMinuteNumber(minuteStr){
+  if(!minuteStr) return 0;
+  const str = String(minuteStr).replace(/[^0-9+]/g, '');
+  return parseInt(str, 10) || 0;
+}
+
+function incrementLiveMinutes(){
+  MATCHES.forEach(m => {
+    if(!m.live) return;
+    
+    if(!(m.id in liveMinuteCache)){
+      liveMinuteCache[m.id] = extractMinuteNumber(m.minute);
+    }
+    
+    liveMinuteCache[m.id]++;
+    const newMinute = String(liveMinuteCache[m.id]);
+    
+    updateMatchDOMMinute(m.id, newMinute);
+  });
+}
+
+function updateMatchDOMMinute(matchId, minute){
+  const card = document.getElementById(`mc-${matchId}`);
+  if(!card) return;
+  
+  const minEl = card.querySelector('.score-min');
+  const badgeEl = card.querySelector('.match-time-badge');
+  
+  if(minEl) minEl.textContent = `MIN ${minute}`;
+  if(badgeEl) badgeEl.textContent = minute + "'";
+  
+  const tickerMinBadges = document.querySelectorAll('.ticker-min');
+  tickerMinBadges.forEach(badge => {
+    if(badge.textContent.match(String(matchId))){
+      badge.textContent = minute + "'";
+    }
+  });
+}
+
+function updateMatchDOM(matchId, minute, score){
+  const card = document.getElementById(`mc-${matchId}`);
+  if(!card) return;
+  
+  liveMinuteCache[matchId] = extractMinuteNumber(minute);
+  const minEl = card.querySelector('.score-min');
+  const scoreEl = card.querySelector('.score-live');
+  const badgeEl = card.querySelector('.match-time-badge');
+  
+  if(minEl) minEl.textContent = `MIN ${minute}`;
+  if(scoreEl) scoreEl.textContent = score;
+  if(badgeEl) badgeEl.textContent = minute + "'";
+  
+  const tickerItems = document.querySelectorAll('.ticker-item');
+  tickerItems.forEach(item => {
+    const teams = item.querySelector('.ticker-teams');
+    const scoreBadge = item.querySelector('.ticker-score');
+    if(teams && teams.textContent.includes(document.querySelector(`#mc-${matchId} .team-name`)?.textContent || '')){
+      if(scoreBadge) scoreBadge.textContent = score;
+    }
+  });
+}
+
+function detectedGoals(){
+  const goals = [];
+  MATCHES.forEach(m => {
+    if(!m.live || !m.score) return;
+    
+    const prevScore = previousScores[m.id];
+    const currScore = parseScore(m.score);
+    
+    if(prevScore && currScore && hasGoalHappened(parseScore(prevScore), currScore)){
+      goals.push({
+        matchId: m.id,
+        match: `${m.home} vs ${m.away}`,
+        prevScore,
+        currentScore: m.score,
+        minute: m.minute
+      });
+    }
+  });
+  
+  return goals;
+}
+
+function triggerGoalAlert(goal){
+  showToast(`⚽ ¡EXITO !GOLAZO! 🐸⚽ ${goal.match} (${goal.currentScore}) - MIN ${goal.minute}`, 'success');
+  
+  if('Notification' in window && Notification.permission === 'granted'){
+    new Notification('🐸 RANIBET - ¡GOLAZO!', {
+      body: `${goal.match}: ${goal.currentScore}`,
+      icon: '🐸'
+    });
+  }
+}
+
+async function pollMatchUpdates(){
+  try{
+    const response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
+    if(!response.ok) return;
+    const data = await response.json();
+    
+    const detectedGoalsList = detectedGoals();
+    
+    replaceScrapedLeagueMatches(data);
+    
+    detectedGoalsList.forEach(goal => {
+      const match = MATCHES.find(m => m.id === goal.matchId);
+      if(match){
+        updateMatchDOM(match.id, match.minute, match.score);
+        triggerGoalAlert(goal);
+      }
+    });
+    
+    storeCurrentScores();
+    buildTicker();
+    
+    if(document.getElementById('page-live')?.classList.contains('active')){
+      renderLive();
+    }
+  }catch(error){
+    console.warn('Error en polling de goles:', error);
+  }
+}
+
 window.RaniSupabase = {client:supabaseClient, initSupabaseProfile, loadUserProfile, saveUserProfile, fetchGlobalRanking};
 window.RaniScraping = {loadScrapedMatches, MATCHES};
 window.RaniLogros = {renderRanking, renderWon, saveAchievement, userAchievements:[]};
@@ -970,7 +1121,14 @@ renderMatches('all');
 renderTicket();
 bindPromoCodeInput();
 syncLeaguesFromFlashscore(false);
-setInterval(() => syncLeaguesFromFlashscore(false), LIGA1_AUTO_REFRESH_MS);
+storeCurrentScores();
+
+// Reloj en vivo: incrementa minutos cada segundo para partidos en vivo
+liveClockIntervalId = setInterval(incrementLiveMinutes, 1000);
+
+// Polling cada 60 segundos con detección de goles
+pollingIntervalId = setInterval(pollMatchUpdates, LIGA1_AUTO_REFRESH_MS);
+
 initSupabaseProfile().then(() => {
   renderTicket();
   renderHistory();
