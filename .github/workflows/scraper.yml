@@ -14,21 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Instalar Chrome
-        run: |
-          sudo apt update
-          sudo apt install -y chromium-browser chromium-chromedriver
-
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Instalar dependencias
-        run: pip install selenium
+        run: python3 -V
 
-      - name: Ejecutar scraper Flashscore
-        run: python3 -u scripts/scrape_flashscore.py
+      - name: Ejecutar scraper ESPN
+        run: python3 -u scripts/scrape_espn.py
 
       - name: Guardar cambios
         run: |

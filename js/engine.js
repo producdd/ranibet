@@ -1,4 +1,4 @@
-// RANIBET engine: RaniCoins, logros/ranking y datos para scraping Flashscore.
+// RANIBET engine: RaniCoins, logros/ranking y datos para feed en vivo.
 const SUPABASE_URL = 'https://gdntslyfogqzvzevcbnl.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_Y7mTO19Wp96L5QwHiEwWAg_2OH4RtEB';
 const GOOGLE_CLIENT_ID = '6300462154-9uoaapb6jcbbe6semt477k2adv6s8f1p.apps.googleusercontent.com';
@@ -732,7 +732,7 @@ function leagueFlag(league){return {liga1:'\uD83C\uDDF5\uD83C\uDDEA',copa:'\uD83
 function addPick(matchId,type){
   const match = MATCHES.find(m => m.id === matchId);
   if(!match) return;
-  if(!isMatchOddsVerified(match)){showToast('Cuotas no verificadas por Flashscore todavía','error');return;}
+  if(!isMatchOddsVerified(match)){showToast('Cuotas no verificadas por el feed todavía','error');return;}
   const pickLabels = {h:`${match.home} gana`,d:'Empate',a:`${match.away} gana`};
   const odd = match.odds[type];
   const existing = ticket.findIndex(t => t.matchId === matchId);
@@ -1172,7 +1172,7 @@ function createMatchFromScraper(item, idx, nextId){
     time: isLive ? (liveMinute || 'EN VIVO') : formatLiga1KickoffLabel(item, matchDate),
     odds,
     oddsVerified: Boolean(verifiedOdds),
-    source: 'flashscore',
+    source: 'espn',
     live: isLive,
     score: liveScore,
     minute: isLive ? liveMinute : undefined,
@@ -1212,9 +1212,9 @@ function replaceScrapedLeagueMatches(scrapedRows){
   const verifiedCount = newMatches.filter(m => m.oddsVerified).length;
   const pendingOddsCount = newMatches.length - verifiedCount;
   if(pendingOddsCount > 0){
-    console.warn('Partidos visibles sin cuota verificada de Flashscore:', pendingOddsCount);
+    console.warn('Partidos visibles sin cuota verificada del feed:', pendingOddsCount);
   }
-  console.log('Flashscore actualizado:', newMatches.length, 'cuotas verificadas:', verifiedCount, 'sin cuota:', pendingOddsCount, 'live:', newMatches.filter(m=>m.live).length);
+  console.log('Feed actualizado:', newMatches.length, 'cuotas verificadas:', verifiedCount, 'sin cuota:', pendingOddsCount, 'live:', newMatches.filter(m=>m.live).length);
   return true;
 }
 
@@ -1224,13 +1224,13 @@ function isUpcomingMatch(match) {
   return (matchTime - now) < 48 * 60 * 60 * 1000; // Próximos 48h
 }
 
-async function syncLeaguesFromFlashscore(notify = false){
+async function syncLeaguesFromFeed(notify = false){
   try{
     const response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
     if(!response.ok) return;
     const data = await response.json();
     const changed = replaceScrapedLeagueMatches(data);
-    if(changed && notify) showToast('Ligas actualizadas desde Flashscore ??','success');
+    if(changed && notify) showToast('Ligas actualizadas desde feed en vivo','success');
   }catch(error){
     console.warn('No se pudo actualizar ligas desde partidos.json', error);
   }
@@ -1445,14 +1445,14 @@ buildTicker();
 renderMatches('all');
 renderTicket();
 bindPromoCodeInput();
-syncLeaguesFromFlashscore(false);
+syncLeaguesFromFeed(false);
 storeCurrentScores();
 
 const flashscorePollMs = getFlashscorePollIntervalMs();
-// Polling dinámico (2 a 5 min, por defecto 3 min) para cuotas/partidos Flashscore.
+// Polling dinámico (1 a 5 min, por defecto 1 min) para cuotas/partidos.
 pollingIntervalId = setInterval(async () => {
   await pollMatchUpdates(); 
-  console.log('Flashscore poll', flashscorePollMs, 'ms - partidos:', MATCHES.length, 'live:', MATCHES.filter(m=>m.live).length);
+  console.log('Feed poll', flashscorePollMs, 'ms - partidos:', MATCHES.length, 'live:', MATCHES.filter(m=>m.live).length);
 }, flashscorePollMs);
 
 initSupabaseProfile().then(() => {
