@@ -3,6 +3,7 @@ const TARGET_LEAGUES = {
   "UEFA.CHAMPIONS": "UEFA Champions League",
   "CONMEBOL.LIBERTADORES": "Copa Libertadores",
   "ENG.1": "Premier League",
+  "ITA.1": "Serie A",
 };
 
 function americanToDecimal(raw) {
