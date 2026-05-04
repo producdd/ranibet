@@ -53,7 +53,7 @@ function decimalToProb(odd) {
 }
 
 function probsToOdds(probH, probD, probA) {
-  const margin = 1.06;
+  const margin = 1.07;
   const oh = 1 / Math.max(0.01, probH * margin);
   const od = 1 / Math.max(0.01, probD * margin);
   const oa = 1 / Math.max(0.01, probA * margin);
@@ -75,15 +75,16 @@ function dynamicLiveOdds({ baseH, baseD, baseA, homeScore, awayScore, minute }) 
 
   const t = Math.max(1, Math.min(120, minute || 1));
   const gd = (homeScore ?? 0) - (awayScore ?? 0);
-  const pressure = t / 90;
+  const pressure = Math.min(1.35, t / 90);
 
   const lH = Math.log(Math.max(1e-6, pH));
   const lD = Math.log(Math.max(1e-6, pD));
   const lA = Math.log(Math.max(1e-6, pA));
 
-  const scoreImpact = 0.30 + 0.65 * pressure;
-  const drawPenaltyIfWinning = 0.40 + 0.70 * pressure;
-  const drawBoostIfDraw = 0.12 * pressure;
+  // Recalibrated to stay closer to market bands and move progressively.
+  const scoreImpact = 0.14 + 0.24 * pressure;
+  const drawPenaltyIfWinning = 0.10 + 0.28 * pressure;
+  const drawBoostIfDraw = 0.02 + 0.08 * pressure;
 
   const sH = lH + gd * scoreImpact;
   const sA = lA - gd * scoreImpact;
@@ -94,7 +95,18 @@ function dynamicLiveOdds({ baseH, baseD, baseA, homeScore, awayScore, minute }) 
   const eA = Math.exp(sA);
   const den = eH + eD + eA;
 
-  return probsToOdds(eH / den, eD / den, eA / den);
+  // Blend with baseline market probabilities so live model doesn't drift too far.
+  const modelH = eH / den;
+  const modelD = eD / den;
+  const modelA = eA / den;
+  const modelWeight = Math.min(0.45, 0.18 + pressure * 0.20);
+  const baseWeight = 1 - modelWeight;
+
+  const blendH = pH * baseWeight + modelH * modelWeight;
+  const blendD = pD * baseWeight + modelD * modelWeight;
+  const blendA = pA * baseWeight + modelA * modelWeight;
+
+  return probsToOdds(blendH, blendD, blendA);
 }
 
 function mapEvent(event, leagueName, sourceUrl) {
