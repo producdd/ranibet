@@ -5,6 +5,10 @@ on:
     - cron: '*/5 * * * *'
   workflow_dispatch:
 
+concurrency:
+  group: scraper-cuotas-master
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -33,10 +37,10 @@ jobs:
           git checkout master
           git add partidos.json
           git diff --staged --quiet && exit 0
-          git pull --rebase origin master
+          git pull --rebase --autostash origin master
           git add partidos.json
           git commit -m "Actualizar cuotas $(date '+%Y-%m-%d %H:%M:%S')"
           for i in 1 2 3; do
-            git pull --rebase origin master && git push origin master && break
+            git pull --rebase --autostash origin master && git push origin master && break
             sleep 3
           done
