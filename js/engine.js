@@ -1228,7 +1228,10 @@ function isUpcomingMatch(match) {
 
 async function syncLeaguesFromFeed(notify = false){
   try{
-    const response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
+    let response = await fetch(`/api/partidos?ts=${Date.now()}`, {cache:'no-store'});
+    if(!response.ok){
+      response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
+    }
     if(!response.ok) return;
     const data = await response.json();
     const changed = replaceScrapedLeagueMatches(data);
@@ -1407,7 +1410,10 @@ async function checkPendingBetsOutcomes(scrapedData) {
 
 async function pollMatchUpdates(){
   try{
-    const response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
+    let response = await fetch(`/api/partidos?ts=${Date.now()}`, {cache:'no-store'});
+    if(!response.ok){
+      response = await fetch(`./partidos.json?ts=${Date.now()}`, {cache:'no-store'});
+    }
     if(!response.ok) return;
     const data = await response.json();
     
