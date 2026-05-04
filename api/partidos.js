@@ -84,6 +84,7 @@ function mapEvent(event, leagueName, sourceUrl) {
     fecha_partido: dt ? dt.toLocaleString("sv-SE", { timeZone: "America/Lima" }).replace("T", " ") : "",
     match_datetime: dt ? dt.toISOString() : "",
     live: isLive(status),
+    live_state: String(status?.type?.state || "").toLowerCase(),
     minute: normalizeMinute(status),
     score,
     status: String(status?.type?.description || status.shortDetail || "").trim(),

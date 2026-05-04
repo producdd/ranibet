@@ -1065,10 +1065,11 @@ const SCRAPER_LEAGUE_CONFIG = {
 };
 
 function isMatchStillLive(scrapedItem) {
-  if(scrapedItem?.live !== true || !scrapedItem?.score) {
+  if(scrapedItem?.live !== true) {
     return false;
   }
   const rawMinute = String(scrapedItem.minute || scrapedItem.status || scrapedItem.time_text || '').trim().toUpperCase();
+  const state = String(scrapedItem.live_state || '').trim().toLowerCase();
   const scrapeTimestamp = parseScraperTimestamp(scrapedItem);
   const matchStart = parseScraperMatchDate(scrapedItem);
 
@@ -1079,6 +1080,9 @@ function isMatchStillLive(scrapedItem) {
   if(/^(FT|AET|PEN|FIN|FINALIZADO)$/.test(rawMinute) || rawMinute.includes('POSTP') || rawMinute.includes('CANCEL')){
     return false;
   }
+
+  // ESPN state "in" is authoritative for live kickoff, even before first score.
+  if(state === 'in') return true;
 
   if(matchStart && (Date.now() - matchStart.getTime()) > 4 * 60 * 60 * 1000){
     return false;
