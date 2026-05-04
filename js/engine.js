@@ -1015,7 +1015,7 @@ function formatLiga1KickoffLabel(item, matchDate){
   return 'Próximamente';
 }
 
-function keepTodayAndNextJornadaByGroup(rows){
+function keepTodayAndNextJornadaByGroup(rows, league){
   const inputRows = (Array.isArray(rows) ? rows : []).filter(shouldDisplayScrapedMatch);
   const now = new Date();
   const todayKey = toDateKey(now);
@@ -1027,7 +1027,30 @@ function keepTodayAndNextJornadaByGroup(rows){
 
   withDate.sort((a, b) => a.matchDate - b.matchDate);
   const todayRows = withDate.filter(item => toDateKey(item.matchDate) === todayKey);
-  const selected = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...todayRows];
+  const futureRows = withDate.filter(item => toDateKey(item.matchDate) > todayKey);
+
+  // Serie A: solo hoy + en vivo (según pedido del usuario).
+  if(league === 'seriea'){
+    const selectedSerieA = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...todayRows];
+    if(selectedSerieA.length){
+      const seenSerieA = new Set();
+      return selectedSerieA.filter(item => {
+        const key = `${item.row?.torneo || ''}|${item.row?.local || ''}|${item.row?.visitante || ''}|${item.row?.match_datetime || ''}|${item.row?.time_text || ''}`;
+        if(seenSerieA.has(key)) return false;
+        seenSerieA.add(key);
+        return true;
+      }).map(item => item.row);
+    }
+    return [];
+  }
+
+  // Resto de ligas: hoy + próxima jornada (comportamiento original).
+  const nextFutureKeys = [...new Set(futureRows.map(item => toDateKey(item.matchDate)))].slice(0, 2);
+  const nextJornadaRows = nextFutureKeys.length
+    ? futureRows.filter(item => nextFutureKeys.includes(toDateKey(item.matchDate)))
+    : [];
+
+  const selected = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...todayRows, ...nextJornadaRows];
   if(selected.length){
     const seen = new Set();
     return selected.filter(item => {
@@ -1037,10 +1060,13 @@ function keepTodayAndNextJornadaByGroup(rows){
       return true;
     }).map(item => item.row);
   }
-  return withoutDate.filter(item => {
-    const rowDate = parseScraperMatchDate(item.row);
-    return Number.isFinite(rowDate?.getTime()) && toDateKey(rowDate) === todayKey;
-  }).slice(0, 10).map(item => item.row);
+  if(futureRows.length){
+    const fallbackKeys = [...new Set(futureRows.map(item => toDateKey(item.matchDate)))].slice(0, 2);
+    return futureRows
+      .filter(item => fallbackKeys.includes(toDateKey(item.matchDate)))
+      .map(item => item.row);
+  }
+  return withoutDate.slice(0, 10).map(item => item.row);
 }
 
 const PRIORITY_LEAGUES = ['liga1', 'champions', 'libertadores', 'premier', 'seriea'];
@@ -1182,7 +1208,7 @@ function replaceScrapedLeagueMatches(scrapedRows){
   const rows = Array.isArray(scrapedRows) ? scrapedRows : [];
   const selectedRows = PRIORITY_LEAGUES.flatMap(league => {
     const leagueRows = rows.filter(row => resolveScraperLeague(row) === league);
-    return keepTodayAndNextJornadaByGroup(leagueRows);
+    return keepTodayAndNextJornadaByGroup(leagueRows, league);
   });
 
   if(!selectedRows.length) return false;
