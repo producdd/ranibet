@@ -1,5 +1,29 @@
 [
   {
+    "torneo": "Premier League",
+    "local": "Chelsea",
+    "visitante": "Nottingham Forest",
+    "cuota_local": "1.42",
+    "cuota_empate": "4.80",
+    "cuota_visitante": "7.50",
+    "mejor_cuota_local": "1.42",
+    "mejor_cuota_empate": "4.80",
+    "mejor_cuota_visitante": "7.50",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": true,
+    "hora_partido": "09:00",
+    "fecha_partido": "2026-05-04 09:00:00",
+    "match_datetime": "2026-05-04T09:00:00-05:00",
+    "live": true,
+    "minute": "81",
+    "score": "0-3",
+    "status": "Second Half",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260504",
+    "fecha_scrape": "2026-05-04T10:52:13.078057-05:00"
+  },
+  {
     "torneo": "Liga 1 Peruana",
     "local": "Los Chankas",
     "visitante": "Deportivo Garcilaso",
@@ -16,12 +40,36 @@
     "fecha_partido": "2026-05-04 13:00:00",
     "match_datetime": "2026-05-04T13:00:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260504",
-    "fecha_scrape": "2026-05-04T10:45:51.229654-05:00"
+    "fecha_scrape": "2026-05-04T10:52:10.872361-05:00"
+  },
+  {
+    "torneo": "Premier League",
+    "local": "Everton",
+    "visitante": "Manchester City",
+    "cuota_local": "6.50",
+    "cuota_empate": "4.60",
+    "cuota_visitante": "1.48",
+    "mejor_cuota_local": "6.50",
+    "mejor_cuota_empate": "4.60",
+    "mejor_cuota_visitante": "1.48",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": true,
+    "hora_partido": "14:00",
+    "fecha_partido": "2026-05-04 14:00:00",
+    "match_datetime": "2026-05-04T14:00:00-05:00",
+    "live": false,
+    "minute": "0",
+    "score": "0-0",
+    "status": "Scheduled",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260504",
+    "fecha_scrape": "2026-05-04T10:52:13.078097-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -40,12 +88,12 @@
     "fecha_partido": "2026-05-05 14:00:00",
     "match_datetime": "2026-05-05T14:00:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260505",
-    "fecha_scrape": "2026-05-04T10:45:51.938780-05:00"
+    "fecha_scrape": "2026-05-04T10:52:11.515103-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -64,12 +112,12 @@
     "fecha_partido": "2026-05-05 17:00:00",
     "match_datetime": "2026-05-05T17:00:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260505",
-    "fecha_scrape": "2026-05-04T10:45:52.158459-05:00"
+    "fecha_scrape": "2026-05-04T10:52:12.468719-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -88,12 +136,12 @@
     "fecha_partido": "2026-05-05 17:00:00",
     "match_datetime": "2026-05-05T17:00:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260505",
-    "fecha_scrape": "2026-05-04T10:45:52.158495-05:00"
+    "fecha_scrape": "2026-05-04T10:52:12.468754-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -112,12 +160,12 @@
     "fecha_partido": "2026-05-05 19:00:00",
     "match_datetime": "2026-05-05T19:00:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260505",
-    "fecha_scrape": "2026-05-04T10:45:52.158524-05:00"
+    "fecha_scrape": "2026-05-04T10:52:12.468783-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -136,12 +184,12 @@
     "fecha_partido": "2026-05-05 19:00:00",
     "match_datetime": "2026-05-05T19:00:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260505",
-    "fecha_scrape": "2026-05-04T10:45:52.158551-05:00"
+    "fecha_scrape": "2026-05-04T10:52:12.468810-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -160,11 +208,11 @@
     "fecha_partido": "2026-05-05 19:30:00",
     "match_datetime": "2026-05-05T19:30:00-05:00",
     "live": false,
-    "minute": "",
+    "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260505",
-    "fecha_scrape": "2026-05-04T10:45:52.158578-05:00"
+    "fecha_scrape": "2026-05-04T10:52:12.468837-05:00"
   }
 ]

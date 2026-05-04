@@ -31,9 +31,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin master
           git checkout master
-          git pull --rebase origin master
           git add partidos.json
           git diff --staged --quiet && exit 0
+          git pull --rebase origin master
+          git add partidos.json
           git commit -m "Actualizar cuotas $(date '+%Y-%m-%d %H:%M:%S')"
           for i in 1 2 3; do
             git pull --rebase origin master && git push origin master && break

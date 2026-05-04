@@ -1053,12 +1053,13 @@ function keepTodayAndNextJornadaByGroup(rows){
   return withoutDate.slice(0, 10).map(item => item.row);
 }
 
-const PRIORITY_LEAGUES = ['liga1', 'champions', 'libertadores'];
+const PRIORITY_LEAGUES = ['liga1', 'champions', 'libertadores', 'premier'];
 
 const SCRAPER_LEAGUE_CONFIG = {
   liga1: {leagueName: 'Liga 1 Peruana', homeEmoji: '🔴', awayEmoji: '🔵'},
   libertadores: {leagueName: 'Copa Libertadores', homeEmoji: '🟡', awayEmoji: '⚫'},
-  champions: {leagueName: 'UEFA Champions League', homeEmoji: '🟣', awayEmoji: '⚪'}
+  champions: {leagueName: 'UEFA Champions League', homeEmoji: '🟣', awayEmoji: '⚪'},
+  premier: {leagueName: 'Premier League', homeEmoji: '🔴', awayEmoji: '🔵'}
 };
 
 function isMatchStillLive(scrapedItem) {
@@ -1130,6 +1131,7 @@ function resolveScraperLeague(item){
   if(torneo.includes('liga 1')) return 'liga1';
   if(torneo.includes('libertador')) return 'libertadores';
   if(torneo.includes('champions')) return 'champions';
+  if(torneo.includes('premier')) return 'premier';
   return null;
 }
 

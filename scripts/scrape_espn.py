@@ -9,6 +9,7 @@ TARGET_LEAGUES = {
     "PER.1": "Liga 1 Peruana",
     "UEFA.CHAMPIONS": "UEFA Champions League",
     "CONMEBOL.LIBERTADORES": "Copa Libertadores",
+    "ENG.1": "Premier League",
 }
 
 
@@ -36,13 +37,18 @@ def american_to_decimal(raw):
 
 def normalize_minute(status):
     short = str(status.get("shortDetail") or "").strip()
+    display_clock = str(status.get("displayClock") or "").strip()
     if not short:
+        if display_clock:
+            return display_clock.replace("'", "").replace("’", "")
         return ""
     up = short.upper()
     if up in {"HT", "FT"}:
         return up
     if "'" in short:
         return short.replace("'", "").replace("’", "")
+    if up in {"LIVE", "EN VIVO", "IN PROGRESS"} and display_clock:
+        return display_clock.replace("'", "").replace("’", "")
     return short
 
 
