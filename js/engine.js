@@ -1029,9 +1029,13 @@ function keepTodayAndNextJornadaByGroup(rows, league){
   const todayRows = withDate.filter(item => toDateKey(item.matchDate) === todayKey);
   const futureRows = withDate.filter(item => toDateKey(item.matchDate) > todayKey);
 
-  // Serie A: solo hoy + en vivo (según pedido del usuario).
+  // Serie A: en vivo + hoy + próxima fecha inmediata para pruebas en previa.
   if(league === 'seriea'){
-    const selectedSerieA = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...todayRows];
+    const nextSerieAKeys = [...new Set(futureRows.map(item => toDateKey(item.matchDate)))].slice(0, 1);
+    const nextSerieARows = nextSerieAKeys.length
+      ? futureRows.filter(item => nextSerieAKeys.includes(toDateKey(item.matchDate)))
+      : [];
+    const selectedSerieA = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...todayRows, ...nextSerieARows];
     if(selectedSerieA.length){
       const seenSerieA = new Set();
       return selectedSerieA.filter(item => {
@@ -1041,7 +1045,7 @@ function keepTodayAndNextJornadaByGroup(rows, league){
         return true;
       }).map(item => item.row);
     }
-    return [];
+    return withoutDate.slice(0, 5).map(item => item.row);
   }
 
   // Resto de ligas: hoy + próxima jornada (comportamiento original).
