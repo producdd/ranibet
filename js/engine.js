@@ -36,9 +36,10 @@ let balance = 500;
 let betsHistory = [];
 let currentLeague = 'all';
 const LIGA1_AUTO_REFRESH_MS = 60000;
-const FLASHSCORE_POLL_DEFAULT_MS = 60000; // 60s
-const FLASHSCORE_POLL_MIN_MS = 60000; // 60s
-const FLASHSCORE_POLL_MAX_MS = 300000; // 5 min
+const FEED_POLL_DEFAULT_MS = 60000; // 60s base
+const FEED_POLL_LIVE_MS = 15000; // 15s cuando hay en vivo
+const FEED_POLL_MIN_MS = 10000; // 10s mínimo permitido
+const FEED_POLL_MAX_MS = 300000; // 5 min
 
 function normalizeStoredPick(pick = {}){
   return {
@@ -1276,13 +1277,20 @@ function keepOnlyScraperLeaguesInMemory(){
 // ?? SISTEMA DE POLLING Y DETECCIÓN DE GOLES (MEJORADO)
 let previousScores = {};
 let pollingIntervalId = null;
+let pollingInFlight = false;
 
 function getFlashscorePollIntervalMs(){
   const raw = Number(localStorage.getItem('rani_flashscore_poll_ms'));
-  if(Number.isFinite(raw) && raw >= FLASHSCORE_POLL_MIN_MS && raw <= FLASHSCORE_POLL_MAX_MS){
+  if(Number.isFinite(raw) && raw >= FEED_POLL_MIN_MS && raw <= FEED_POLL_MAX_MS){
     return raw;
   }
-  return FLASHSCORE_POLL_DEFAULT_MS;
+  return FEED_POLL_DEFAULT_MS;
+}
+
+function getAdaptivePollIntervalMs(){
+  const hasLive = MATCHES.some(m => m.live);
+  if(hasLive) return FEED_POLL_LIVE_MS;
+  return getFlashscorePollIntervalMs();
 }
 
 function storeCurrentScores(){
@@ -1436,6 +1444,8 @@ async function checkPendingBetsOutcomes(scrapedData) {
 }
 
 async function pollMatchUpdates(){
+  if(pollingInFlight) return;
+  pollingInFlight = true;
   try{
     let response = await fetch(`/api/partidos?ts=${Date.now()}`, {cache:'no-store'});
     if(!response.ok){
@@ -1467,6 +1477,8 @@ async function pollMatchUpdates(){
     }
   }catch(error){
     console.warn('Error en polling de goles:', error);
+  }finally{
+    pollingInFlight = false;
   }
 }
 
@@ -1483,12 +1495,32 @@ bindPromoCodeInput();
 syncLeaguesFromFeed(false);
 storeCurrentScores();
 
-const flashscorePollMs = getFlashscorePollIntervalMs();
-// Polling dinámico (1 a 5 min, por defecto 1 min) para cuotas/partidos.
-pollingIntervalId = setInterval(async () => {
-  await pollMatchUpdates(); 
-  console.log('Feed poll', flashscorePollMs, 'ms - partidos:', MATCHES.length, 'live:', MATCHES.filter(m=>m.live).length);
-}, flashscorePollMs);
+function startAdaptivePolling(){
+  if(pollingIntervalId) clearInterval(pollingIntervalId);
+  let currentMs = getAdaptivePollIntervalMs();
+  pollingIntervalId = setInterval(async () => {
+    await pollMatchUpdates();
+    const nextMs = getAdaptivePollIntervalMs();
+    if(nextMs !== currentMs){
+      currentMs = nextMs;
+      startAdaptivePolling();
+      return;
+    }
+    console.log('Feed poll', currentMs, 'ms - partidos:', MATCHES.length, 'live:', MATCHES.filter(m=>m.live).length);
+  }, currentMs);
+}
+
+startAdaptivePolling();
+
+document.addEventListener('visibilitychange', async () => {
+  if(document.visibilityState === 'visible'){
+    await pollMatchUpdates();
+  }
+});
+
+window.addEventListener('focus', async () => {
+  await pollMatchUpdates();
+});
 
 initSupabaseProfile().then(() => {
   renderTicket();
