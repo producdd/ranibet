@@ -1021,40 +1021,15 @@ function keepTodayAndNextJornadaByGroup(rows, league){
   const inputRows = rawRows.filter(shouldDisplayScrapedMatch);
   const now = new Date();
   const todayKey = toDateKey(now);
-  const liveRows = inputRows.filter(row => isMatchStillLive(row));
+  const liveRows = rawRows.filter(row => isMatchStillLive(row));
 
-  const enriched = inputRows.map(row => ({row, matchDate: parseScraperMatchDate(row)}));
-  const withDate = enriched.filter(item => Number.isFinite(item.matchDate?.getTime()));
+  const enriched = rawRows.map(row => ({row, matchDate: parseScraperMatchDate(row)}));
+  const withDate = enriched.filter(item => Number.isFinite(item.matchDate?.getTime())).sort((a, b) => a.matchDate - b.matchDate);
   const withoutDate = enriched.filter(item => !Number.isFinite(item.matchDate?.getTime()));
 
-  withDate.sort((a, b) => a.matchDate - b.matchDate);
   const todayRows = withDate.filter(item => toDateKey(item.matchDate) === todayKey);
   const futureRows = withDate.filter(item => toDateKey(item.matchDate) > todayKey);
-
-  // Serie A: en vivo + hoy + próxima fecha inmediata para pruebas en previa.
-  if(league === 'seriea'){
-    const serieAEnriched = rawRows.map(row => ({row, matchDate: parseScraperMatchDate(row)}));
-    const serieAWithDate = serieAEnriched.filter(item => Number.isFinite(item.matchDate?.getTime())).sort((a,b) => a.matchDate - b.matchDate);
-    const serieATodayRows = serieAWithDate.filter(item => toDateKey(item.matchDate) === todayKey);
-    const serieAFutureRows = serieAWithDate.filter(item => toDateKey(item.matchDate) > todayKey);
-    const nextSerieAKeys = [...new Set(serieAFutureRows.map(item => toDateKey(item.matchDate)))].slice(0, 1);
-    const nextSerieARows = nextSerieAKeys.length
-      ? serieAFutureRows.filter(item => nextSerieAKeys.includes(toDateKey(item.matchDate)))
-      : [];
-    const selectedSerieA = [...liveRows.map(row => ({row, matchDate: parseScraperMatchDate(row)})), ...serieATodayRows, ...nextSerieARows];
-    if(selectedSerieA.length){
-      const seenSerieA = new Set();
-      return selectedSerieA.filter(item => {
-        const key = `${item.row?.torneo || ''}|${item.row?.local || ''}|${item.row?.visitante || ''}|${item.row?.match_datetime || ''}|${item.row?.time_text || ''}`;
-        if(seenSerieA.has(key)) return false;
-        seenSerieA.add(key);
-        return true;
-      }).map(item => item.row);
-    }
-    return serieAEnriched.filter(item => !Number.isFinite(item.matchDate?.getTime())).slice(0, 8).map(item => item.row);
-  }
-
-  // Resto de ligas: hoy + próxima jornada (comportamiento original).
+  // En vivo + hoy + próxima jornada para todas las ligas principales.
   const nextFutureKeys = [...new Set(futureRows.map(item => toDateKey(item.matchDate)))].slice(0, 2);
   const nextJornadaRows = nextFutureKeys.length
     ? futureRows.filter(item => nextFutureKeys.includes(toDateKey(item.matchDate)))
