@@ -985,14 +985,25 @@ function parseScraperTimestamp(item){
 function formatLiveMinuteLabel(minute){
   const raw = String(minute || '').trim().toUpperCase();
   if(!raw) return 'EN VIVO';
+  if(raw === 'HT' || raw === 'HALFTIME') return 'MT';
+  if(raw === 'MT') return 'MT';
+  if(raw === '1H' || raw === '1T') return '1T';
+  if(raw === '2H' || raw === '2T') return '2T';
   if(/^\d{1,3}(?:\+\d{1,2})?$/.test(raw)) return `${raw}'`;
+  const clock = raw.match(/^(\d{1,3}):\d{2}$/);
+  if(clock) return `${clock[1]}'`;
   return raw;
 }
 
 function formatLiveStatusText(minute){
   const raw = String(minute || '').trim().toUpperCase();
   if(!raw) return 'EN VIVO';
+  if(raw === 'HT' || raw === 'HALFTIME' || raw === 'MT') return 'MT';
+  if(raw === '1H' || raw === '1T') return '1T';
+  if(raw === '2H' || raw === '2T') return '2T';
   if(/^\d{1,3}(?:\+\d{1,2})?$/.test(raw)) return `MIN ${raw}`;
+  const clock = raw.match(/^(\d{1,3}):\d{2}$/);
+  if(clock) return `MIN ${clock[1]}`;
   return raw;
 }
 
@@ -1088,7 +1099,7 @@ function isMatchStillLive(scrapedItem) {
     return false;
   }
 
-  if(rawMinute === 'HT' || rawMinute === 'DESCANSO' || rawMinute === 'BREAK'){
+  if(rawMinute === 'HT' || rawMinute === 'HALFTIME' || rawMinute === 'MT' || rawMinute === 'DESCANSO' || rawMinute === 'BREAK'){
     return true;
   }
 

@@ -17,18 +17,41 @@ function americanToDecimal(raw) {
 function normalizeMinute(status = {}) {
   const short = String(status.shortDetail || "").trim();
   const display = String(status.displayClock || "").trim();
-  if (!short) return display ? display.replace(/['’]/g, "") : "";
+  const displayClean = display.replace(/['’]/g, "");
+  if (!short) {
+    const clockMatch = displayClean.match(/^(\d{1,3}):\d{2}$/);
+    return clockMatch ? clockMatch[1] : displayClean;
+  }
+
   const up = short.toUpperCase();
-  if (up === "HT" || up === "FT") return up;
+  if (up === "HT" || up === "HALFTIME") return "MT";
+  if (up === "FT" || up === "FULL TIME") return "FT";
+  if (up === "1H" || up === "1ST HALF") return displayClean || "1T";
+  if (up === "2H" || up === "2ND HALF") return displayClean || "2T";
   if (short.includes("'") || short.includes("’")) return short.replace(/['’]/g, "");
-  if ((up === "LIVE" || up === "EN VIVO" || up === "IN PROGRESS") && display) return display.replace(/['’]/g, "");
+
+  if ((up === "LIVE" || up === "EN VIVO" || up === "IN PROGRESS") && displayClean) {
+    const m = displayClean.match(/^(\d{1,3}):\d{2}$/);
+    return m ? m[1] : displayClean;
+  }
+
+  const shortClock = short.match(/^(\d{1,3}):\d{2}$/);
+  if (shortClock) return shortClock[1];
   return short;
 }
 
 function isLive(status = {}) {
   const state = String(status?.type?.state || "").toLowerCase();
   const short = String(status.shortDetail || "").toUpperCase();
-  return state === "in" || short === "HT" || short === "1H" || short === "2H" || short.includes("'") || short.includes("’");
+  return (
+    state === "in" ||
+    short === "HT" ||
+    short === "HALFTIME" ||
+    short === "1H" ||
+    short === "2H" ||
+    short.includes("'") ||
+    short.includes("’")
+  );
 }
 
 function toNumber(value) {
@@ -38,6 +61,11 @@ function toNumber(value) {
 
 function parseMinute(minuteRaw) {
   const txt = String(minuteRaw || "").trim().toUpperCase();
+  const clock = txt.match(/^(\d{1,3}):\d{2}$/);
+  if (clock) {
+    const mm = Number(clock[1]);
+    return Number.isFinite(mm) ? Math.max(1, Math.min(130, mm)) : null;
+  }
   const m = txt.match(/^(\d{1,3})(?:\+(\d{1,2}))?$/);
   if (!m) return null;
   const base = Number(m[1]);
@@ -75,16 +103,16 @@ function dynamicLiveOdds({ baseH, baseD, baseA, homeScore, awayScore, minute }) 
 
   const t = Math.max(1, Math.min(120, minute || 1));
   const gd = (homeScore ?? 0) - (awayScore ?? 0);
-  const pressure = Math.min(1.35, t / 90);
+  const pressure = Math.min(1.45, t / 85);
+  const goalDiffAbs = Math.abs(gd);
 
   const lH = Math.log(Math.max(1e-6, pH));
   const lD = Math.log(Math.max(1e-6, pD));
   const lA = Math.log(Math.max(1e-6, pA));
 
-  // Recalibrated to stay closer to market bands and move progressively.
-  const scoreImpact = 0.14 + 0.24 * pressure;
-  const drawPenaltyIfWinning = 0.10 + 0.28 * pressure;
-  const drawBoostIfDraw = 0.02 + 0.08 * pressure;
+  const scoreImpact = 0.32 + 0.95 * pressure;
+  const drawPenaltyIfWinning = 0.22 + 0.90 * pressure;
+  const drawBoostIfDraw = 0.03 + 0.12 * pressure;
 
   const sH = lH + gd * scoreImpact;
   const sA = lA - gd * scoreImpact;
@@ -95,11 +123,14 @@ function dynamicLiveOdds({ baseH, baseD, baseA, homeScore, awayScore, minute }) 
   const eA = Math.exp(sA);
   const den = eH + eD + eA;
 
-  // Blend with baseline market probabilities so live model doesn't drift too far.
   const modelH = eH / den;
   const modelD = eD / den;
   const modelA = eA / den;
-  const modelWeight = Math.min(0.45, 0.18 + pressure * 0.20);
+  const decisiveBoost =
+    Math.min(0.44, goalDiffAbs * 0.20) +
+    (t >= 55 ? 0.10 : 0) +
+    (goalDiffAbs >= 2 && t >= 40 ? 0.10 : 0);
+  const modelWeight = Math.min(0.95, 0.30 + pressure * 0.26 + decisiveBoost);
   const baseWeight = 1 - modelWeight;
 
   const blendH = pH * baseWeight + modelH * modelWeight;
@@ -132,7 +163,10 @@ function mapEvent(event, leagueName, sourceUrl) {
   const awayScore = String(away.score || "").trim();
   const score = /^\d+$/.test(homeScore) && /^\d+$/.test(awayScore) ? `${homeScore}-${awayScore}` : "";
 
-  let oddH = "", oddD = "", oddA = "", oddsVerified = false;
+  let oddH = "";
+  let oddD = "";
+  let oddA = "";
+  let oddsVerified = false;
   const odds = (comp.odds || [])[0];
   if (odds) {
     const ml = odds.moneyline || {};
@@ -181,7 +215,9 @@ function mapEvent(event, leagueName, sourceUrl) {
     odds_detalle: [],
     odds_source: oddsSource,
     odds_verified: oddsVerified,
-    hora_partido: dt ? dt.toLocaleTimeString("es-PE", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "America/Lima" }) : "",
+    hora_partido: dt
+      ? dt.toLocaleTimeString("es-PE", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "America/Lima" })
+      : "",
     fecha_partido: dt ? dt.toLocaleString("sv-SE", { timeZone: "America/Lima" }).replace("T", " ") : "",
     match_datetime: dt ? dt.toISOString() : "",
     live: isLive(status),
@@ -228,7 +264,13 @@ export default async function handler(req, res) {
       const leagueRows = await fetchLeague(code);
       rows.push(...leagueRows);
     }
-    rows.sort((a, b) => (a.live === b.live ? String(a.match_datetime || "").localeCompare(String(b.match_datetime || "")) : a.live ? -1 : 1));
+    rows.sort((a, b) =>
+      a.live === b.live
+        ? String(a.match_datetime || "").localeCompare(String(b.match_datetime || ""))
+        : a.live
+          ? -1
+          : 1
+    );
     res.setHeader("Cache-Control", "no-store, max-age=0");
     res.status(200).json(rows);
   } catch (err) {
