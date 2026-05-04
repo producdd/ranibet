@@ -727,7 +727,7 @@ function matchCardHTML(m){
   return `<div class="match-card" id="mc-${m.id}"><div class="match-header"><div class="match-league-name"><span class="match-league-flag">${leagueFlag(m.league)}</span>${m.leagueName}</div><div class="match-right-info">${isLive ? '<span class="live-badge">\uD83D\uDD34 EN VIVO</span>' : ''}<span class="match-time-badge">${isLive ? liveBadgeTime : m.time}</span></div></div><div class="match-body"><div class="teams-row"><div class="team-side"><div class="team-icon">${m.homeEmoji}</div><div class="team-name">${m.home}</div></div><div class="match-center">${isLive ? `<div class="score-live">${m.score || '-'}</div><div class="score-min">${formatLiveStatusText(m.minute)}</div>` : `<div class="vs-text">VS</div><div class="match-date-sub">${m.time}</div>`}</div><div class="team-side"><div class="team-icon">${m.awayEmoji}</div><div class="team-name">${m.away}</div></div></div></div><div class="odds-row">${oddButtonHTML(m,safeMatchId,'h',`1 - ${m.home.split(' ')[0]}`)}${oddButtonHTML(m,safeMatchId,'d','X - Empate')}${oddButtonHTML(m,safeMatchId,'a',`2 - ${m.away.split(' ')[0]}`)}</div><div class="more-mkts"><button class="more-mkts-btn" onclick="showToast('Mercados adicionales próximamente','info')">+12 mercados \u26BD</button></div></div>`;
 }
 
-function leagueFlag(league){return {liga1:'\uD83C\uDDF5\uD83C\uDDEA',copa:'\uD83C\uDDF5\uD83C\uDDEA',champions:'\u2B50',laliga:'\uD83C\uDDEA\uD83C\uDDF8',premier:'\uD83C\uDDEC\uD83C\uDDE7',libertadores:'\uD83C\uDFC6'}[league] || '\u26BD';}
+function leagueFlag(league){return {liga1:'\uD83C\uDDF5\uD83C\uDDEA',copa:'\uD83C\uDDF5\uD83C\uDDEA',champions:'\u2B50',laliga:'\uD83C\uDDEA\uD83C\uDDF8',premier:'\uD83C\uDDEC\uD83C\uDDE7',libertadores:'\uD83C\uDFC6',seriea:'\uD83C\uDDEE\uD83C\uDDF9'}[league] || '\u26BD';}
 
 function addPick(matchId,type){
   const match = MATCHES.find(m => m.id === matchId);
@@ -1053,13 +1053,14 @@ function keepTodayAndNextJornadaByGroup(rows){
   return withoutDate.slice(0, 10).map(item => item.row);
 }
 
-const PRIORITY_LEAGUES = ['liga1', 'champions', 'libertadores', 'premier'];
+const PRIORITY_LEAGUES = ['liga1', 'champions', 'libertadores', 'premier', 'seriea'];
 
 const SCRAPER_LEAGUE_CONFIG = {
   liga1: {leagueName: 'Liga 1 Peruana', homeEmoji: '🔴', awayEmoji: '🔵'},
   libertadores: {leagueName: 'Copa Libertadores', homeEmoji: '🟡', awayEmoji: '⚫'},
   champions: {leagueName: 'UEFA Champions League', homeEmoji: '🟣', awayEmoji: '⚪'},
-  premier: {leagueName: 'Premier League', homeEmoji: '🔴', awayEmoji: '🔵'}
+  premier: {leagueName: 'Premier League', homeEmoji: '🔴', awayEmoji: '🔵'},
+  seriea: {leagueName: 'Serie A', homeEmoji: '🔵', awayEmoji: '⚫'}
 };
 
 function isMatchStillLive(scrapedItem) {
@@ -1132,6 +1133,7 @@ function resolveScraperLeague(item){
   if(torneo.includes('libertador')) return 'libertadores';
   if(torneo.includes('champions')) return 'champions';
   if(torneo.includes('premier')) return 'premier';
+  if(torneo.includes('serie a') || torneo.includes('italian serie a')) return 'seriea';
   return null;
 }
 

@@ -10,6 +10,7 @@ TARGET_LEAGUES = {
     "UEFA.CHAMPIONS": "UEFA Champions League",
     "CONMEBOL.LIBERTADORES": "Copa Libertadores",
     "ENG.1": "Premier League",
+    "ITA.1": "Serie A",
 }
 
 
@@ -66,7 +67,7 @@ def is_live(status):
 
 def map_event(event, league_name, source_url):
     comp = (event.get("competitions") or [{}])[0]
-    competitors = comp.get("competitors") or []
+    competitors = [c for c in (comp.get("competitors") or []) if isinstance(c, dict)]
     home = next((c for c in competitors if c.get("homeAway") == "home"), None)
     away = next((c for c in competitors if c.get("homeAway") == "away"), None)
     if not home or not away:
@@ -96,7 +97,7 @@ def map_event(event, league_name, source_url):
     if home_score.isdigit() and away_score.isdigit():
         score = f"{home_score}-{away_score}"
 
-    odds_list = comp.get("odds") or []
+    odds_list = [o for o in (comp.get("odds") or []) if isinstance(o, dict)]
     odd_h = odd_d = odd_a = ""
     odds_verified = False
     if odds_list:
