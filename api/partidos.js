@@ -31,6 +31,72 @@ function isLive(status = {}) {
   return state === "in" || short === "HT" || short === "1H" || short === "2H" || short.includes("'") || short.includes("’");
 }
 
+function toNumber(value) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
+function parseMinute(minuteRaw) {
+  const txt = String(minuteRaw || "").trim().toUpperCase();
+  const m = txt.match(/^(\d{1,3})(?:\+(\d{1,2}))?$/);
+  if (!m) return null;
+  const base = Number(m[1]);
+  const extra = Number(m[2] || 0);
+  const minute = base + extra;
+  return Number.isFinite(minute) ? Math.max(1, Math.min(130, minute)) : null;
+}
+
+function decimalToProb(odd) {
+  const n = toNumber(odd);
+  if (!n || n <= 1.01) return null;
+  return 1 / n;
+}
+
+function probsToOdds(probH, probD, probA) {
+  const margin = 1.06;
+  const oh = 1 / Math.max(0.01, probH * margin);
+  const od = 1 / Math.max(0.01, probD * margin);
+  const oa = 1 / Math.max(0.01, probA * margin);
+  return {
+    h: Math.max(1.01, Math.min(80, oh)).toFixed(2),
+    d: Math.max(1.01, Math.min(80, od)).toFixed(2),
+    a: Math.max(1.01, Math.min(80, oa)).toFixed(2),
+  };
+}
+
+function dynamicLiveOdds({ baseH, baseD, baseA, homeScore, awayScore, minute }) {
+  const pH0 = decimalToProb(baseH) ?? 0.45;
+  const pD0 = decimalToProb(baseD) ?? 0.28;
+  const pA0 = decimalToProb(baseA) ?? 0.27;
+  const norm = pH0 + pD0 + pA0;
+  const pH = pH0 / norm;
+  const pD = pD0 / norm;
+  const pA = pA0 / norm;
+
+  const t = Math.max(1, Math.min(120, minute || 1));
+  const gd = (homeScore ?? 0) - (awayScore ?? 0);
+  const pressure = t / 90;
+
+  const lH = Math.log(Math.max(1e-6, pH));
+  const lD = Math.log(Math.max(1e-6, pD));
+  const lA = Math.log(Math.max(1e-6, pA));
+
+  const scoreImpact = 0.30 + 0.65 * pressure;
+  const drawPenaltyIfWinning = 0.40 + 0.70 * pressure;
+  const drawBoostIfDraw = 0.12 * pressure;
+
+  const sH = lH + gd * scoreImpact;
+  const sA = lA - gd * scoreImpact;
+  const sD = lD + (gd === 0 ? drawBoostIfDraw : -Math.abs(gd) * drawPenaltyIfWinning);
+
+  const eH = Math.exp(sH);
+  const eD = Math.exp(sD);
+  const eA = Math.exp(sA);
+  const den = eH + eD + eA;
+
+  return probsToOdds(eH / den, eD / den, eA / den);
+}
+
 function mapEvent(event, leagueName, sourceUrl) {
   const comp = (event.competitions || [])[0] || {};
   const competitors = comp.competitors || [];
@@ -67,18 +133,41 @@ function mapEvent(event, leagueName, sourceUrl) {
     oddsVerified = Boolean(oddH && oddD && oddA);
   }
 
+  let finalH = oddH;
+  let finalD = oddD;
+  let finalA = oddA;
+  let oddsSource = "espn";
+  if (isLive(status)) {
+    const m = parseMinute(normalizeMinute(status));
+    const hs = toNumber(homeScore) ?? 0;
+    const as = toNumber(awayScore) ?? 0;
+    const liveModel = dynamicLiveOdds({
+      baseH: oddH || "2.20",
+      baseD: oddD || "3.10",
+      baseA: oddA || "3.20",
+      homeScore: hs,
+      awayScore: as,
+      minute: m ?? 1,
+    });
+    finalH = liveModel.h;
+    finalD = liveModel.d;
+    finalA = liveModel.a;
+    oddsVerified = true;
+    oddsSource = "espn-live-model";
+  }
+
   return {
     torneo: leagueName,
     local: homeName,
     visitante: awayName,
-    cuota_local: oddH,
-    cuota_empate: oddD,
-    cuota_visitante: oddA,
-    mejor_cuota_local: oddH,
-    mejor_cuota_empate: oddD,
-    mejor_cuota_visitante: oddA,
+    cuota_local: finalH,
+    cuota_empate: finalD,
+    cuota_visitante: finalA,
+    mejor_cuota_local: finalH,
+    mejor_cuota_empate: finalD,
+    mejor_cuota_visitante: finalA,
     odds_detalle: [],
-    odds_source: "espn",
+    odds_source: oddsSource,
     odds_verified: oddsVerified,
     hora_partido: dt ? dt.toLocaleTimeString("es-PE", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "America/Lima" }) : "",
     fecha_partido: dt ? dt.toLocaleString("sv-SE", { timeZone: "America/Lima" }).replace("T", " ") : "",
