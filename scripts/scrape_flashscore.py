@@ -3,6 +3,9 @@ from zoneinfo import ZoneInfo
 import json
 import re
 import time
+import os
+import shutil
+import traceback
 from urllib.parse import urljoin
 
 from selenium import webdriver
@@ -413,19 +416,54 @@ def collect_matches_from_page(driver, torneo, source_url, league_links):
 
 
 def create_driver():
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--window-size=1440,1200")
-    options.add_argument("--lang=es-PE")
-    options.add_argument("--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
-    options.binary_location = "/usr/bin/chromium-browser"
-    service = Service("/usr/bin/chromedriver")
-    driver = webdriver.Chrome(service=service, options=options)
-    driver.execute_cdp_cmd("Emulation.setTimezoneOverride", {"timezoneId": "America/Lima"})
-    return driver
+    candidate_bins = [
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+        shutil.which("chromium-browser"),
+        shutil.which("chromium"),
+        shutil.which("google-chrome"),
+        shutil.which("google-chrome-stable"),
+    ]
+    candidate_bins = [p for p in candidate_bins if p and os.path.exists(p)]
+
+    driver_paths = [
+        "/usr/bin/chromedriver",
+        shutil.which("chromedriver"),
+    ]
+    driver_paths = [p for p in driver_paths if p and os.path.exists(p)]
+    service = Service(driver_paths[0]) if driver_paths else Service()
+
+    last_error = None
+    for browser_bin in candidate_bins or [None]:
+        for headless_arg in ["--headless=new", "--headless"]:
+            options = Options()
+            options.add_argument(headless_arg)
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--disable-blink-features=AutomationControlled")
+            options.add_argument("--window-size=1440,1200")
+            options.add_argument("--lang=es-PE")
+            options.add_argument("--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+            if browser_bin:
+                options.binary_location = browser_bin
+            try:
+                driver = webdriver.Chrome(service=service, options=options)
+                driver.execute_cdp_cmd("Emulation.setTimezoneOverride", {"timezoneId": "America/Lima"})
+                print(f"Driver OK with binary={browser_bin or 'default'} headless={headless_arg}")
+                return driver
+            except Exception as exc:
+                last_error = exc
+                print(f"Driver init failed with binary={browser_bin or 'default'} headless={headless_arg}: {exc}")
+
+    raise RuntimeError(f"No se pudo iniciar Chrome/Chromium en Actions. Último error: {last_error}")
+
+
+def write_output(rows):
+    with open("partidos.json", "w", encoding="utf-8") as f:
+        json.dump(rows, f, indent=2, ensure_ascii=False)
 
 
 def main():
@@ -435,9 +473,10 @@ def main():
         ("UEFA Champions League", "https://www.flashscore.pe/futbol/europa/champions-league/partidos/"),
     ]
 
-    driver = create_driver()
+    driver = None
     todos = []
     try:
+        driver = create_driver()
         for torneo, url in competitions:
             urls_to_try = [url]
             if "champions-league/partidos/" in url:
@@ -456,8 +495,8 @@ def main():
                     matches = collect_matches_from_page(driver, torneo, source_url, league_links)
                     if matches:
                         break
-                except Exception:
-                    pass
+                except Exception as comp_exc:
+                    print(f"Error en competencia {torneo} url={source_url}: {comp_exc}")
 
             for match in matches:
                 if not match.get("odds_verified") and match.get("detalle_url"):
@@ -465,12 +504,18 @@ def main():
                     match.update(odds_data)
                     match["fecha_scrape"] = datetime.now(LIMA_TZ).isoformat()
                 todos.append(match)
+    except Exception as fatal:
+        print(f"ERROR FATAL SCRAPER: {fatal}")
+        traceback.print_exc()
     finally:
-        driver.quit()
+        if driver:
+            try:
+                driver.quit()
+            except Exception:
+                pass
 
     verified = sum(1 for row in todos if row.get("odds_verified"))
-    with open("partidos.json", "w", encoding="utf-8") as f:
-        json.dump(todos, f, indent=2, ensure_ascii=False)
+    write_output(todos)
     print(f"{len(todos)} partidos; cuotas verificadas Flashscore: {verified}")
 
 
