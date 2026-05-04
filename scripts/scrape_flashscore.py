@@ -274,7 +274,7 @@ def norm_team_name(name):
 
 def extract_detail_links_from_league_url(source_url):
     req = Request(source_url, headers={"User-Agent": "Mozilla/5.0"})
-    html = urlopen(req, timeout=20).read().decode("utf-8", errors="ignore")
+    html = urlopen(req, timeout=12).read().decode("utf-8", errors="ignore")
     links = sorted(set(re.findall(r"/partido/futbol/[^\"'#? ]+", html)))
     mapping = []
     for rel in links:
@@ -315,6 +315,7 @@ def extract_odds_from_detail(driver, detail_url):
 
     for fragment in ODDS_FRAGMENTS:
         try:
+            print(f"[odds] detalle: {detail_url} fragment={fragment}", flush=True)
             driver.get(detail_url.split("#")[0] + fragment)
             accept_cookies_if_present(driver)
             WebDriverWait(driver, 8).until(
@@ -451,6 +452,7 @@ def create_driver():
                 options.binary_location = browser_bin
             try:
                 driver = webdriver.Chrome(service=service, options=options)
+                driver.set_page_load_timeout(15)
                 driver.execute_cdp_cmd("Emulation.setTimezoneOverride", {"timezoneId": "America/Lima"})
                 print(f"Driver OK with binary={browser_bin or 'default'} headless={headless_arg}")
                 return driver
@@ -477,7 +479,9 @@ def main():
     todos = []
     try:
         driver = create_driver()
+        print("[scraper] driver iniciado", flush=True)
         for torneo, url in competitions:
+            print(f"[scraper] torneo: {torneo}", flush=True)
             urls_to_try = [url]
             if "champions-league/partidos/" in url:
                 urls_to_try.append("https://www.flashscore.pe/futbol/europa/champions-league/")
@@ -488,11 +492,13 @@ def main():
             league_links = []
             for source_url in urls_to_try:
                 try:
+                    print(f"[scraper] fuente: {source_url}", flush=True)
                     league_links = extract_detail_links_from_league_url(source_url)
                     driver.get(source_url)
                     accept_cookies_if_present(driver)
                     enable_odds_view(driver)
                     matches = collect_matches_from_page(driver, torneo, source_url, league_links)
+                    print(f"[scraper] partidos base capturados {torneo}: {len(matches)}", flush=True)
                     if matches:
                         break
                 except Exception as comp_exc:
@@ -504,6 +510,7 @@ def main():
                     match.update(odds_data)
                     match["fecha_scrape"] = datetime.now(LIMA_TZ).isoformat()
                 todos.append(match)
+            print(f"[scraper] acumulado tras {torneo}: {len(todos)}", flush=True)
     except Exception as fatal:
         print(f"ERROR FATAL SCRAPER: {fatal}")
         traceback.print_exc()

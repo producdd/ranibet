@@ -28,7 +28,7 @@ jobs:
         run: pip install selenium
 
       - name: Ejecutar scraper Flashscore
-        run: python3 scripts/scrape_flashscore.py
+        run: python3 -u scripts/scrape_flashscore.py
 
       - name: Guardar cambios
         run: |
