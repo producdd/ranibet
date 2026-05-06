@@ -4,13 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RANIBET 🐸</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%90%B8%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <link rel="stylesheet" href="css/style.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C0NRV9XMF7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-C0NRV9XMF7");
+</script>
 </head>
 <body>
-  <div class="frog-corner" onclick="showToast('🐸 ¡RANIBET! ¡Apostá con cabeza!','info')" title="¡Mascota RANIBET!">🐸</div>
+  <div class="frog-corner" onclick="showToast('🐸 ¡RANIBET! ¡PENSA, PENSA!','info')" title="¡Mascota RANIBET!">🐸</div>
   <div class="toast-wrap" id="toastWrap"></div>
 
   <div class="username-gate" id="usernameGate">
@@ -40,6 +49,7 @@
       <div class="modal-ticket-id" id="mTicketId">RNB-00000</div>
       <div class="modal-body">
         <div class="modal-row"><span class="modal-row-label">Selecciones</span><span class="modal-row-val" id="mPicks">-</span></div>
+        <div class="modal-picks-detail" id="mBetDetails"></div>
         <div class="modal-row"><span class="modal-row-label">Cuota Total</span><span class="modal-row-val" id="mOdd">-</span></div>
         <div class="modal-row"><span class="modal-row-label">Monedas Apostadas</span><span class="modal-row-val" id="mStake">-</span></div>
         <div class="modal-row"><span class="modal-row-label">Ganancia Potencial</span><span class="modal-row-val green" id="mPotential">-</span></div>
@@ -130,13 +140,18 @@
 
       <section class="page" id="page-ranking">
         <div class="ranking-header">
-          <div class="rh-title">🐸 RANKING TIPSTER SEMANAL</div>
-          <div class="rh-sub"><span>Semana del 27 Abr - 3 May 2026</span><span class="rh-week">SEMANA 18</span></div>
+          <div class="rh-title" id="rankingTitle">🐸 RANKING TIPSTER</div>
+          <div class="rh-sub"><span id="rankingRange">Semana actual</span><span class="rh-week" id="rankingWeekBadge">SEMANAL</span></div>
+        </div>
+        <div class="rank-switch">
+          <button class="rank-tab active" id="rankTabWeekly" onclick="setRankingTab('weekly',this)">SEMANAL</button>
+          <button class="rank-tab" id="rankTabMonthly" onclick="setRankingTab('monthly',this)">MENSUAL</button>
+          <button class="rank-tab" id="rankTabHistorical" onclick="setRankingTab('historical',this)">HISTÓRICO</button>
         </div>
         <div class="rank-legend">
-          <div class="rleg-cell"><div class="rleg-num" id="rlTotal">0</div><div class="rleg-lbl">Tipsters</div></div>
-          <div class="rleg-cell"><div class="rleg-num" id="rlAvgRate">0%</div><div class="rleg-lbl">% Acierto Prom.</div></div>
-          <div class="rleg-cell"><div class="rleg-num" id="rlTopProfit">R0</div><div class="rleg-lbl">Mejor Ganancia</div></div>
+          <div class="rleg-cell"><div class="rleg-num" id="rlTotal">0</div><div class="rleg-lbl" id="rlTotalLabel">Tipsters</div></div>
+          <div class="rleg-cell"><div class="rleg-num" id="rlAvgRate">0%</div><div class="rleg-lbl" id="rlAvgRateLabel">% Acierto Prom.</div></div>
+          <div class="rleg-cell"><div class="rleg-num" id="rlTopProfit">R0</div><div class="rleg-lbl" id="rlTopProfitLabel">Mejor Ganancia</div></div>
         </div>
         <div class="rank-list" id="rankList"></div>
       </section>
