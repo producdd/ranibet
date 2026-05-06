@@ -6,6 +6,58 @@ const TARGET_LEAGUES = {
   "ITA.1": "Serie A",
 };
 
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 45;
+const RATE_LIMIT_STORE = new Map();
+
+function getClientIp(req) {
+  const forwarded = String(req.headers["x-forwarded-for"] || "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  return forwarded[0] || req.socket?.remoteAddress || "unknown";
+}
+
+function cleanupRateLimitStore() {
+  const now = Date.now();
+  for (const [key, value] of RATE_LIMIT_STORE.entries()) {
+    if (now > value.resetAt) RATE_LIMIT_STORE.delete(key);
+  }
+}
+
+function consumeRateLimit(key) {
+  const now = Date.now();
+  const current = RATE_LIMIT_STORE.get(key);
+  if (!current || now > current.resetAt) {
+    const next = { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS };
+    RATE_LIMIT_STORE.set(key, next);
+    return next;
+  }
+
+  current.count += 1;
+  RATE_LIMIT_STORE.set(key, current);
+  return current;
+}
+
+function hasTrustedOrigin(req) {
+  const host = String(req.headers.host || "").trim().toLowerCase();
+  if (!host) return true;
+
+  const candidates = [req.headers.origin, req.headers.referer]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean);
+
+  if (!candidates.length) return true;
+
+  return candidates.some((value) => {
+    try {
+      return new URL(value).host.toLowerCase() === host;
+    } catch {
+      return false;
+    }
+  });
+}
+
 function americanToDecimal(raw) {
   if (raw === null || raw === undefined) return "";
   const n = Number(String(raw).trim());
@@ -233,7 +285,7 @@ function mapEvent(event, leagueName, sourceUrl) {
 
 async function fetchLeague(code) {
   const now = new Date();
-  const dates = [now, new Date(now.getTime() + 24 * 60 * 60 * 1000)];
+  const dates = Array.from({ length: 7 }, (_, offset) => new Date(now.getTime() + offset * 24 * 60 * 60 * 1000));
   const out = [];
   const seen = new Set();
 
@@ -259,6 +311,30 @@ async function fetchLeague(code) {
 
 export default async function handler(req, res) {
   try {
+    cleanupRateLimitStore();
+    res.setHeader("Cache-Control", "no-store, max-age=0");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+
+    if (req.method !== "GET") {
+      res.setHeader("Allow", "GET");
+      return res.status(405).json({ error: "method_not_allowed" });
+    }
+
+    if (!hasTrustedOrigin(req)) {
+      return res.status(403).json({ error: "forbidden_origin" });
+    }
+
+    const rate = consumeRateLimit(getClientIp(req));
+    const retryAfterSeconds = Math.max(1, Math.ceil((rate.resetAt - Date.now()) / 1000));
+    res.setHeader("X-RateLimit-Limit", String(RATE_LIMIT_MAX_REQUESTS));
+    res.setHeader("X-RateLimit-Remaining", String(Math.max(0, RATE_LIMIT_MAX_REQUESTS - rate.count)));
+    res.setHeader("X-RateLimit-Reset", String(rate.resetAt));
+
+    if (rate.count > RATE_LIMIT_MAX_REQUESTS) {
+      res.setHeader("Retry-After", String(retryAfterSeconds));
+      return res.status(429).json({ error: "rate_limited", retry_after_seconds: retryAfterSeconds });
+    }
+
     const rows = [];
     for (const code of Object.keys(TARGET_LEAGUES)) {
       const leagueRows = await fetchLeague(code);
@@ -271,7 +347,6 @@ export default async function handler(req, res) {
           ? -1
           : 1
     );
-    res.setHeader("Cache-Control", "no-store, max-age=0");
     res.status(200).json(rows);
   } catch (err) {
     res.status(500).json({ error: "feed_error", message: String(err && err.message ? err.message : err) });

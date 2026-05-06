@@ -1,0 +1,9 @@
+{
+  "name": "ranibet-final",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/functions": "^3.2.0"
+  }
+}
