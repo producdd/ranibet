@@ -285,7 +285,7 @@ function mapEvent(event, leagueName, sourceUrl) {
 
 async function fetchLeague(code) {
   const now = new Date();
-  const dates = Array.from({ length: 7 }, (_, offset) => new Date(now.getTime() + offset * 24 * 60 * 60 * 1000));
+  const dates = Array.from({ length: 10 }, (_, offset) => new Date(now.getTime() + (offset - 3) * 24 * 60 * 60 * 1000));
   const out = [];
   const seen = new Set();
 

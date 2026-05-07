@@ -141,7 +141,8 @@ def map_event(event, league_name, source_url):
 
 
 def load_league_events(code):
-    days = [datetime.now(LIMA_TZ).date(), (datetime.now(LIMA_TZ) + timedelta(days=1)).date()]
+    base_day = datetime.now(LIMA_TZ).date()
+    days = [base_day + timedelta(days=offset) for offset in range(-3, 7)]
     events = []
     seen = set()
     for d in days:

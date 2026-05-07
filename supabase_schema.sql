@@ -70,6 +70,38 @@ create table if not exists public.monthly_rank_snapshots (
   unique (month_id, email)
 );
 
+create table if not exists public.weekly_rank_results (
+  id uuid primary key default gen_random_uuid(),
+  week_id text not null,
+  email text not null,
+  username text not null,
+  title text not null default '',
+  pos integer not null default 0,
+  status text not null default 'PROVISIONAL',
+  score numeric(10,2) not null default 0,
+  win_rate numeric(10,2) not null default 0,
+  risk_rate numeric(10,2) not null default 0,
+  coverage_rate numeric(10,2) not null default 0,
+  clean_rate numeric(10,2) not null default 0,
+  profit numeric(12,2) not null default 0,
+  best_odd numeric(10,2) not null default 0,
+  bets integer not null default 0,
+  won integer not null default 0,
+  lost integer not null default 0,
+  pending integer not null default 0,
+  contaminated integer not null default 0,
+  closed_at timestamptz not null default now(),
+  unique (week_id, email)
+);
+
+create table if not exists public.system_event_logs (
+  id uuid primary key default gen_random_uuid(),
+  event_type text not null,
+  event_source text not null default '',
+  payload jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now()
+);
+
 alter table public.profiles add column if not exists email text;
 alter table public.profiles add column if not exists photo_url text not null default '';
 alter table public.profiles add column if not exists last_daily_bonus_on date;
@@ -98,16 +130,24 @@ create unique index if not exists unique_username on public.profiles(username) w
 create unique index if not exists user_achievements_email_achievement_key on public.user_achievements(email, achievement_key);
 create unique index if not exists bet_tickets_ticket_code_key on public.bet_tickets(ticket_code);
 create index if not exists bet_tickets_email_created_at_idx on public.bet_tickets(email, created_at desc);
+create index if not exists bet_tickets_created_at_idx on public.bet_tickets(created_at desc);
+create index if not exists bet_tickets_status_created_at_idx on public.bet_tickets(status, created_at desc);
+create index if not exists bet_tickets_username_created_at_idx on public.bet_tickets(username, created_at desc) where username <> '';
+create index if not exists bet_tickets_email_status_created_at_idx on public.bet_tickets(email, status, created_at desc);
 create unique index if not exists weekly_rank_snapshots_week_email_key on public.weekly_rank_snapshots(week_id, email);
 create index if not exists weekly_rank_snapshots_week_idx on public.weekly_rank_snapshots(week_id);
 create unique index if not exists monthly_rank_snapshots_month_email_key on public.monthly_rank_snapshots(month_id, email);
 create index if not exists monthly_rank_snapshots_month_idx on public.monthly_rank_snapshots(month_id);
+create index if not exists weekly_rank_results_week_pos_idx on public.weekly_rank_results(week_id, pos);
+create index if not exists system_event_logs_type_created_at_idx on public.system_event_logs(event_type, created_at desc);
 
 alter table public.profiles enable row level security;
 alter table public.user_achievements enable row level security;
 alter table public.bet_tickets enable row level security;
 alter table public.weekly_rank_snapshots enable row level security;
 alter table public.monthly_rank_snapshots enable row level security;
+alter table public.weekly_rank_results enable row level security;
+alter table public.system_event_logs enable row level security;
 
 drop policy if exists "profiles read global ranking" on public.profiles;
 drop policy if exists "profiles insert own" on public.profiles;
@@ -125,6 +165,7 @@ drop policy if exists "weekly snapshots update own" on public.weekly_rank_snapsh
 drop policy if exists "monthly snapshots read global ranking" on public.monthly_rank_snapshots;
 drop policy if exists "monthly snapshots insert own" on public.monthly_rank_snapshots;
 drop policy if exists "monthly snapshots update own" on public.monthly_rank_snapshots;
+drop policy if exists "weekly results read global ranking" on public.weekly_rank_results;
 
 create policy "profiles read global ranking"
 on public.profiles for select
@@ -210,6 +251,11 @@ on public.monthly_rank_snapshots for update
 to authenticated
 using (auth.uid() = user_id)
 with check (auth.uid() = user_id and auth.email() = email);
+
+create policy "weekly results read global ranking"
+on public.weekly_rank_results for select
+to anon, authenticated
+using (username <> '');
 
 create table if not exists public.promo_codes (
   id uuid primary key default gen_random_uuid(),
@@ -499,7 +545,293 @@ begin
 end;
 $$;
 
+create or replace function public.close_weekly_ranking_secure()
+returns jsonb
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  v_uid uuid := auth.uid();
+  v_email text := auth.email();
+  v_role text := coalesce(auth.role(), current_setting('request.jwt.claim.role', true));
+  v_week_start timestamptz;
+  v_week_end timestamptz;
+  v_week_id text;
+  v_rows integer := 0;
+  v_winner record;
+begin
+  if (v_uid is null or v_email is null) and v_role <> 'service_role' then
+    raise exception 'AUTH_REQUIRED';
+  end if;
+
+  if v_email is null then
+    v_email := 'system@ranibet.local';
+  end if;
+
+  v_week_end := date_trunc('week', timezone('America/Lima', now()));
+  v_week_start := v_week_end - interval '7 day';
+  v_week_id := to_char(v_week_start::date, 'IYYY-"W"IW');
+
+  if exists (select 1 from public.weekly_rank_results where week_id = v_week_id limit 1) then
+    select count(*) into v_rows
+    from public.weekly_rank_results
+    where week_id = v_week_id;
+
+    select username, pos, score
+      into v_winner
+      from public.weekly_rank_results
+     where week_id = v_week_id
+     order by pos asc
+     limit 1;
+
+    return jsonb_build_object(
+      'week_id', v_week_id,
+      'closed', true,
+      'already_closed', true,
+      'rows', coalesce(v_rows, 0),
+      'winner', coalesce(v_winner.username, ''),
+      'winner_pos', coalesce(v_winner.pos, 0),
+      'winner_score', coalesce(v_winner.score, 0)
+    );
+  end if;
+
+  with ticket_rows as (
+    select
+      email,
+      username,
+      status,
+      picks,
+      coalesce(stake, 0)::numeric as stake,
+      coalesce(payout, 0)::numeric as payout,
+      coalesce(total_odd, 0)::numeric as total_odd,
+      created_at
+    from public.bet_tickets
+    where created_at >= v_week_start
+      and created_at < v_week_end
+      and coalesce(username, '') <> ''
+  ),
+  snapshot_rows as (
+    select email, username, coalesce(starting_coins, 500)::numeric as starting_coins
+    from public.weekly_rank_snapshots
+    where week_id = v_week_id
+  ),
+  profile_rows as (
+    select email, username, coalesce(title, '') as title, coalesce(coins, 0)::numeric as coins
+    from public.profiles
+    where coalesce(username, '') <> ''
+  ),
+  user_sources as (
+    select email, username, null::text as title, starting_coins as bankroll from snapshot_rows
+    union all
+    select email, username, title, coins as bankroll from profile_rows
+    union all
+    select email, username, null::text as title, null::numeric as bankroll from ticket_rows
+  ),
+  user_base as (
+    select
+      lower(coalesce(email, username)) as ranking_key,
+      max(email) as email,
+      coalesce(nullif(max(username), ''), 'Brutality') as username,
+      coalesce(max(title), '') as title,
+      coalesce(max(bankroll), 0)::numeric as initial_bankroll
+    from user_sources
+    group by lower(coalesce(email, username))
+  ),
+  ticket_totals as (
+    select
+      lower(coalesce(email, username)) as ranking_key,
+      sum(stake)::numeric as total_staked,
+      sum(payout)::numeric as total_payout,
+      max(total_odd)::numeric as best_odd
+    from ticket_rows
+    group by lower(coalesce(email, username))
+  ),
+  expanded_picks as (
+    select
+      lower(coalesce(t.email, t.username)) as ranking_key,
+      t.status,
+      coalesce(nullif(pick ->> 'matchId', ''), nullif(pick ->> 'match', '')) as match_key,
+      lower(coalesce(pick ->> 'type', '')) as pick_type
+    from ticket_rows t
+    cross join lateral jsonb_array_elements(
+      case
+        when jsonb_typeof(t.picks) = 'array' then t.picks
+        else '[]'::jsonb
+      end
+    ) as pick
+  ),
+  total_matches as (
+    select greatest(count(distinct match_key), 1)::numeric as total_matches
+    from expanded_picks
+    where coalesce(match_key, '') <> ''
+  ),
+  match_summaries as (
+    select
+      ranking_key,
+      match_key,
+      count(distinct nullif(pick_type, '')) as side_count,
+      bool_or(status = 'WON') as has_won,
+      bool_or(status = 'LOST') as has_lost,
+      bool_or(status = 'PENDING') as has_pending
+    from expanded_picks
+    where coalesce(match_key, '') <> ''
+    group by ranking_key, match_key
+  ),
+  user_match_stats as (
+    select
+      ranking_key,
+      count(*)::integer as bets,
+      count(*) filter (where side_count > 1 or (has_won and has_lost))::integer as contaminated,
+      count(*) filter (where not (side_count > 1 or (has_won and has_lost)) and has_won)::integer as won,
+      count(*) filter (where not (side_count > 1 or (has_won and has_lost)) and has_lost)::integer as lost,
+      count(*) filter (where not (side_count > 1 or (has_won and has_lost)) and not has_won and not has_lost)::integer as pending
+    from match_summaries
+    group by ranking_key
+  ),
+  combined as (
+    select
+      u.ranking_key,
+      u.email,
+      u.username,
+      u.title,
+      greatest(coalesce(u.initial_bankroll, 0), 1)::numeric as initial_bankroll,
+      coalesce(t.total_staked, 0)::numeric as total_staked,
+      coalesce(t.total_payout, 0)::numeric as total_payout,
+      coalesce(t.best_odd, 0)::numeric as best_odd,
+      coalesce(m.bets, 0)::integer as bets,
+      coalesce(m.won, 0)::integer as won,
+      coalesce(m.lost, 0)::integer as lost,
+      coalesce(m.pending, 0)::integer as pending,
+      coalesce(m.contaminated, 0)::integer as contaminated
+    from user_base u
+    left join ticket_totals t on t.ranking_key = u.ranking_key
+    left join user_match_stats m on m.ranking_key = u.ranking_key
+  ),
+  scored as (
+    select
+      c.*,
+      (c.won + c.lost + c.contaminated) as resolved,
+      case when (c.won + c.lost + c.contaminated) > 0 then c.won::numeric / (c.won + c.lost + c.contaminated) else 0 end as win_rate_ratio,
+      case when tm.total_matches > 0 then c.bets::numeric / tm.total_matches else 0 end as coverage_rate_ratio,
+      least(c.total_staked / greatest(c.initial_bankroll, 1), 1) as risk_rate_ratio,
+      case when c.bets > 0 then (c.bets - c.contaminated)::numeric / c.bets else 1 end as clean_rate_ratio,
+      (c.total_payout - c.total_staked)::numeric as profit
+    from combined c
+    cross join total_matches tm
+    where c.bets > 0 or c.total_staked > 0 or c.total_payout > 0
+  ),
+  ranked as (
+    select
+      row_number() over (
+        order by
+          round(((win_rate_ratio * 50) + (risk_rate_ratio * 25) + (coverage_rate_ratio * 20) + (clean_rate_ratio * 5))::numeric, 2) desc,
+          round((win_rate_ratio * 100)::numeric, 2) desc,
+          round((risk_rate_ratio * 100)::numeric, 2) desc,
+          round((coverage_rate_ratio * 100)::numeric, 2) desc,
+          won desc,
+          contaminated asc,
+          profit desc
+      )::integer as pos,
+      email,
+      username,
+      title,
+      case when resolved >= 3 then 'OFICIAL' else 'PROVISIONAL' end as status,
+      round(((win_rate_ratio * 50) + (risk_rate_ratio * 25) + (coverage_rate_ratio * 20) + (clean_rate_ratio * 5))::numeric, 2) as score,
+      round((win_rate_ratio * 100)::numeric, 2) as win_rate,
+      round((risk_rate_ratio * 100)::numeric, 2) as risk_rate,
+      round((coverage_rate_ratio * 100)::numeric, 2) as coverage_rate,
+      round((clean_rate_ratio * 100)::numeric, 2) as clean_rate,
+      round(profit::numeric, 2) as profit,
+      round(best_odd::numeric, 2) as best_odd,
+      bets,
+      won,
+      lost,
+      pending,
+      contaminated
+    from scored
+  )
+  insert into public.weekly_rank_results (
+    week_id, email, username, title, pos, status, score, win_rate, risk_rate, coverage_rate, clean_rate, profit, best_odd, bets, won, lost, pending, contaminated, closed_at
+  )
+  select
+    v_week_id,
+    email,
+    username,
+    title,
+    pos,
+    status,
+    score,
+    win_rate,
+    risk_rate,
+    coverage_rate,
+    clean_rate,
+    profit,
+    best_odd,
+    bets,
+    won,
+    lost,
+    pending,
+    contaminated,
+    now()
+  from ranked
+  on conflict (week_id, email) do update set
+    username = excluded.username,
+    title = excluded.title,
+    pos = excluded.pos,
+    status = excluded.status,
+    score = excluded.score,
+    win_rate = excluded.win_rate,
+    risk_rate = excluded.risk_rate,
+    coverage_rate = excluded.coverage_rate,
+    clean_rate = excluded.clean_rate,
+    profit = excluded.profit,
+    best_odd = excluded.best_odd,
+    bets = excluded.bets,
+    won = excluded.won,
+    lost = excluded.lost,
+    pending = excluded.pending,
+    contaminated = excluded.contaminated,
+    closed_at = excluded.closed_at;
+
+  select count(*) into v_rows
+  from public.weekly_rank_results
+  where week_id = v_week_id;
+
+  select username, pos, score
+    into v_winner
+    from public.weekly_rank_results
+   where week_id = v_week_id
+   order by pos asc
+   limit 1;
+
+  insert into public.system_event_logs(event_type, event_source, payload)
+  values (
+    'weekly_closure',
+    'close_weekly_ranking_secure',
+    jsonb_build_object(
+      'week_id', v_week_id,
+      'closed_by', v_email,
+      'rows', coalesce(v_rows, 0),
+      'winner', coalesce(v_winner.username, ''),
+      'winner_score', coalesce(v_winner.score, 0)
+    )
+  );
+
+  return jsonb_build_object(
+    'week_id', v_week_id,
+    'closed', true,
+    'already_closed', false,
+    'rows', coalesce(v_rows, 0),
+    'winner', coalesce(v_winner.username, ''),
+    'winner_pos', coalesce(v_winner.pos, 0),
+    'winner_score', coalesce(v_winner.score, 0)
+  );
+end;
+$$;
+
 grant execute on function public.bootstrap_profile_secure(text, text) to authenticated;
 grant execute on function public.set_username_secure(text) to authenticated;
 grant execute on function public.redeem_promo_code_secure(text) to authenticated;
 grant execute on function public.place_bet_secure(text, jsonb, numeric, numeric) to authenticated;
+grant execute on function public.close_weekly_ranking_secure() to authenticated;
