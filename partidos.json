@@ -1,51 +1,27 @@
 [
   {
     "torneo": "Serie A",
-    "local": "Lazio",
-    "visitante": "Internazionale",
-    "cuota_local": "4.10",
-    "cuota_empate": "3.55",
-    "cuota_visitante": "1.80",
-    "mejor_cuota_local": "4.10",
-    "mejor_cuota_empate": "3.55",
-    "mejor_cuota_visitante": "1.80",
+    "local": "Lecce",
+    "visitante": "Juventus",
+    "cuota_local": "8.00",
+    "cuota_empate": "4.30",
+    "cuota_visitante": "1.39",
+    "mejor_cuota_local": "8.00",
+    "mejor_cuota_empate": "4.30",
+    "mejor_cuota_visitante": "1.39",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
-    "hora_partido": "11:00",
-    "fecha_partido": "2026-05-09 11:00:00",
-    "match_datetime": "2026-05-09T11:00:00-05:00",
+    "hora_partido": "13:45",
+    "fecha_partido": "2026-05-09 13:45:00",
+    "match_datetime": "2026-05-09T13:45:00-05:00",
     "live": true,
-    "minute": "80",
-    "score": "0-3",
+    "minute": "58",
+    "score": "0-1",
     "status": "Second Half",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:58.135953-05:00"
-  },
-  {
-    "torneo": "Premier League",
-    "local": "Manchester City",
-    "visitante": "Brentford",
-    "cuota_local": "1.34",
-    "cuota_empate": "5.50",
-    "cuota_visitante": "8.00",
-    "mejor_cuota_local": "1.34",
-    "mejor_cuota_empate": "5.50",
-    "mejor_cuota_visitante": "8.00",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "11:30",
-    "fecha_partido": "2026-05-09 11:30:00",
-    "match_datetime": "2026-05-09T11:30:00-05:00",
-    "live": true,
-    "minute": "48",
-    "score": "0-0",
-    "status": "Second Half",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:56.836689-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.140804-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -69,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:53.923582-05:00"
+    "fecha_scrape": "2026-05-09T15:06:15.630157-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -93,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:55.209679-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.232781-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -117,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:55.209706-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.232803-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -141,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:55.209726-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.232818-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -165,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:55.209743-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.232830-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -189,7 +165,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:55.209760-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.232843-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -213,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260506",
-    "fecha_scrape": "2026-05-09T12:36:55.209777-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.232854-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -237,7 +213,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260507",
-    "fecha_scrape": "2026-05-09T12:36:55.307735-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.473775-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -261,7 +237,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260507",
-    "fecha_scrape": "2026-05-09T12:36:55.307762-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.473794-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -285,7 +261,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260507",
-    "fecha_scrape": "2026-05-09T12:36:55.307783-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.473807-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -309,7 +285,7 @@
     "status": "Canceled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260507",
-    "fecha_scrape": "2026-05-09T12:36:55.307801-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.473819-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -333,7 +309,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260507",
-    "fecha_scrape": "2026-05-09T12:36:55.307818-05:00"
+    "fecha_scrape": "2026-05-09T15:06:17.473830-05:00"
   },
   {
     "torneo": "Serie A",
@@ -357,7 +333,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260508",
-    "fecha_scrape": "2026-05-09T12:36:58.039611-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.051536-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -381,7 +357,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260508",
-    "fecha_scrape": "2026-05-09T12:36:52.795186-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.126393-05:00"
   },
   {
     "torneo": "Premier League",
@@ -405,7 +381,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:56.836597-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.778174-05:00"
   },
   {
     "torneo": "Serie A",
@@ -429,7 +405,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:58.135916-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.140758-05:00"
   },
   {
     "torneo": "Premier League",
@@ -453,7 +429,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:56.836623-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.778193-05:00"
   },
   {
     "torneo": "Premier League",
@@ -477,7 +453,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:56.836643-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.778207-05:00"
   },
   {
     "torneo": "Premier League",
@@ -501,7 +477,55 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:56.836661-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.778220-05:00"
+  },
+  {
+    "torneo": "Serie A",
+    "local": "Lazio",
+    "visitante": "Internazionale",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": false,
+    "hora_partido": "11:00",
+    "fecha_partido": "2026-05-09 11:00:00",
+    "match_datetime": "2026-05-09T11:00:00-05:00",
+    "live": false,
+    "minute": "90+2",
+    "score": "0-3",
+    "status": "Full Time",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
+    "fecha_scrape": "2026-05-09T15:06:20.140778-05:00"
+  },
+  {
+    "torneo": "Premier League",
+    "local": "Manchester City",
+    "visitante": "Brentford",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": false,
+    "hora_partido": "11:30",
+    "fecha_partido": "2026-05-09 11:30:00",
+    "match_datetime": "2026-05-09T11:30:00-05:00",
+    "live": false,
+    "minute": "90+6",
+    "score": "3-0",
+    "status": "Full Time",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
+    "fecha_scrape": "2026-05-09T15:06:18.778233-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -525,42 +549,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:52.923998-05:00"
-  },
-  {
-    "torneo": "Serie A",
-    "local": "Lecce",
-    "visitante": "Juventus",
-    "cuota_local": "7.50",
-    "cuota_empate": "4.30",
-    "cuota_visitante": "1.39",
-    "mejor_cuota_local": "7.50",
-    "mejor_cuota_empate": "4.30",
-    "mejor_cuota_visitante": "1.39",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "13:45",
-    "fecha_partido": "2026-05-09 13:45:00",
-    "match_datetime": "2026-05-09T13:45:00-05:00",
-    "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:58.135977-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.464796-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Atlético Grau",
     "visitante": "Cienciano del Cusco",
-    "cuota_local": "2.05",
-    "cuota_empate": "3.15",
-    "cuota_visitante": "3.40",
-    "mejor_cuota_local": "2.05",
-    "mejor_cuota_empate": "3.15",
-    "mejor_cuota_visitante": "3.40",
+    "cuota_local": "2.20",
+    "cuota_empate": "3.10",
+    "cuota_visitante": "3.20",
+    "mejor_cuota_local": "2.20",
+    "mejor_cuota_empate": "3.10",
+    "mejor_cuota_visitante": "3.20",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -573,7 +573,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:52.924030-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.464819-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -597,7 +597,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-09T12:36:52.924055-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.464836-05:00"
   },
   {
     "torneo": "Serie A",
@@ -621,7 +621,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:58.235723-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.229836-05:00"
   },
   {
     "torneo": "Premier League",
@@ -645,18 +645,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:56.940506-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.893099-05:00"
   },
   {
     "torneo": "Premier League",
     "local": "Crystal Palace",
     "visitante": "Everton",
-    "cuota_local": "2.85",
-    "cuota_empate": "3.35",
-    "cuota_visitante": "2.55",
-    "mejor_cuota_local": "2.85",
-    "mejor_cuota_empate": "3.35",
-    "mejor_cuota_visitante": "2.55",
+    "cuota_local": "3.00",
+    "cuota_empate": "3.40",
+    "cuota_visitante": "2.35",
+    "mejor_cuota_local": "3.00",
+    "mejor_cuota_empate": "3.40",
+    "mejor_cuota_visitante": "2.35",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -669,7 +669,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:56.940556-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.893122-05:00"
   },
   {
     "torneo": "Premier League",
@@ -693,18 +693,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:56.940581-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.893138-05:00"
   },
   {
     "torneo": "Serie A",
     "local": "Cremonese",
     "visitante": "Pisa",
-    "cuota_local": "1.67",
-    "cuota_empate": "3.60",
-    "cuota_visitante": "5.00",
-    "mejor_cuota_local": "1.67",
-    "mejor_cuota_empate": "3.60",
-    "mejor_cuota_visitante": "5.00",
+    "cuota_local": "1.71",
+    "cuota_empate": "3.45",
+    "cuota_visitante": "4.80",
+    "mejor_cuota_local": "1.71",
+    "mejor_cuota_empate": "3.45",
+    "mejor_cuota_visitante": "4.80",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -717,18 +717,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:58.235756-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.229860-05:00"
   },
   {
     "torneo": "Serie A",
     "local": "Fiorentina",
     "visitante": "Genoa",
-    "cuota_local": "2.05",
+    "cuota_local": "2.00",
     "cuota_empate": "3.25",
-    "cuota_visitante": "3.55",
-    "mejor_cuota_local": "2.05",
+    "cuota_visitante": "3.60",
+    "mejor_cuota_local": "2.00",
     "mejor_cuota_empate": "3.25",
-    "mejor_cuota_visitante": "3.55",
+    "mejor_cuota_visitante": "3.60",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -741,7 +741,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:58.235780-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.229876-05:00"
   },
   {
     "torneo": "Premier League",
@@ -765,7 +765,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:56.940603-05:00"
+    "fecha_scrape": "2026-05-09T15:06:18.893152-05:00"
   },
   {
     "torneo": "Serie A",
@@ -773,10 +773,10 @@
     "visitante": "AS Roma",
     "cuota_local": "6.00",
     "cuota_empate": "4.20",
-    "cuota_visitante": "1.49",
+    "cuota_visitante": "1.47",
     "mejor_cuota_local": "6.00",
     "mejor_cuota_empate": "4.20",
-    "mejor_cuota_visitante": "1.49",
+    "mejor_cuota_visitante": "1.47",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -789,7 +789,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:58.235802-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.229892-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -813,7 +813,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:53.031734-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.559513-05:00"
   },
   {
     "torneo": "Serie A",
@@ -837,7 +837,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:58.235823-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.229907-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -861,7 +861,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:53.031766-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.559535-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -885,7 +885,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-09T12:36:53.031790-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.559551-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -909,7 +909,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-09T12:36:53.130233-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.654919-05:00"
   },
   {
     "torneo": "Serie A",
@@ -933,7 +933,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-09T12:36:58.536075-05:00"
+    "fecha_scrape": "2026-05-09T15:06:20.333601-05:00"
   },
   {
     "torneo": "Premier League",
@@ -957,7 +957,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-09T12:36:57.040621-05:00"
+    "fecha_scrape": "2026-05-09T15:06:19.145655-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -981,7 +981,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-09T12:36:53.130267-05:00"
+    "fecha_scrape": "2026-05-09T15:06:14.654941-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1005,7 +1005,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260513",
-    "fecha_scrape": "2026-05-09T12:36:57.379459-05:00"
+    "fecha_scrape": "2026-05-09T15:06:19.428919-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1029,7 +1029,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260515",
-    "fecha_scrape": "2026-05-09T12:36:57.604936-05:00"
+    "fecha_scrape": "2026-05-09T15:06:19.624072-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1053,7 +1053,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260515",
-    "fecha_scrape": "2026-05-09T12:36:53.823843-05:00"
+    "fecha_scrape": "2026-05-09T15:06:15.446148-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1077,6 +1077,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260515",
-    "fecha_scrape": "2026-05-09T12:36:53.823869-05:00"
+    "fecha_scrape": "2026-05-09T15:06:15.446167-05:00"
   }
 ]
