@@ -1,5 +1,29 @@
 [
   {
+    "torneo": "Premier League",
+    "local": "Tottenham Hotspur",
+    "visitante": "Leeds United",
+    "cuota_local": "1.77",
+    "cuota_empate": "3.95",
+    "cuota_visitante": "4.30",
+    "mejor_cuota_local": "1.77",
+    "mejor_cuota_empate": "3.95",
+    "mejor_cuota_visitante": "4.30",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": true,
+    "hora_partido": "14:00",
+    "fecha_partido": "2026-05-11 14:00:00",
+    "match_datetime": "2026-05-11T14:00:00-05:00",
+    "live": true,
+    "minute": "88",
+    "score": "1-1",
+    "status": "Second Half",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260511",
+    "fecha_scrape": "2026-05-11T16:55:41.450123-05:00"
+  },
+  {
     "torneo": "Serie A",
     "local": "Torino",
     "visitante": "Sassuolo",
@@ -21,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260508",
-    "fecha_scrape": "2026-05-11T13:02:50.350106-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.950267-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260508",
-    "fecha_scrape": "2026-05-11T13:02:46.891777-05:00"
+    "fecha_scrape": "2026-05-11T16:55:38.738918-05:00"
   },
   {
     "torneo": "Premier League",
@@ -69,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:49.679052-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.303617-05:00"
   },
   {
     "torneo": "Serie A",
@@ -93,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:50.430174-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.019536-05:00"
   },
   {
     "torneo": "Premier League",
@@ -117,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:49.679079-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.303643-05:00"
   },
   {
     "torneo": "Premier League",
@@ -141,7 +165,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:49.679099-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.303681-05:00"
   },
   {
     "torneo": "Premier League",
@@ -165,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:49.679118-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.303703-05:00"
   },
   {
     "torneo": "Serie A",
@@ -189,7 +213,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:50.430200-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.019561-05:00"
   },
   {
     "torneo": "Premier League",
@@ -213,7 +237,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:49.679136-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.303721-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,7 +261,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:47.032076-05:00"
+    "fecha_scrape": "2026-05-11T16:55:38.857919-05:00"
   },
   {
     "torneo": "Serie A",
@@ -261,7 +285,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:50.430218-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.019580-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -285,7 +309,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:47.032101-05:00"
+    "fecha_scrape": "2026-05-11T16:55:38.857944-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -309,7 +333,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260509",
-    "fecha_scrape": "2026-05-11T13:02:47.032120-05:00"
+    "fecha_scrape": "2026-05-11T16:55:38.857963-05:00"
   },
   {
     "torneo": "Serie A",
@@ -333,7 +357,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:50.498880-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.206838-05:00"
   },
   {
     "torneo": "Premier League",
@@ -357,7 +381,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:49.752254-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.373352-05:00"
   },
   {
     "torneo": "Premier League",
@@ -381,7 +405,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:49.752280-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.373377-05:00"
   },
   {
     "torneo": "Premier League",
@@ -405,7 +429,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:49.752300-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.373397-05:00"
   },
   {
     "torneo": "Serie A",
@@ -429,7 +453,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:50.498908-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.206866-05:00"
   },
   {
     "torneo": "Serie A",
@@ -453,7 +477,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:50.498927-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.206885-05:00"
   },
   {
     "torneo": "Premier League",
@@ -477,7 +501,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:49.752320-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.373414-05:00"
   },
   {
     "torneo": "Serie A",
@@ -501,7 +525,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:50.498946-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.206902-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -525,7 +549,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:47.112551-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.004846-05:00"
   },
   {
     "torneo": "Serie A",
@@ -549,7 +573,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:50.498962-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.206919-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -573,7 +597,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:47.112577-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.004871-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -597,7 +621,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260510",
-    "fecha_scrape": "2026-05-11T13:02:47.112598-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.004890-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -621,55 +645,31 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-11T13:02:47.222928-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.080928-05:00"
   },
   {
     "torneo": "Serie A",
     "local": "Napoli",
     "visitante": "Bologna",
-    "cuota_local": "1.53",
-    "cuota_empate": "3.95",
-    "cuota_visitante": "5.75",
-    "mejor_cuota_local": "1.53",
-    "mejor_cuota_empate": "3.95",
-    "mejor_cuota_visitante": "5.75",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
     "odds_detalle": [],
     "odds_source": "espn",
-    "odds_verified": true,
+    "odds_verified": false,
     "hora_partido": "13:45",
     "fecha_partido": "2026-05-11 13:45:00",
     "match_datetime": "2026-05-11T13:45:00-05:00",
     "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
+    "minute": "90+6",
+    "score": "2-3",
+    "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-11T13:02:50.573189-05:00"
-  },
-  {
-    "torneo": "Premier League",
-    "local": "Tottenham Hotspur",
-    "visitante": "Leeds United",
-    "cuota_local": "1.77",
-    "cuota_empate": "3.95",
-    "cuota_visitante": "4.30",
-    "mejor_cuota_local": "1.77",
-    "mejor_cuota_empate": "3.95",
-    "mejor_cuota_visitante": "4.30",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "14:00",
-    "fecha_partido": "2026-05-11 14:00:00",
-    "match_datetime": "2026-05-11T14:00:00-05:00",
-    "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-11T13:02:49.816554-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.271175-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -693,7 +693,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260511",
-    "fecha_scrape": "2026-05-11T13:02:47.222960-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.080960-05:00"
   },
   {
     "torneo": "Premier League",
@@ -717,7 +717,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260513",
-    "fecha_scrape": "2026-05-11T13:02:49.951530-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.584066-05:00"
   },
   {
     "torneo": "Premier League",
@@ -741,7 +741,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260515",
-    "fecha_scrape": "2026-05-11T13:02:50.101818-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.721019-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -765,7 +765,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260515",
-    "fecha_scrape": "2026-05-11T13:02:47.692899-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.355289-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -789,7 +789,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260515",
-    "fecha_scrape": "2026-05-11T13:02:47.692927-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.355316-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -813,7 +813,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260516",
-    "fecha_scrape": "2026-05-11T13:02:47.816730-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.422203-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -837,7 +837,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260516",
-    "fecha_scrape": "2026-05-11T13:02:47.816756-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.422229-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -861,7 +861,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260516",
-    "fecha_scrape": "2026-05-11T13:02:47.816786-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.422258-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -885,7 +885,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260516",
-    "fecha_scrape": "2026-05-11T13:02:47.816805-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.422277-05:00"
   },
   {
     "torneo": "Premier League",
@@ -909,7 +909,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:50.281131-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.867099-05:00"
   },
   {
     "torneo": "Premier League",
@@ -933,7 +933,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:50.281161-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.867130-05:00"
   },
   {
     "torneo": "Premier League",
@@ -957,7 +957,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:50.281185-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.867153-05:00"
   },
   {
     "torneo": "Premier League",
@@ -981,7 +981,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:50.281209-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.867174-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1005,7 +1005,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:50.281231-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.867196-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1029,7 +1029,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:47.928128-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.485664-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1053,7 +1053,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:50.281252-05:00"
+    "fecha_scrape": "2026-05-11T16:55:41.867216-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1077,7 +1077,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036182-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774021-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1101,7 +1101,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036214-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774052-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1125,7 +1125,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036238-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774075-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1149,7 +1149,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036260-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774097-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1173,7 +1173,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036282-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774117-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1197,7 +1197,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036304-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774138-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1221,7 +1221,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036326-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774157-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1245,7 +1245,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036347-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774177-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1269,7 +1269,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036368-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774197-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1293,7 +1293,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:51.036387-05:00"
+    "fecha_scrape": "2026-05-11T16:55:42.774217-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1317,7 +1317,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:47.928155-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.485713-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1341,6 +1341,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260517",
-    "fecha_scrape": "2026-05-11T13:02:47.928176-05:00"
+    "fecha_scrape": "2026-05-11T16:55:39.485734-05:00"
   }
 ]
