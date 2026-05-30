@@ -1,5 +1,29 @@
 [
   {
+    "torneo": "UEFA Champions League",
+    "local": "Paris Saint-Germain",
+    "visitante": "Arsenal",
+    "cuota_local": "2.45",
+    "cuota_empate": "3.30",
+    "cuota_visitante": "2.95",
+    "mejor_cuota_local": "2.45",
+    "mejor_cuota_empate": "3.30",
+    "mejor_cuota_visitante": "2.95",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": true,
+    "hora_partido": "11:00",
+    "fecha_partido": "2026-05-30 11:00:00",
+    "match_datetime": "2026-05-30T11:00:00-05:00",
+    "live": true,
+    "minute": "45",
+    "score": "0-1",
+    "status": "First Half",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260530",
+    "fecha_scrape": "2026-05-30T11:47:03.260847-05:00"
+  },
+  {
     "torneo": "Copa Libertadores",
     "local": "Independiente del Valle",
     "visitante": "Rosario Central",
@@ -21,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T10:48:25.420355-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.642926-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -45,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T10:48:25.420379-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.642947-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -69,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T10:48:25.420397-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.642962-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -93,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T10:48:25.420414-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.642975-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -117,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T10:48:25.420430-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.642988-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -141,7 +165,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T10:48:25.420446-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.643001-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -165,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T10:48:25.688062-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.816936-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -189,7 +213,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T10:48:25.688086-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.816957-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -213,7 +237,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T10:48:25.688105-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.816972-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -237,7 +261,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T10:48:25.688122-05:00"
+    "fecha_scrape": "2026-05-30T11:47:04.816986-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -261,7 +285,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260529",
-    "fecha_scrape": "2026-05-30T10:48:21.370728-05:00"
+    "fecha_scrape": "2026-05-30T11:47:00.573361-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -285,31 +309,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T10:48:21.840168-05:00"
-  },
-  {
-    "torneo": "UEFA Champions League",
-    "local": "Paris Saint-Germain",
-    "visitante": "Arsenal",
-    "cuota_local": "2.45",
-    "cuota_empate": "3.30",
-    "cuota_visitante": "2.95",
-    "mejor_cuota_local": "2.45",
-    "mejor_cuota_empate": "3.30",
-    "mejor_cuota_visitante": "2.95",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "11:00",
-    "fecha_partido": "2026-05-30 11:00:00",
-    "match_datetime": "2026-05-30T11:00:00-05:00",
-    "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T10:48:23.987251-05:00"
+    "fecha_scrape": "2026-05-30T11:47:00.816672-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -333,7 +333,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T10:48:21.840199-05:00"
+    "fecha_scrape": "2026-05-30T11:47:00.816708-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -357,7 +357,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T10:48:21.840222-05:00"
+    "fecha_scrape": "2026-05-30T11:47:00.816726-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -381,7 +381,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T10:48:21.840243-05:00"
+    "fecha_scrape": "2026-05-30T11:47:00.816741-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -405,7 +405,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T10:48:21.985651-05:00"
+    "fecha_scrape": "2026-05-30T11:47:01.094419-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -429,7 +429,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T10:48:21.985680-05:00"
+    "fecha_scrape": "2026-05-30T11:47:01.094443-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -453,7 +453,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T10:48:21.985698-05:00"
+    "fecha_scrape": "2026-05-30T11:47:01.094457-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -477,6 +477,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T10:48:21.985719-05:00"
+    "fecha_scrape": "2026-05-30T11:47:01.094471-05:00"
   }
 ]
