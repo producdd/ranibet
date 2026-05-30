@@ -1,173 +1,5 @@
 [
   {
-    "torneo": "Liga 1 Peruana",
-    "local": "Atlético Grau",
-    "visitante": "Deportivo Moquegua",
-    "cuota_local": "1.56",
-    "cuota_empate": "3.70",
-    "cuota_visitante": "6.00",
-    "mejor_cuota_local": "1.56",
-    "mejor_cuota_empate": "3.70",
-    "mejor_cuota_visitante": "6.00",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "15:00",
-    "fecha_partido": "2026-05-29 15:00:00",
-    "match_datetime": "2026-05-29T15:00:00-05:00",
-    "live": true,
-    "minute": "90+7",
-    "score": "1-0",
-    "status": "Second Half",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260529",
-    "fecha_scrape": "2026-05-29T20:31:07.832613-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Lanús",
-    "visitante": "Mirassol",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "17:00",
-    "fecha_partido": "2026-05-26 17:00:00",
-    "match_datetime": "2026-05-26T17:00:00-05:00",
-    "live": false,
-    "minute": "90+11",
-    "score": "1-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260526",
-    "fecha_scrape": "2026-05-29T20:31:09.182476-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Liga de Quito",
-    "visitante": "Always Ready",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "17:00",
-    "fecha_partido": "2026-05-26 17:00:00",
-    "match_datetime": "2026-05-26T17:00:00-05:00",
-    "live": false,
-    "minute": "90+8",
-    "score": "3-2",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260526",
-    "fecha_scrape": "2026-05-29T20:31:09.182496-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Estudiantes de La Plata",
-    "visitante": "Independiente Medellín",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-26 19:30:00",
-    "match_datetime": "2026-05-26T19:30:00-05:00",
-    "live": false,
-    "minute": "90+13",
-    "score": "1-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260526",
-    "fecha_scrape": "2026-05-29T20:31:09.182510-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Flamengo",
-    "visitante": "Cusco FC",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-26 19:30:00",
-    "match_datetime": "2026-05-26T19:30:00-05:00",
-    "live": false,
-    "minute": "90+8",
-    "score": "3-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260526",
-    "fecha_scrape": "2026-05-29T20:31:09.182523-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Nacional",
-    "visitante": "Coquimbo Unido",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-26 19:30:00",
-    "match_datetime": "2026-05-26T19:30:00-05:00",
-    "live": false,
-    "minute": "90+13",
-    "score": "1-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260526",
-    "fecha_scrape": "2026-05-29T20:31:09.182536-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Universitario",
-    "visitante": "Deportes Tolima",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-26 19:30:00",
-    "match_datetime": "2026-05-26T19:30:00-05:00",
-    "live": false,
-    "minute": "90+10",
-    "score": "0-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260526",
-    "fecha_scrape": "2026-05-29T20:31:09.182549-05:00"
-  },
-  {
     "torneo": "Copa Libertadores",
     "local": "Independiente del Valle",
     "visitante": "Rosario Central",
@@ -189,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-29T20:31:09.397773-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.770539-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -213,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-29T20:31:09.397793-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.770564-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -237,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-29T20:31:09.397808-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.770581-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -261,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-29T20:31:09.397821-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.770598-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -285,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-29T20:31:09.397832-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.770614-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -309,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-29T20:31:09.397844-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.770630-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -333,7 +165,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-29T20:31:09.474894-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.855229-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -357,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-29T20:31:09.474915-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.855254-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -381,7 +213,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-29T20:31:09.474929-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.855271-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -405,7 +237,31 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-29T20:31:09.474942-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.855287-05:00"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Atlético Grau",
+    "visitante": "Deportivo Moquegua",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": false,
+    "hora_partido": "15:00",
+    "fecha_partido": "2026-05-29 15:00:00",
+    "match_datetime": "2026-05-29T15:00:00-05:00",
+    "live": false,
+    "minute": "90+21",
+    "score": "1-0",
+    "status": "Full Time",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260529",
+    "fecha_scrape": "2026-05-30T00:31:16.559476-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -429,17 +285,17 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-29T20:31:07.912800-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.616670-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Paris Saint-Germain",
     "visitante": "Arsenal",
     "cuota_local": "2.40",
-    "cuota_empate": "3.25",
+    "cuota_empate": "3.20",
     "cuota_visitante": "3.10",
     "mejor_cuota_local": "2.40",
-    "mejor_cuota_empate": "3.25",
+    "mejor_cuota_empate": "3.20",
     "mejor_cuota_visitante": "3.10",
     "odds_detalle": [],
     "odds_source": "espn",
@@ -453,7 +309,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-29T20:31:08.723200-05:00"
+    "fecha_scrape": "2026-05-30T00:31:17.368643-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -477,18 +333,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-29T20:31:07.912824-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.616701-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Sport Boys",
     "visitante": "Comerciantes Unidos",
-    "cuota_local": "1.61",
-    "cuota_empate": "3.60",
-    "cuota_visitante": "5.00",
-    "mejor_cuota_local": "1.61",
-    "mejor_cuota_empate": "3.60",
-    "mejor_cuota_visitante": "5.00",
+    "cuota_local": "1.62",
+    "cuota_empate": "3.55",
+    "cuota_visitante": "4.90",
+    "mejor_cuota_local": "1.62",
+    "mejor_cuota_empate": "3.55",
+    "mejor_cuota_visitante": "4.90",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -501,7 +357,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-29T20:31:07.912844-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.616723-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -525,7 +381,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-29T20:31:07.912863-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.616742-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -549,7 +405,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-29T20:31:07.980778-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.670514-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -573,7 +429,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-29T20:31:07.980801-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.670542-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -597,7 +453,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-29T20:31:07.980815-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.670560-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -621,6 +477,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-29T20:31:07.980829-05:00"
+    "fecha_scrape": "2026-05-30T00:31:16.670579-05:00"
   }
 ]
