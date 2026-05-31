@@ -1,150 +1,6 @@
 [
   {
     "torneo": "Copa Libertadores",
-    "local": "Independiente del Valle",
-    "visitante": "Rosario Central",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "17:00",
-    "fecha_partido": "2026-05-27 17:00:00",
-    "match_datetime": "2026-05-27T17:00:00-05:00",
-    "live": false,
-    "minute": "90+11",
-    "score": "1-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T20:36:01.670271-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Libertad",
-    "visitante": "Universidad Central",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "17:00",
-    "fecha_partido": "2026-05-27 17:00:00",
-    "match_datetime": "2026-05-27T17:00:00-05:00",
-    "live": false,
-    "minute": "90+11",
-    "score": "0-1",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T20:36:01.670296-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Bolívar",
-    "visitante": "Independiente Rivadavia",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-27 19:30:00",
-    "match_datetime": "2026-05-27T19:30:00-05:00",
-    "live": false,
-    "minute": "90+16",
-    "score": "1-3",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T20:36:01.670314-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Corinthians",
-    "visitante": "Platense",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-27 19:30:00",
-    "match_datetime": "2026-05-27T19:30:00-05:00",
-    "live": false,
-    "minute": "90+12",
-    "score": "0-2",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T20:36:01.670331-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Fluminense",
-    "visitante": "Deportivo La Guaira",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-27 19:30:00",
-    "match_datetime": "2026-05-27T19:30:00-05:00",
-    "live": false,
-    "minute": "90+9",
-    "score": "3-1",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T20:36:01.670348-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
-    "local": "Peñarol",
-    "visitante": "Independiente Santa Fe",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "19:30",
-    "fecha_partido": "2026-05-27 19:30:00",
-    "match_datetime": "2026-05-27T19:30:00-05:00",
-    "live": false,
-    "minute": "90+10",
-    "score": "0-1",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260527",
-    "fecha_scrape": "2026-05-30T20:36:01.670363-05:00"
-  },
-  {
-    "torneo": "Copa Libertadores",
     "local": "Cerro Porteño",
     "visitante": "Sporting Cristal",
     "cuota_local": "",
@@ -165,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T20:36:01.822963-05:00"
+    "fecha_scrape": "2026-05-31T01:01:54.144909-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -189,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T20:36:01.822990-05:00"
+    "fecha_scrape": "2026-05-31T01:01:54.144928-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -213,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T20:36:01.823008-05:00"
+    "fecha_scrape": "2026-05-31T01:01:54.144940-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -237,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20260528",
-    "fecha_scrape": "2026-05-30T20:36:01.823024-05:00"
+    "fecha_scrape": "2026-05-31T01:01:54.144949-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -261,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260529",
-    "fecha_scrape": "2026-05-30T20:35:57.476588-05:00"
+    "fecha_scrape": "2026-05-31T01:01:50.784579-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -285,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T20:35:57.948181-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.045936-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -309,7 +165,7 @@
     "status": "Final Score - After Penalties",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T20:36:00.006767-05:00"
+    "fecha_scrape": "2026-05-31T01:01:52.938606-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -333,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T20:35:57.948207-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.045952-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -357,41 +213,41 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T20:35:57.948223-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.045963-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Universitario",
     "visitante": "Sport Huancayo",
-    "cuota_local": "1.44",
-    "cuota_empate": "4.20",
-    "cuota_visitante": "6.50",
-    "mejor_cuota_local": "1.44",
-    "mejor_cuota_empate": "4.20",
-    "mejor_cuota_visitante": "6.50",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
     "odds_detalle": [],
     "odds_source": "espn",
-    "odds_verified": true,
+    "odds_verified": false,
     "hora_partido": "20:00",
     "fecha_partido": "2026-05-30 20:00:00",
     "match_datetime": "2026-05-30T20:00:00-05:00",
     "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
+    "minute": "90+8",
+    "score": "2-1",
+    "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-05-30T20:35:57.948266-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.045974-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Melgar",
     "visitante": "Alianza Atlético",
-    "cuota_local": "1.54",
-    "cuota_empate": "3.75",
+    "cuota_local": "1.56",
+    "cuota_empate": "3.80",
     "cuota_visitante": "5.25",
-    "mejor_cuota_local": "1.54",
-    "mejor_cuota_empate": "3.75",
+    "mejor_cuota_local": "1.56",
+    "mejor_cuota_empate": "3.80",
     "mejor_cuota_visitante": "5.25",
     "odds_detalle": [],
     "odds_source": "espn",
@@ -405,7 +261,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T20:35:58.104284-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.346583-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -429,7 +285,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T20:35:58.104314-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.346602-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -453,18 +309,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T20:35:58.104332-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.346613-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Cienciano del Cusco",
     "visitante": "Sporting Cristal",
-    "cuota_local": "1.65",
-    "cuota_empate": "3.75",
-    "cuota_visitante": "4.30",
-    "mejor_cuota_local": "1.65",
-    "mejor_cuota_empate": "3.75",
-    "mejor_cuota_visitante": "4.30",
+    "cuota_local": "1.71",
+    "cuota_empate": "3.70",
+    "cuota_visitante": "4.10",
+    "mejor_cuota_local": "1.71",
+    "mejor_cuota_empate": "3.70",
+    "mejor_cuota_visitante": "4.10",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -477,6 +333,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-05-30T20:35:58.104352-05:00"
+    "fecha_scrape": "2026-05-31T01:01:51.346625-05:00"
   }
 ]
