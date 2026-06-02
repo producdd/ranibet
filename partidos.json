@@ -1,30 +1,6 @@
 [
   {
     "torneo": "Liga 1 Peruana",
-    "local": "Atlético Grau",
-    "visitante": "Deportivo Moquegua",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": false,
-    "hora_partido": "15:00",
-    "fecha_partido": "2026-05-29 15:00:00",
-    "match_datetime": "2026-05-29T15:00:00-05:00",
-    "live": false,
-    "minute": "90+21",
-    "score": "1-0",
-    "status": "Full Time",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260529",
-    "fecha_scrape": "2026-06-01T21:01:51.935871-05:00"
-  },
-  {
-    "torneo": "Liga 1 Peruana",
     "local": "ADT",
     "visitante": "Cusco FC",
     "cuota_local": "",
@@ -45,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-06-01T21:01:52.024183-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.535192-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -69,7 +45,7 @@
     "status": "Final Score - After Penalties",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-06-01T21:01:53.045887-05:00"
+    "fecha_scrape": "2026-06-02T01:52:19.980774-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-06-01T21:01:52.024207-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.535226-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-06-01T21:01:52.024226-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.535247-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260530",
-    "fecha_scrape": "2026-06-01T21:01:52.024243-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.535265-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-01T21:01:52.120288-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.827952-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +165,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-01T21:01:52.120314-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.828005-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-01T21:01:52.120334-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.828047-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,6 +213,6 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-01T21:01:52.120351-05:00"
+    "fecha_scrape": "2026-06-02T01:52:17.828089-05:00"
   }
 ]
