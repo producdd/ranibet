@@ -21,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-03T02:14:07.828436-05:00"
+    "fecha_scrape": "2026-06-03T07:13:52.501553-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-03T02:14:07.828461-05:00"
+    "fecha_scrape": "2026-06-03T07:13:52.501581-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-03T02:14:07.828480-05:00"
+    "fecha_scrape": "2026-06-03T07:13:52.501601-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,6 +93,6 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260531",
-    "fecha_scrape": "2026-06-03T02:14:07.828499-05:00"
+    "fecha_scrape": "2026-06-03T07:13:52.501617-05:00"
   }
 ]
