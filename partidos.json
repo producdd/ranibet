@@ -21,7 +21,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-17T03:58:44.852742-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.178220-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,18 +45,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-17T03:58:44.852775-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.178242-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Cienciano del Cusco",
     "visitante": "Melgar",
-    "cuota_local": "1.83",
-    "cuota_empate": "3.55",
-    "cuota_visitante": "3.55",
-    "mejor_cuota_local": "1.83",
-    "mejor_cuota_empate": "3.55",
-    "mejor_cuota_visitante": "3.55",
+    "cuota_local": "1.91",
+    "cuota_empate": "3.45",
+    "cuota_visitante": "3.45",
+    "mejor_cuota_local": "1.91",
+    "mejor_cuota_empate": "3.45",
+    "mejor_cuota_visitante": "3.45",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -69,7 +69,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-17T03:58:44.852799-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.178255-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,7 +93,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T03:58:44.945268-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.326375-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +117,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T03:58:44.945297-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.326393-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +141,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T03:58:44.945316-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.326404-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T03:58:44.945339-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.326416-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +189,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-17T03:58:45.049307-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.490442-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,6 +213,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-17T03:58:45.049346-05:00"
+    "fecha_scrape": "2026-07-17T05:55:07.490460-05:00"
   }
 ]
