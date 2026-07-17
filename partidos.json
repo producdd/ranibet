@@ -3,12 +3,12 @@
     "torneo": "Liga 1 Peruana",
     "local": "FC Cajamarca",
     "visitante": "Juan Pablo II",
-    "cuota_local": "2.00",
-    "cuota_empate": "3.55",
-    "cuota_visitante": "3.25",
-    "mejor_cuota_local": "2.00",
-    "mejor_cuota_empate": "3.55",
-    "mejor_cuota_visitante": "3.25",
+    "cuota_local": "2.10",
+    "cuota_empate": "3.50",
+    "cuota_visitante": "3.10",
+    "mejor_cuota_local": "2.10",
+    "mejor_cuota_empate": "3.50",
+    "mejor_cuota_visitante": "3.10",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -21,7 +21,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-17T10:34:33.116048-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.587779-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +45,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-17T10:34:33.116092-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.587838-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,18 +69,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-17T10:34:33.116115-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.587877-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Deportivo Moquegua",
     "visitante": "Comerciantes Unidos",
-    "cuota_local": "2.15",
-    "cuota_empate": "3.00",
-    "cuota_visitante": "3.25",
-    "mejor_cuota_local": "2.15",
-    "mejor_cuota_empate": "3.00",
-    "mejor_cuota_visitante": "3.25",
+    "cuota_local": "2.05",
+    "cuota_empate": "3.05",
+    "cuota_visitante": "3.45",
+    "mejor_cuota_local": "2.05",
+    "mejor_cuota_empate": "3.05",
+    "mejor_cuota_visitante": "3.45",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -93,7 +93,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T10:34:33.231270-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.707663-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +117,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T10:34:33.231321-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.707694-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +141,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T10:34:33.231342-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.707712-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-17T10:34:33.231364-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.707732-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +189,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-17T10:34:33.367143-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.839116-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,6 +213,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-17T10:34:33.367173-05:00"
+    "fecha_scrape": "2026-07-17T11:43:39.839147-05:00"
   }
 ]
