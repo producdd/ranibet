@@ -16,12 +16,12 @@
     "fecha_partido": "2026-07-18 15:30:00",
     "match_datetime": "2026-07-18T15:30:00-05:00",
     "live": true,
-    "minute": "18",
-    "score": "1-0",
-    "status": "First Half",
+    "minute": "45+6",
+    "score": "2-0",
+    "status": "Halftime",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T16:23:24.986239-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.879456-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-18T16:23:24.810261-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.733495-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-18T16:23:24.810291-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.733522-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-18T16:23:24.810317-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.733539-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T16:23:24.986179-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.879382-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,16 +141,16 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T16:23:24.986199-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.879408-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Cusco FC",
     "visitante": "Alianza Atlético",
-    "cuota_local": "1.50",
+    "cuota_local": "1.48",
     "cuota_empate": "4.10",
     "cuota_visitante": "6.00",
-    "mejor_cuota_local": "1.50",
+    "mejor_cuota_local": "1.48",
     "mejor_cuota_empate": "4.10",
     "mejor_cuota_visitante": "6.00",
     "odds_detalle": [],
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T16:23:24.986257-05:00"
+    "fecha_scrape": "2026-07-18T17:13:39.879479-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +189,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-18T16:23:25.098864-05:00"
+    "fecha_scrape": "2026-07-18T17:13:40.057294-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,7 +213,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-18T16:23:25.098887-05:00"
+    "fecha_scrape": "2026-07-18T17:13:40.057324-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,7 +237,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-18T16:23:25.563405-05:00"
+    "fecha_scrape": "2026-07-18T17:13:41.002445-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -261,6 +261,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-18T16:23:25.563438-05:00"
+    "fecha_scrape": "2026-07-18T17:13:41.002472-05:00"
   }
 ]
