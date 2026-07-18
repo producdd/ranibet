@@ -21,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-18T03:12:44.313287-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.152053-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-18T03:12:44.313315-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.152083-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260717",
-    "fecha_scrape": "2026-07-18T03:12:44.313334-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.152105-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,18 +93,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T03:12:44.418322-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.203805-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "ADT",
     "visitante": "Universitario",
-    "cuota_local": "3.15",
-    "cuota_empate": "3.00",
-    "cuota_visitante": "2.25",
-    "mejor_cuota_local": "3.15",
-    "mejor_cuota_empate": "3.00",
-    "mejor_cuota_visitante": "2.25",
+    "cuota_local": "2.90",
+    "cuota_empate": "2.95",
+    "cuota_visitante": "2.45",
+    "mejor_cuota_local": "2.90",
+    "mejor_cuota_empate": "2.95",
+    "mejor_cuota_visitante": "2.45",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -117,7 +117,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T03:12:44.418356-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.203844-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +141,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T03:12:44.418378-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.203870-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-18T03:12:44.418401-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.203900-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +189,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-18T03:12:44.521477-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.264010-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,7 +213,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-18T03:12:44.521510-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.264047-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,7 +237,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-18T03:12:45.229146-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.588953-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -261,6 +261,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-18T03:12:45.229177-05:00"
+    "fecha_scrape": "2026-07-18T04:47:40.588981-05:00"
   }
 ]
