@@ -21,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-21T11:42:00.447687-05:00"
+    "fecha_scrape": "2026-07-21T13:00:25.557597-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-21T11:42:00.447718-05:00"
+    "fecha_scrape": "2026-07-21T13:00:25.557636-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-21T11:42:00.447738-05:00"
+    "fecha_scrape": "2026-07-21T13:00:25.557654-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260718",
-    "fecha_scrape": "2026-07-21T11:42:00.447755-05:00"
+    "fecha_scrape": "2026-07-21T13:00:25.557676-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-21T11:42:00.534852-05:00"
+    "fecha_scrape": "2026-07-21T13:00:25.653277-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,18 +141,18 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260719",
-    "fecha_scrape": "2026-07-21T11:42:00.534878-05:00"
+    "fecha_scrape": "2026-07-21T13:00:25.653303-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Alianza Atlético",
     "visitante": "Los Chankas",
-    "cuota_local": "1.74",
-    "cuota_empate": "3.45",
-    "cuota_visitante": "4.20",
-    "mejor_cuota_local": "1.74",
-    "mejor_cuota_empate": "3.45",
-    "mejor_cuota_visitante": "4.20",
+    "cuota_local": "1.69",
+    "cuota_empate": "3.50",
+    "cuota_visitante": "4.30",
+    "mejor_cuota_local": "1.69",
+    "mejor_cuota_empate": "3.50",
+    "mejor_cuota_visitante": "4.30",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-21T11:42:00.958599-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.163318-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,18 +189,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-21T11:42:00.958633-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.163348-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Sport Huancayo",
     "visitante": "Atlético Grau",
-    "cuota_local": "1.71",
-    "cuota_empate": "3.40",
-    "cuota_visitante": "4.40",
-    "mejor_cuota_local": "1.71",
-    "mejor_cuota_empate": "3.40",
-    "mejor_cuota_visitante": "4.40",
+    "cuota_local": "1.62",
+    "cuota_empate": "3.55",
+    "cuota_visitante": "4.80",
+    "mejor_cuota_local": "1.62",
+    "mejor_cuota_empate": "3.55",
+    "mejor_cuota_visitante": "4.80",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -213,7 +213,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-21T11:42:01.049183-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.252044-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,7 +237,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-21T11:42:01.049221-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.252076-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -261,7 +261,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-21T11:42:01.049247-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.252097-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -285,7 +285,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-21T11:42:01.049269-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.252117-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -309,7 +309,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-21T11:42:01.141776-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.344788-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -333,21 +333,21 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-21T11:42:01.141814-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.344825-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Deportivo Garcilaso",
     "visitante": "FC Cajamarca",
-    "cuota_local": "",
-    "cuota_empate": "",
-    "cuota_visitante": "",
-    "mejor_cuota_local": "",
-    "mejor_cuota_empate": "",
-    "mejor_cuota_visitante": "",
+    "cuota_local": "1.49",
+    "cuota_empate": "3.75",
+    "cuota_visitante": "5.50",
+    "mejor_cuota_local": "1.49",
+    "mejor_cuota_empate": "3.75",
+    "mejor_cuota_visitante": "5.50",
     "odds_detalle": [],
     "odds_source": "espn",
-    "odds_verified": false,
+    "odds_verified": true,
     "hora_partido": "19:00",
     "fecha_partido": "2026-07-26 19:00:00",
     "match_datetime": "2026-07-26T19:00:00-05:00",
@@ -357,6 +357,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-21T11:42:01.141834-05:00"
+    "fecha_scrape": "2026-07-21T13:00:26.344847-05:00"
   }
 ]
