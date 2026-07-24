@@ -3,12 +3,12 @@
     "torneo": "Liga 1 Peruana",
     "local": "Alianza Atlético",
     "visitante": "Los Chankas",
-    "cuota_local": "1.65",
-    "cuota_empate": "3.70",
-    "cuota_visitante": "4.60",
-    "mejor_cuota_local": "1.65",
-    "mejor_cuota_empate": "3.70",
-    "mejor_cuota_visitante": "4.60",
+    "cuota_local": "1.59",
+    "cuota_empate": "3.80",
+    "cuota_visitante": "5.00",
+    "mejor_cuota_local": "1.59",
+    "mejor_cuota_empate": "3.80",
+    "mejor_cuota_visitante": "5.00",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -21,16 +21,16 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-24T07:55:17.777559-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.764319-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Universitario",
     "visitante": "Cusco FC",
-    "cuota_local": "1.43",
+    "cuota_local": "1.44",
     "cuota_empate": "4.20",
     "cuota_visitante": "6.00",
-    "mejor_cuota_local": "1.43",
+    "mejor_cuota_local": "1.44",
     "mejor_cuota_empate": "4.20",
     "mejor_cuota_visitante": "6.00",
     "odds_detalle": [],
@@ -45,7 +45,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-24T07:55:17.777578-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.764350-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,7 +69,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-24T07:55:17.896745-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.834706-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,7 +93,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-24T07:55:17.896761-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.834736-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +117,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-24T07:55:17.896773-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.834760-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +141,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-24T07:55:17.896784-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.834781-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-24T07:55:17.997199-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.923664-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +189,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-24T07:55:17.997224-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.923716-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,6 +213,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-24T07:55:17.997237-05:00"
+    "fecha_scrape": "2026-07-24T09:56:58.923761-05:00"
   }
 ]
