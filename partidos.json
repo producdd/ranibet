@@ -1,30 +1,6 @@
 [
   {
     "torneo": "Liga 1 Peruana",
-    "local": "Melgar",
-    "visitante": "Sporting Cristal",
-    "cuota_local": "1.71",
-    "cuota_empate": "3.75",
-    "cuota_visitante": "4.30",
-    "mejor_cuota_local": "1.71",
-    "mejor_cuota_empate": "3.75",
-    "mejor_cuota_visitante": "4.30",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "20:00",
-    "fecha_partido": "2026-07-25 20:00:00",
-    "match_datetime": "2026-07-25T20:00:00-05:00",
-    "live": true,
-    "minute": "3",
-    "score": "0-0",
-    "status": "First Half",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-25T20:15:03.771288-05:00"
-  },
-  {
-    "torneo": "Liga 1 Peruana",
     "local": "Alianza Atlético",
     "visitante": "Los Chankas",
     "cuota_local": "",
@@ -45,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-25T20:15:03.441863-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.388796-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260724",
-    "fecha_scrape": "2026-07-25T20:15:03.441889-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.388821-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-25T20:15:03.771196-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.461784-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -117,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-25T20:15:03.771227-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.461821-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +117,31 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
-    "fecha_scrape": "2026-07-25T20:15:03.771246-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.461868-05:00"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Melgar",
+    "visitante": "Sporting Cristal",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": false,
+    "hora_partido": "20:00",
+    "fecha_partido": "2026-07-25 20:00:00",
+    "match_datetime": "2026-07-25T20:00:00-05:00",
+    "live": false,
+    "minute": "90+7",
+    "score": "2-1",
+    "status": "Full Time",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260725",
+    "fecha_scrape": "2026-07-25T23:46:01.461887-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,17 +165,17 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-25T20:15:03.977757-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.604981-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Comerciantes Unidos",
     "visitante": "Alianza Lima",
-    "cuota_local": "3.85",
-    "cuota_empate": "2.95",
+    "cuota_local": "3.80",
+    "cuota_empate": "3.00",
     "cuota_visitante": "1.95",
-    "mejor_cuota_local": "3.85",
-    "mejor_cuota_empate": "2.95",
+    "mejor_cuota_local": "3.80",
+    "mejor_cuota_empate": "3.00",
     "mejor_cuota_visitante": "1.95",
     "odds_detalle": [],
     "odds_source": "espn",
@@ -189,18 +189,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-25T20:15:03.977794-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.605054-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Deportivo Garcilaso",
     "visitante": "FC Cajamarca",
-    "cuota_local": "1.50",
-    "cuota_empate": "3.80",
-    "cuota_visitante": "5.75",
-    "mejor_cuota_local": "1.50",
-    "mejor_cuota_empate": "3.80",
-    "mejor_cuota_visitante": "5.75",
+    "cuota_local": "1.51",
+    "cuota_empate": "3.85",
+    "cuota_visitante": "5.50",
+    "mejor_cuota_local": "1.51",
+    "mejor_cuota_empate": "3.85",
+    "mejor_cuota_visitante": "5.50",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -213,7 +213,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260726",
-    "fecha_scrape": "2026-07-25T20:15:03.977817-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.605083-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,6 +237,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260731",
-    "fecha_scrape": "2026-07-25T20:15:06.486748-05:00"
+    "fecha_scrape": "2026-07-25T23:46:01.973627-05:00"
   }
 ]
