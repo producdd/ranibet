@@ -21,18 +21,18 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260731",
-    "fecha_scrape": "2026-08-01T09:54:48.798109-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.075384-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "FC Cajamarca",
     "visitante": "Sport Huancayo",
-    "cuota_local": "2.95",
-    "cuota_empate": "3.20",
-    "cuota_visitante": "2.25",
-    "mejor_cuota_local": "2.95",
-    "mejor_cuota_empate": "3.20",
-    "mejor_cuota_visitante": "2.25",
+    "cuota_local": "3.05",
+    "cuota_empate": "3.30",
+    "cuota_visitante": "2.15",
+    "mejor_cuota_local": "3.05",
+    "mejor_cuota_empate": "3.30",
+    "mejor_cuota_visitante": "2.15",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -45,18 +45,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260801",
-    "fecha_scrape": "2026-08-01T09:54:48.890204-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.189056-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Atlético Grau",
     "visitante": "Sport Boys",
-    "cuota_local": "2.15",
-    "cuota_empate": "3.05",
-    "cuota_visitante": "3.35",
-    "mejor_cuota_local": "2.15",
-    "mejor_cuota_empate": "3.05",
-    "mejor_cuota_visitante": "3.35",
+    "cuota_local": "2.10",
+    "cuota_empate": "3.15",
+    "cuota_visitante": "3.40",
+    "mejor_cuota_local": "2.10",
+    "mejor_cuota_empate": "3.15",
+    "mejor_cuota_visitante": "3.40",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -69,7 +69,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260801",
-    "fecha_scrape": "2026-08-01T09:54:48.890234-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.189092-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -93,17 +93,17 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260801",
-    "fecha_scrape": "2026-08-01T09:54:48.890253-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.189137-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
     "local": "Alianza Lima",
     "visitante": "Alianza Atlético",
     "cuota_local": "1.36",
-    "cuota_empate": "4.40",
+    "cuota_empate": "4.30",
     "cuota_visitante": "7.50",
     "mejor_cuota_local": "1.36",
-    "mejor_cuota_empate": "4.40",
+    "mejor_cuota_empate": "4.30",
     "mejor_cuota_visitante": "7.50",
     "odds_detalle": [],
     "odds_source": "espn",
@@ -117,7 +117,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260801",
-    "fecha_scrape": "2026-08-01T09:54:48.890273-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.189166-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -141,7 +141,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260802",
-    "fecha_scrape": "2026-08-01T09:54:48.962105-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.281795-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -165,7 +165,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260802",
-    "fecha_scrape": "2026-08-01T09:54:48.962133-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.281829-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -189,7 +189,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260802",
-    "fecha_scrape": "2026-08-01T09:54:48.962154-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.281854-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -213,7 +213,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260802",
-    "fecha_scrape": "2026-08-01T09:54:48.962172-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.281876-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -237,7 +237,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260806",
-    "fecha_scrape": "2026-08-01T09:54:49.266927-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.688491-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -261,7 +261,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260807",
-    "fecha_scrape": "2026-08-01T09:54:49.345755-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.765476-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -285,7 +285,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260807",
-    "fecha_scrape": "2026-08-01T09:54:49.345779-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.765527-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -300,15 +300,15 @@
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": false,
-    "hora_partido": "20:30",
-    "fecha_partido": "2026-08-07 20:30:00",
-    "match_datetime": "2026-08-07T20:30:00-05:00",
+    "hora_partido": "20:00",
+    "fecha_partido": "2026-08-07 20:00:00",
+    "match_datetime": "2026-08-07T20:00:00-05:00",
     "live": false,
     "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260807",
-    "fecha_scrape": "2026-08-01T09:54:49.345796-05:00"
+    "fecha_scrape": "2026-08-01T11:00:39.765569-05:00"
   }
 ]
