@@ -21,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20260930",
-    "fecha_scrape": "2026-10-02T20:22:53.590900-05:00"
+    "fecha_scrape": "2026-10-03T01:47:41.295706-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -45,7 +45,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261008",
-    "fecha_scrape": "2026-10-02T20:22:54.559838-05:00"
+    "fecha_scrape": "2026-10-03T01:47:42.131458-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -69,6 +69,30 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261008",
-    "fecha_scrape": "2026-10-02T20:22:54.559864-05:00"
+    "fecha_scrape": "2026-10-03T01:47:42.131486-05:00"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Deportivo Garcilaso",
+    "visitante": "Sport Huancayo",
+    "cuota_local": "",
+    "cuota_empate": "",
+    "cuota_visitante": "",
+    "mejor_cuota_local": "",
+    "mejor_cuota_empate": "",
+    "mejor_cuota_visitante": "",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": false,
+    "hora_partido": "20:00",
+    "fecha_partido": "2026-10-09 20:00:00",
+    "match_datetime": "2026-10-09T20:00:00-05:00",
+    "live": false,
+    "minute": "0",
+    "score": "0-0",
+    "status": "Scheduled",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261009",
+    "fecha_scrape": "2026-10-03T01:47:42.212625-05:00"
   }
 ]
