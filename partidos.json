@@ -21,7 +21,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261012",
-    "fecha_scrape": "2026-10-15T01:51:59.571657-05:00"
+    "fecha_scrape": "2026-10-15T07:22:01.318594-05:00"
   },
   {
     "torneo": "Serie A",
@@ -45,7 +45,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261012",
-    "fecha_scrape": "2026-10-15T01:51:59.571686-05:00"
+    "fecha_scrape": "2026-10-15T07:22:01.318616-05:00"
   },
   {
     "torneo": "Premier League",
@@ -69,7 +69,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261012",
-    "fecha_scrape": "2026-10-15T01:51:58.863019-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.147019-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -93,7 +93,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089797-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934062-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -117,7 +117,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089824-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934083-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -141,7 +141,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089845-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934098-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -165,7 +165,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089862-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934111-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -189,7 +189,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089880-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934124-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -213,7 +213,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089897-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934137-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -237,11 +237,11 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089914-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934149-05:00"
   },
   {
     "torneo": "UEFA Champions League",
-    "local": "Viking FK",
+    "local": "VIKING FK",
     "visitante": "Bayern Munich",
     "cuota_local": "",
     "cuota_empate": "",
@@ -261,7 +261,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089930-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934161-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -285,7 +285,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261013",
-    "fecha_scrape": "2026-10-15T01:51:57.089947-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.934173-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -309,7 +309,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163628-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045805-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -333,7 +333,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163657-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045825-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -357,7 +357,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163677-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045840-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -381,7 +381,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163696-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045852-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -405,7 +405,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163713-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045865-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -429,7 +429,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163731-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045876-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -453,7 +453,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163749-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045888-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -477,7 +477,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163766-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045899-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -501,7 +501,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:57.163784-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.045911-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -525,7 +525,7 @@
     "status": "Full Time",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20261014",
-    "fecha_scrape": "2026-10-15T01:51:58.139307-05:00"
+    "fecha_scrape": "2026-10-15T07:21:59.294683-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -549,7 +549,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20261015",
-    "fecha_scrape": "2026-10-15T01:51:58.205293-05:00"
+    "fecha_scrape": "2026-10-15T07:21:59.383234-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -573,7 +573,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261016",
-    "fecha_scrape": "2026-10-15T01:51:56.584494-05:00"
+    "fecha_scrape": "2026-10-15T07:21:56.855801-05:00"
   },
   {
     "torneo": "Serie A",
@@ -597,7 +597,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261016",
-    "fecha_scrape": "2026-10-15T01:51:59.817723-05:00"
+    "fecha_scrape": "2026-10-15T07:22:01.848370-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -621,31 +621,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261016",
-    "fecha_scrape": "2026-10-15T01:51:56.584531-05:00"
-  },
-  {
-    "torneo": "Liga 1 Peruana",
-    "local": "Alianza Lima",
-    "visitante": "Atlético Grau",
-    "cuota_local": "1.31",
-    "cuota_empate": "4.70",
-    "cuota_visitante": "7.50",
-    "mejor_cuota_local": "1.31",
-    "mejor_cuota_empate": "4.70",
-    "mejor_cuota_visitante": "7.50",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "20:00",
-    "fecha_partido": "2026-10-16 20:00:00",
-    "match_datetime": "2026-10-16T20:00:00-05:00",
-    "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261016",
-    "fecha_scrape": "2026-10-15T01:51:56.584558-05:00"
+    "fecha_scrape": "2026-10-15T07:21:56.855837-05:00"
   },
   {
     "torneo": "Premier League",
@@ -669,7 +645,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.199497-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.770198-05:00"
   },
   {
     "torneo": "Serie A",
@@ -693,7 +669,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.881152-05:00"
+    "fecha_scrape": "2026-10-15T07:22:01.953818-05:00"
   },
   {
     "torneo": "Premier League",
@@ -717,7 +693,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.199531-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.770221-05:00"
   },
   {
     "torneo": "Premier League",
@@ -741,7 +717,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.199557-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.770239-05:00"
   },
   {
     "torneo": "Premier League",
@@ -765,42 +741,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.199581-05:00"
-  },
-  {
-    "torneo": "Liga 1 Peruana",
-    "local": "Sporting Cristal",
-    "visitante": "Comerciantes Unidos",
-    "cuota_local": "1.24",
-    "cuota_empate": "5.25",
-    "cuota_visitante": "9.00",
-    "mejor_cuota_local": "1.24",
-    "mejor_cuota_empate": "5.25",
-    "mejor_cuota_visitante": "9.00",
-    "odds_detalle": [],
-    "odds_source": "espn",
-    "odds_verified": true,
-    "hora_partido": "11:00",
-    "fecha_partido": "2026-10-17 11:00:00",
-    "match_datetime": "2026-10-17T11:00:00-05:00",
-    "live": false,
-    "minute": "0",
-    "score": "0-0",
-    "status": "Scheduled",
-    "time_text": "",
-    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:56.667117-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.770269-05:00"
   },
   {
     "torneo": "Serie A",
     "local": "Bologna",
     "visitante": "Internazionale",
-    "cuota_local": "5.50",
-    "cuota_empate": "4.00",
-    "cuota_visitante": "1.54",
-    "mejor_cuota_local": "5.50",
-    "mejor_cuota_empate": "4.00",
-    "mejor_cuota_visitante": "1.54",
+    "cuota_local": "5.25",
+    "cuota_empate": "3.95",
+    "cuota_visitante": "1.57",
+    "mejor_cuota_local": "5.25",
+    "mejor_cuota_empate": "3.95",
+    "mejor_cuota_visitante": "1.57",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -813,7 +765,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.881187-05:00"
+    "fecha_scrape": "2026-10-15T07:22:01.953842-05:00"
   },
   {
     "torneo": "Premier League",
@@ -837,7 +789,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.199605-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.770285-05:00"
   },
   {
     "torneo": "Serie A",
@@ -861,7 +813,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:59.881212-05:00"
+    "fecha_scrape": "2026-10-15T07:22:01.953859-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -885,7 +837,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:56.667151-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.032753-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -909,7 +861,31 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261017",
-    "fecha_scrape": "2026-10-15T01:51:56.667176-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.032778-05:00"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Alianza Lima",
+    "visitante": "Atlético Grau",
+    "cuota_local": "1.31",
+    "cuota_empate": "4.70",
+    "cuota_visitante": "7.50",
+    "mejor_cuota_local": "1.31",
+    "mejor_cuota_empate": "4.70",
+    "mejor_cuota_visitante": "7.50",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": true,
+    "hora_partido": "20:30",
+    "fecha_partido": "2026-10-17 20:30:00",
+    "match_datetime": "2026-10-17T20:30:00-05:00",
+    "live": false,
+    "minute": "0",
+    "score": "0-0",
+    "status": "Scheduled",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261017",
+    "fecha_scrape": "2026-10-15T07:21:57.032796-05:00"
   },
   {
     "torneo": "Serie A",
@@ -933,7 +909,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.948737-05:00"
+    "fecha_scrape": "2026-10-15T07:22:02.048505-05:00"
   },
   {
     "torneo": "Premier League",
@@ -957,7 +933,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.284422-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.888499-05:00"
   },
   {
     "torneo": "Premier League",
@@ -981,7 +957,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.284460-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.888526-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1005,7 +981,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.284485-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.888542-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1029,7 +1005,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.948771-05:00"
+    "fecha_scrape": "2026-10-15T07:22:02.048529-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1053,7 +1029,31 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.284509-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.888558-05:00"
+  },
+  {
+    "torneo": "Liga 1 Peruana",
+    "local": "Sporting Cristal",
+    "visitante": "Comerciantes Unidos",
+    "cuota_local": "1.24",
+    "cuota_empate": "5.25",
+    "cuota_visitante": "9.00",
+    "mejor_cuota_local": "1.24",
+    "mejor_cuota_empate": "5.25",
+    "mejor_cuota_visitante": "9.00",
+    "odds_detalle": [],
+    "odds_source": "espn",
+    "odds_verified": true,
+    "hora_partido": "11:00",
+    "fecha_partido": "2026-10-18 11:00:00",
+    "match_datetime": "2026-10-18T11:00:00-05:00",
+    "live": false,
+    "minute": "0",
+    "score": "0-0",
+    "status": "Scheduled",
+    "time_text": "",
+    "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261018",
+    "fecha_scrape": "2026-10-15T07:21:57.181446-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1077,7 +1077,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.948797-05:00"
+    "fecha_scrape": "2026-10-15T07:22:02.048547-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1092,16 +1092,16 @@
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
-    "hora_partido": "13:00",
-    "fecha_partido": "2026-10-18 13:00:00",
-    "match_datetime": "2026-10-18T13:00:00-05:00",
+    "hora_partido": "13:15",
+    "fecha_partido": "2026-10-18 13:15:00",
+    "match_datetime": "2026-10-18T13:15:00-05:00",
     "live": false,
     "minute": "0",
     "score": "0-0",
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:56.745714-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.181470-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1125,7 +1125,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:59.948821-05:00"
+    "fecha_scrape": "2026-10-15T07:22:02.048563-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1149,7 +1149,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:56.745750-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.181489-05:00"
   },
   {
     "torneo": "Liga 1 Peruana",
@@ -1173,7 +1173,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/PER.1/scoreboard?dates=20261018",
-    "fecha_scrape": "2026-10-15T01:51:56.745772-05:00"
+    "fecha_scrape": "2026-10-15T07:21:57.181502-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1197,7 +1197,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261019",
-    "fecha_scrape": "2026-10-15T01:52:00.043995-05:00"
+    "fecha_scrape": "2026-10-15T07:22:02.144390-05:00"
   },
   {
     "torneo": "Serie A",
@@ -1221,7 +1221,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ITA.1/scoreboard?dates=20261019",
-    "fecha_scrape": "2026-10-15T01:52:00.044028-05:00"
+    "fecha_scrape": "2026-10-15T07:22:02.144414-05:00"
   },
   {
     "torneo": "Premier League",
@@ -1245,17 +1245,17 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ENG.1/scoreboard?dates=20261019",
-    "fecha_scrape": "2026-10-15T01:51:59.349214-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.984237-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Fenerbahce",
     "visitante": "Slavia Prague",
-    "cuota_local": "1.65",
-    "cuota_empate": "4.10",
+    "cuota_local": "1.62",
+    "cuota_empate": "4.20",
     "cuota_visitante": "5.00",
-    "mejor_cuota_local": "1.65",
-    "mejor_cuota_empate": "4.10",
+    "mejor_cuota_local": "1.62",
+    "mejor_cuota_empate": "4.20",
     "mejor_cuota_visitante": "5.00",
     "odds_detalle": [],
     "odds_source": "espn",
@@ -1269,18 +1269,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815846-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841749-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Sabah FK",
     "visitante": "Borussia Dortmund",
-    "cuota_local": "7.50",
-    "cuota_empate": "5.50",
-    "cuota_visitante": "1.35",
-    "mejor_cuota_local": "7.50",
-    "mejor_cuota_empate": "5.50",
-    "mejor_cuota_visitante": "1.35",
+    "cuota_local": "8.00",
+    "cuota_empate": "5.75",
+    "cuota_visitante": "1.31",
+    "mejor_cuota_local": "8.00",
+    "mejor_cuota_empate": "5.75",
+    "mejor_cuota_visitante": "1.31",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1293,18 +1293,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815880-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841773-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "AS Roma",
     "visitante": "Slovan Bratislava",
-    "cuota_local": "1.12",
-    "cuota_empate": "9.50",
-    "cuota_visitante": "17.00",
-    "mejor_cuota_local": "1.12",
-    "mejor_cuota_empate": "9.50",
-    "mejor_cuota_visitante": "17.00",
+    "cuota_local": "1.15",
+    "cuota_empate": "8.00",
+    "cuota_visitante": "14.00",
+    "mejor_cuota_local": "1.15",
+    "mejor_cuota_empate": "8.00",
+    "mejor_cuota_visitante": "14.00",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1317,7 +1317,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815905-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841792-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1341,18 +1341,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815929-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841807-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Liverpool",
     "visitante": "Villarreal",
-    "cuota_local": "1.53",
-    "cuota_empate": "4.60",
-    "cuota_visitante": "5.50",
-    "mejor_cuota_local": "1.53",
-    "mejor_cuota_empate": "4.60",
-    "mejor_cuota_visitante": "5.50",
+    "cuota_local": "1.51",
+    "cuota_empate": "4.50",
+    "cuota_visitante": "5.75",
+    "mejor_cuota_local": "1.51",
+    "mejor_cuota_empate": "4.50",
+    "mejor_cuota_visitante": "5.75",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1365,7 +1365,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815952-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841880-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1389,17 +1389,17 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815975-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841895-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Napoli",
     "visitante": "Bodo/Glimt",
     "cuota_local": "1.57",
-    "cuota_empate": "4.40",
+    "cuota_empate": "4.50",
     "cuota_visitante": "5.00",
     "mejor_cuota_local": "1.57",
-    "mejor_cuota_empate": "4.40",
+    "mejor_cuota_empate": "4.50",
     "mejor_cuota_visitante": "5.00",
     "odds_detalle": [],
     "odds_source": "espn",
@@ -1413,7 +1413,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.815999-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841910-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1437,7 +1437,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.816022-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841925-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1461,18 +1461,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261020",
-    "fecha_scrape": "2026-10-15T01:51:57.816046-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.841940-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Como",
     "visitante": "Manchester United",
-    "cuota_local": "2.25",
+    "cuota_local": "2.30",
     "cuota_empate": "3.75",
-    "cuota_visitante": "2.90",
-    "mejor_cuota_local": "2.25",
+    "cuota_visitante": "2.80",
+    "mejor_cuota_local": "2.30",
     "mejor_cuota_empate": "3.75",
-    "mejor_cuota_visitante": "2.90",
+    "mejor_cuota_visitante": "2.80",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1485,7 +1485,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890613-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953048-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1509,18 +1509,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890648-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953072-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Aston Villa",
-    "visitante": "Viking FK",
+    "visitante": "VIKING FK",
     "cuota_local": "1.29",
-    "cuota_empate": "5.25",
-    "cuota_visitante": "12.00",
+    "cuota_empate": "5.00",
+    "cuota_visitante": "13.00",
     "mejor_cuota_local": "1.29",
-    "mejor_cuota_empate": "5.25",
-    "mejor_cuota_visitante": "12.00",
+    "mejor_cuota_empate": "5.00",
+    "mejor_cuota_visitante": "13.00",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1533,7 +1533,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890676-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953090-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1557,7 +1557,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890700-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953106-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1581,7 +1581,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890723-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953121-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1605,18 +1605,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890743-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953135-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Real Betis",
     "visitante": "Feyenoord Rotterdam",
-    "cuota_local": "1.51",
+    "cuota_local": "1.54",
     "cuota_empate": "4.60",
-    "cuota_visitante": "5.50",
-    "mejor_cuota_local": "1.51",
+    "cuota_visitante": "5.25",
+    "mejor_cuota_local": "1.54",
     "mejor_cuota_empate": "4.60",
-    "mejor_cuota_visitante": "5.50",
+    "mejor_cuota_visitante": "5.25",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1629,18 +1629,18 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890766-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953150-05:00"
   },
   {
     "torneo": "UEFA Champions League",
     "local": "Real Madrid",
     "visitante": "RB Leipzig",
-    "cuota_local": "1.29",
+    "cuota_local": "1.30",
     "cuota_empate": "6.00",
-    "cuota_visitante": "8.50",
-    "mejor_cuota_local": "1.29",
+    "cuota_visitante": "8.00",
+    "mejor_cuota_local": "1.30",
     "mejor_cuota_empate": "6.00",
-    "mejor_cuota_visitante": "8.50",
+    "mejor_cuota_visitante": "8.00",
     "odds_detalle": [],
     "odds_source": "espn",
     "odds_verified": true,
@@ -1653,7 +1653,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890788-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953165-05:00"
   },
   {
     "torneo": "UEFA Champions League",
@@ -1677,7 +1677,7 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/UEFA.CHAMPIONS/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:57.890811-05:00"
+    "fecha_scrape": "2026-10-15T07:21:58.953179-05:00"
   },
   {
     "torneo": "Copa Libertadores",
@@ -1701,6 +1701,6 @@
     "status": "Scheduled",
     "time_text": "",
     "fuente_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/CONMEBOL.LIBERTADORES/scoreboard?dates=20261021",
-    "fecha_scrape": "2026-10-15T01:51:58.748851-05:00"
+    "fecha_scrape": "2026-10-15T07:22:00.045362-05:00"
   }
 ]
